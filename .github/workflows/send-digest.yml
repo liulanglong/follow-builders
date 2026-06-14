@@ -1,0 +1,29 @@
+name: Send Daily Digest Email
+
+# UTC 1:00 = 北京 9:00 (基于昨日 feed —— 原作者每天北京 14:17 才更新 feed)
+# 想要当日最新内容,把 cron 改成 '30 7 * * *' (北京 15:30)
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Generate and send digest
+        working-directory: scripts
+        env:
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DELIVERY_EMAIL: ${{ secrets.DELIVERY_EMAIL }}
+          GLM_MODEL: ${{ vars.GLM_MODEL }}
+        run: node digest-email.js
