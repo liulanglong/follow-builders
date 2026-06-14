@@ -1,10 +1,8 @@
 name: Send Daily Digest Email
 
-# UTC 1:00 = 北京 9:00 (基于昨日 feed —— 原作者每天北京 14:17 才更新 feed)
-# 想要当日最新内容,把 cron 改成 '30 7 * * *' (北京 15:30)
+# 由 cron-job.org 定时打 workflow_dispatch 触发(北京 9:00)。
+# 不用 GitHub schedule —— fork 的 schedule 历史不稳定(同 aihot-daily-push 的前车之鉴)。
 on:
-  schedule:
-    - cron: '0 1 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -25,5 +23,6 @@ jobs:
           GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           DELIVERY_EMAIL: ${{ secrets.DELIVERY_EMAIL }}
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           GLM_MODEL: ${{ vars.GLM_MODEL }}
         run: node digest-email.js
