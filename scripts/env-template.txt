@@ -1,0 +1,15 @@
+# 公司邮箱 SMTP 配置 (send-local.js 使用)
+# 把本文件复制成 scripts/.env 后填真实值; .env 不要提交到 git (已被 .gitignore 忽略)
+
+# SMTP 服务器 (实测 587 可达, 465 不可达)
+SMTP_HOST=smtp.honor.com
+SMTP_PORT=587
+
+# 你的公司邮箱地址
+SMTP_USER=你的名字@honor.com
+
+# 邮箱客户端授权码 (非登录密码! 企业邮箱需在后台开启 SMTP 并生成专用密码)
+SMTP_PASS=在此填授权码
+
+# 收件人 (多个用英文逗号分隔)
+MAIL_TO=收件人@example.com

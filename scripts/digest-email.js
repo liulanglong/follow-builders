@@ -65,6 +65,11 @@ function todayLong() {
   });
 }
 
+// 文件名用的日期戳 YYYY-MM-DD (Asia/Shanghai), 用于落盘归档
+function todayStamp() {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
+}
+
 // -- Build material text (truncated) -----------------------------------------
 
 function buildXText(builders = []) {
@@ -259,6 +264,21 @@ async function pushWechat(markdown, sendkey) {
 // DRY_RUN=1 → write the exact HTML that would be sent to a file instead of
 // emailing, so the rendered output can be inspected without touching an inbox.
 async function deliver(html) {
+  // 落盘成品日报归档(无论是否 DRY_RUN 都存): digest/YYYY-MM-DD.html + .md
+  // 失败不中断主流程, 只记日志
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const dir = path.join(__dirname, '..', 'digest');
+    fs.mkdirSync(dir, { recursive: true });
+    const stamp = todayStamp();
+    fs.writeFileSync(path.join(dir, `${stamp}.html`), html, 'utf8');
+    fs.writeFileSync(path.join(dir, `${stamp}.md`), htmlToMarkdown(html), 'utf8');
+    console.log(`archived: digest/${stamp}.html + .md`);
+  } catch (e) {
+    console.error(`archive failed (continue to send): ${e.message}`);
+  }
+
   if (process.env.DRY_RUN) {
     const { writeFileSync } = require('fs');
     const { dirname, join } = require('path');
