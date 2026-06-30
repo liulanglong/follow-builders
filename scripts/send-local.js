@@ -94,13 +94,18 @@ async function main() {
   const html = await readFile(join(DIGEST_DIR, latest), 'utf8');
   const date = latest.replace(/\.html$/, ''); // YYYY-MM-DD
 
-  // 587 是 submission 端口, 走 STARTTLS (先明文再升级加密),
-  // 不是 465 的隐式 SSL —— 配错会卡在握手
+  // honor 公邮 SMTP 实测配置: 25 端口、明文、无 SSL/STARTTLS
+  // SMTP_USER 是 "域名\账号" 格式的 AD 账号(如 hihonor\xxx), 不是邮箱地址
+  // 发件人 from 用 MAIL_FROM(邮箱地址), 和登录账号 SMTP_USER 分开
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: false,     // 587 用 STARTTLS
-    requireTLS: true,  // 强制升级到 TLS
+    port: Number(process.env.SMTP_PORT) || 25,
+    secure: false,      // 25 端口明文
+    requireTLS: false,  // honor SMTP 不用 STARTTLS
+    tls: {
+      // 25 明文端口, 关闭证书校验相关副作用
+      rejectUnauthorized: false,
+    },
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
@@ -109,7 +114,7 @@ async function main() {
 
   const recipients = String(process.env.MAIL_TO).split(',').map((s) => s.trim()).filter(Boolean);
   const info = await transporter.sendMail({
-    from: process.env.SMTP_USER,
+    from: process.env.MAIL_FROM || process.env.SMTP_USER,
     to: recipients.join(', '),
     subject: `AI Builders 日报 · ${date}`,
     html,

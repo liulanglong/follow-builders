@@ -1,15 +1,20 @@
-# 公司邮箱 SMTP 配置 (send-local.js 使用)
+# 公司公邮 SMTP 配置 (send-local.js 使用)
 # 把本文件复制成 scripts/.env 后填真实值; .env 不要提交到 git (已被 .gitignore 忽略)
+# !! 密码直接填进 .env 文件, 不要贴进任何对话/聊天 !!
 
-# SMTP 服务器 (实测 587 可达, 465 不可达)
+# SMTP 服务器 (honor 公邮实测: 25 端口、明文、无 SSL)
 SMTP_HOST=smtp.honor.com
-SMTP_PORT=587
+SMTP_PORT=25
 
-# 你的公司邮箱地址
-SMTP_USER=你的名字@honor.com
+# 登录账号: "域名\账号" 格式的 AD 账号 (不是邮箱地址!)
+# 例如 hihonor\xxx_team
+SMTP_USER=hihonor\你的公邮账号
 
-# 邮箱客户端授权码 (非登录密码! 企业邮箱需在后台开启 SMTP 并生成专用密码)
-SMTP_PASS=在此填授权码
+# 公邮密码 (填进 .env, 不要外传)
+SMTP_PASS=在此填公邮密码
 
-# 收件人 (多个用英文逗号分隔)
-MAIL_TO=收件人@example.com
+# 发件人邮箱地址 (和 SMTP_USER 分开; SMTP_USER 是登录用, MAIL_FROM 是信件显示的发件人)
+MAIL_FROM=公邮账号@honor.com
+
+# 收件人 (多个用英文逗号分隔; 通常填你自己的个人邮箱)
+MAIL_TO=你的个人邮箱@honor.com

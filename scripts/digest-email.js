@@ -287,7 +287,17 @@ async function deliver(html) {
     console.log(`DRY_RUN: wrote ${outPath} (${html.length} chars)`);
     return;
   }
-  await sendEmail(html, process.env.RESEND_API_KEY, process.env.DELIVERY_EMAIL);
+  // Resend 邮件推送(可选): 未配 RESEND_API_KEY 则跳过, 只落盘归档。
+  // 配了才发; 失败不影响已落盘的成品。
+  if (process.env.RESEND_API_KEY && process.env.DELIVERY_EMAIL) {
+    try {
+      await sendEmail(html, process.env.RESEND_API_KEY, process.env.DELIVERY_EMAIL);
+    } catch (err) {
+      console.error(`resend email failed (digest already archived): ${err.message}`);
+    }
+  } else {
+    console.log('resend skipped (RESEND_API_KEY / DELIVERY_EMAIL not configured) — 仅落盘归档');
+  }
   // Server酱 微信推送(可选):SERVERCHAN_SENDKEY 未配则跳过,失败不影响已发的邮件
   if (process.env.SERVERCHAN_SENDKEY) {
     try {
@@ -301,10 +311,10 @@ async function deliver(html) {
 // -- Main --------------------------------------------------------------------
 
 async function main() {
-  // 1. Validate env (DRY_RUN only needs GLM — it dumps HTML to a file instead of emailing)
-  const required = process.env.DRY_RUN
-    ? ['GLM_API_KEY']
-    : ['GLM_API_KEY', 'RESEND_API_KEY', 'DELIVERY_EMAIL'];
+  // 1. Validate env: 只强制要求 GLM_API_KEY (生成日报用)。
+  // RESEND_API_KEY / DELIVERY_EMAIL / SERVERCHAN_SENDKEY 都是可选推送渠道,
+  // 未配则跳过对应推送, 不影响生成和落盘。
+  const required = ['GLM_API_KEY'];
   const missing = required.filter((k) => !process.env[k]);
   if (missing.length) {
     console.error(`Missing env: ${missing.join(', ')}`);
