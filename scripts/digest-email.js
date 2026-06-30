@@ -10,6 +10,14 @@
 // Env: GLM_API_KEY, RESEND_API_KEY, DELIVERY_EMAIL, GLM_MODEL (default glm-4.6)
 // ============================================================================
 
+import { writeFileSync, mkdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+// ESM 下没有 __dirname, 手动构造
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 // -- Constants ---------------------------------------------------------------
 
 const FEED_X_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json';
@@ -267,22 +275,18 @@ async function deliver(html) {
   // 落盘成品日报归档(无论是否 DRY_RUN 都存): digest/YYYY-MM-DD.html + .md
   // 失败不中断主流程, 只记日志
   try {
-    const fs = require('fs');
-    const path = require('path');
-    const dir = path.join(__dirname, '..', 'digest');
-    fs.mkdirSync(dir, { recursive: true });
+    const dir = join(__dirname, '..', 'digest');
+    mkdirSync(dir, { recursive: true });
     const stamp = todayStamp();
-    fs.writeFileSync(path.join(dir, `${stamp}.html`), html, 'utf8');
-    fs.writeFileSync(path.join(dir, `${stamp}.md`), htmlToMarkdown(html), 'utf8');
+    writeFileSync(join(dir, `${stamp}.html`), html, 'utf8');
+    writeFileSync(join(dir, `${stamp}.md`), htmlToMarkdown(html), 'utf8');
     console.log(`archived: digest/${stamp}.html + .md`);
   } catch (e) {
     console.error(`archive failed (continue to send): ${e.message}`);
   }
 
   if (process.env.DRY_RUN) {
-    const { writeFileSync } = require('fs');
-    const { dirname, join } = require('path');
-    const outPath = join(dirname(__filename), 'digest-preview.html');
+    const outPath = join(__dirname, 'digest-preview.html');
     writeFileSync(outPath, html);
     console.log(`DRY_RUN: wrote ${outPath} (${html.length} chars)`);
     return;
