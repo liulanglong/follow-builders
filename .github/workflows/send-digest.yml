@@ -1,11 +1,8 @@
 name: Send Daily Digest Email
 
-# 定时触发: GitHub 原生 schedule, 每天 UTC 1:00 (北京 9:00) 自动跑。
-# 同时保留 workflow_dispatch, 方便手动测试。
-# cron 用 UTC, 北京 9:00 = UTC 1:00。
+# 由 cron-job.org 定时打 workflow_dispatch 触发(北京 9:00)。
+# 只用 cron-job.org 外部触发, 不用 GitHub schedule。
 on:
-  schedule:
-    - cron: '0 1 * * *'
   workflow_dispatch: {}
 
 permissions:
