@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 拉完整历史, 供后面 push 前 rebase
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -34,4 +36,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add digest/*.html digest/*.md 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: archive digest [skip ci]"
+          # push 前先 rebase 到远程最新, 避免运行期间 main 前进导致 push 被拒
+          git pull --rebase origin main
           git push
