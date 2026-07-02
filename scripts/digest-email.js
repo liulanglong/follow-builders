@@ -159,6 +159,58 @@ async function callGLM(systemText, userText, model) {
   throw lastErr;
 }
 
+// -- Fallback digest (GLM 不可用时, 用原始素材直接拼一份降级日报) ------------
+// GLM 欠费/限流/抖动时, 不让整条产出链路断掉。把已拉到的素材铺成 HTML,
+// 落盘 + 推送照常进行, 顶部加醒目提示让读者知道是降级版。
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function buildFallbackHtml(builders, podcasts, blogs, reason) {
+  const parts = [];
+  parts.push(`<h1>AI Builders 日报 · ${todayLong()}</h1>`);
+  parts.push(
+    `<p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:10px 12px;color:#92400e;">` +
+    `⚠️ <strong>AI 加工暂不可用,以下为原始素材快照。</strong>原因:${escapeHtml(reason)}。` +
+    `素材本身完整,GLM 恢复后次日将自动回到精编版。</p>`
+  );
+
+  if (builders.length) {
+    parts.push(`<h2>X / 推特</h2>`);
+    for (const b of builders) {
+      const tweets = (b.tweets || []).slice().sort((a, c) => (c.likes || 0) - (a.likes || 0)).slice(0, MAX_TWEETS_PER_BUILDER);
+      if (!tweets.length) continue;
+      parts.push(`<div class="item"><h3>${escapeHtml(b.name || b.handle)} (${escapeHtml(b.bio || '')})</h3>`);
+      for (const t of tweets) {
+        parts.push(`<p>${escapeHtml(t.text || '')}` + (t.url ? ` <a href="${escapeHtml(t.url)}">详情</a>` : '') + `</p>`);
+      }
+      parts.push(`</div>`);
+    }
+  }
+
+  if (blogs.length) {
+    parts.push(`<h2>官方博客</h2>`);
+    for (const b of blogs.slice(0, MAX_BLOG_POSTS)) {
+      parts.push(`<div class="item"><h3>${escapeHtml(b.name)}: ${escapeHtml(b.title || '')}</h3>`);
+      parts.push(`<p>${escapeHtml((b.content || '').slice(0, BLOG_CONTENT_CHARS))}` + (b.url ? ` <a href="${escapeHtml(b.url)}">详情</a>` : '') + `</p></div>`);
+    }
+  }
+
+  if (podcasts.length) {
+    parts.push(`<h2>播客</h2>`);
+    for (const p of podcasts.slice(0, MAX_PODCAST_EPISODES)) {
+      parts.push(`<div class="item"><h3>${escapeHtml(p.name)} — ${escapeHtml(p.title || '')}</h3>`);
+      parts.push(`<p>${escapeHtml((p.transcript || '').slice(0, PODCAST_TRANSCRIPT_CHARS))}` + (p.url ? ` <a href="${escapeHtml(p.url)}">详情</a>` : '') + `</p></div>`);
+    }
+  }
+
+  parts.push(`<p class="footer">由 Follow Builders 技能自动生成 · <a href="${REPO_URL}">详情</a></p>`);
+  return parts.join('\n');
+}
+
 // -- Email (Resend) — HTML body with 详情 hyperlinks -------------------------
 
 // GLM sometimes wraps its HTML in ``` fences; strip them so the email renders.
@@ -388,16 +440,30 @@ async function main() {
     `=== OFFICIAL BLOGS 素材 ===\n${buildBlogsText(blogs)}\n` +
     `=== PODCASTS 素材 ===\n${buildPodcastsText(podcasts)}`;
 
-  // 5. GLM remix
-  const digestText = await callGLM(systemText, userText, model);
+  // 5. GLM remix (失败时降级到原始素材版, 保证日报每天都能产出)
+  let digestText;
+  let degraded = false;
+  let degradeReason = '';
+  try {
+    digestText = await callGLM(systemText, userText, model);
+  } catch (err) {
+    // GLM 欠费/限流/抖动: 不中断, 用原始素材拼一份降级日报, 照常落盘推送
+    degraded = true;
+    degradeReason = err.message;
+    console.error(`GLM failed, falling back to raw-material digest: ${err.message}`);
+    digestText = buildFallbackHtml(builders, podcasts, blogs, err.message);
+  }
 
-  // 6. Send email
-  await deliver(wrapHtml(sanitizeFragment(digestText)));
+  // 6. Send email (降级版走 wrapHtml 前先不 sanitize, 因为它本身是合法片段;
+  //    正常版才需要 sanitizeFragment 去掉 GLM 偶尔加的 ```html 围栏)
+  const finalHtml = wrapHtml(degraded ? digestText : sanitizeFragment(digestText));
+  await deliver(finalHtml);
 
   console.log(JSON.stringify({
     status: 'ok',
     method: 'email',
-    model,
+    degraded,
+    ...(degraded ? { degradeReason } : { model }),
     builders: builders.length,
     podcasts: podcasts.length,
     blogs: blogs.length,
