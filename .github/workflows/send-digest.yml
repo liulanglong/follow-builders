@@ -22,11 +22,9 @@ jobs:
       - name: Generate and send digest
         working-directory: scripts
         env:
-          # LLM 走 Anthropic 兼容接口(MiniMax-M2.7 等)。key 优先 ANTHROPIC_API_KEY,
-          # 回退 MINIMAX_API_KEY/GLM_API_KEY, 便于复用已有 secret。
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          # LLM 走智谱 GLM Anthropic 兼容接口, 复用 Pro 包年额度。
+          # key 读 GLM_API_KEY(脚本里 GLM_API_KEY || ANTHROPIC_API_KEY || MINIMAX_API_KEY)。
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           DELIVERY_EMAIL: ${{ secrets.DELIVERY_EMAIL }}

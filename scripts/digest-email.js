@@ -382,7 +382,7 @@ async function main() {
   // RESEND_API_KEY / DELIVERY_EMAIL / SERVERCHAN_SENDKEY 都是可选推送渠道,
   // 未配则跳过对应推送, 不影响生成和落盘。
   if (!LLM_API_KEY) {
-    console.error('Missing env: ANTHROPIC_API_KEY / MINIMAX_API_KEY (任一)');
+    console.error('Missing env: GLM_API_KEY (智谱 Pro 套餐 key, 用于 Anthropic 兼容接口)');
     process.exit(1);
   }
   const model = process.env.LLM_MODEL || 'glm-5';
