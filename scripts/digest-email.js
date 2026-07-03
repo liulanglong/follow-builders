@@ -7,7 +7,7 @@
 // remix a Chinese digest, and emails it via Resend. Built to run in a GitHub
 // Actions cron — no local agent, no node_modules needed (Node 20 fetch).
 //
-// Env: GLM_API_KEY, RESEND_API_KEY, DELIVERY_EMAIL, GLM_MODEL (default glm-4.6)
+// Env: ANTHROPIC_API_KEY (或 MINIMAX_API_KEY), ANTHROPIC_BASE_URL, LLM_MODEL (default MiniMax-M2.7)
 // ============================================================================
 
 import { writeFileSync, mkdirSync } from 'node:fs';
@@ -27,7 +27,12 @@ const FEED_BLOGS_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-bu
 const PROMPTS_BASE = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/prompts';
 const PROMPT_FILES = ['digest-intro.md', 'summarize-tweets.md', 'summarize-blogs.md', 'summarize-podcast.md', 'translate.md'];
 
-const GLM_ENDPOINT = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
+// LLM 调用: 走 Anthropic 兼容接口(MiniMax-M2.7 等都通过这套协议暴露)。
+// endpoint/base_url/key/model 全部从环境变量读, 换模型只改 secret 不改代码。
+const LLM_ENDPOINT = process.env.ANTHROPIC_BASE_URL
+  ? `${process.env.ANTHROPIC_BASE_URL.replace(/\/$/, '')}/v1/messages`
+  : 'https://api.minimaxi.com/anthropic/v1/messages';
+const LLM_API_KEY = process.env.ANTHROPIC_API_KEY || process.env.MINIMAX_API_KEY || process.env.GLM_API_KEY;
 const REPO_URL = 'https://github.com/zarazhangrui/follow-builders';
 
 // Truncation budgets — keep total well under GLM's 128K context
@@ -121,35 +126,36 @@ function buildBlogsText(blogs = []) {
   return lines.join('\n');
 }
 
-// -- GLM call ----------------------------------------------------------------
+// -- LLM call (Anthropic 兼容接口, 适配 MiniMax-M2.7 等) ---------------------
 
-async function callGLM(systemText, userText, model) {
+async function callLLM(systemText, userText, model) {
+  // Anthropic Messages API: system 单独传, messages 只放 user/assistant
   const body = {
     model,
-    messages: [
-      { role: 'system', content: systemText },
-      { role: 'user', content: userText }
-    ],
-    temperature: 0.7,
-    top_p: 0.9,
+    system: systemText,
+    messages: [{ role: 'user', content: userText }],
     max_tokens: 8192
   };
 
   let lastErr;
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      const res = await fetch(GLM_ENDPOINT, {
+      const res = await fetch(LLM_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.GLM_API_KEY}`
+          'x-api-key': LLM_API_KEY,
+          'anthropic-version': '2023-06-01'
         },
         body: JSON.stringify(body)
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(`GLM API ${res.status}: ${data?.error?.message || JSON.stringify(data)}`);
-      const content = data?.choices?.[0]?.message?.content;
-      if (!content) throw new Error('GLM returned empty content');
+      if (!res.ok) throw new Error(`LLM API ${res.status}: ${data?.error?.message || data?.message || JSON.stringify(data)}`);
+      // Anthropic 响应: content 是数组, 每项 {type, text}; 取所有 text 拼接
+      const content = Array.isArray(data?.content)
+        ? data.content.filter((b) => b.type === 'text').map((b) => b.text).join('\n')
+        : null;
+      if (!content) throw new Error('LLM returned empty content');
       return content;
     } catch (err) {
       lastErr = err;
@@ -175,7 +181,7 @@ function buildFallbackHtml(builders, podcasts, blogs, reason) {
   parts.push(
     `<p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:10px 12px;color:#92400e;">` +
     `⚠️ <strong>AI 加工暂不可用,以下为原始素材快照。</strong>原因:${escapeHtml(reason)}。` +
-    `素材本身完整,GLM 恢复后次日将自动回到精编版。</p>`
+    `素材本身完整,LLM 恢复后次日将自动回到精编版。</p>`
   );
 
   if (builders.length) {
@@ -367,16 +373,15 @@ async function deliver(html) {
 // -- Main --------------------------------------------------------------------
 
 async function main() {
-  // 1. Validate env: 只强制要求 GLM_API_KEY (生成日报用)。
+  // 1. Validate env: 只强制要求 LLM key (生成日报用), 兼容三种变量名。
+  // ANTHROPIC_API_KEY / MINIMAX_API_KEY 任一即可; base_url 不配则默认 MiniMax 国际版。
   // RESEND_API_KEY / DELIVERY_EMAIL / SERVERCHAN_SENDKEY 都是可选推送渠道,
   // 未配则跳过对应推送, 不影响生成和落盘。
-  const required = ['GLM_API_KEY'];
-  const missing = required.filter((k) => !process.env[k]);
-  if (missing.length) {
-    console.error(`Missing env: ${missing.join(', ')}`);
+  if (!LLM_API_KEY) {
+    console.error('Missing env: ANTHROPIC_API_KEY / MINIMAX_API_KEY (任一)');
     process.exit(1);
   }
-  const model = process.env.GLM_MODEL || 'glm-4.6';
+  const model = process.env.LLM_MODEL || 'MiniMax-M2.7';
 
   // 2. Fetch feeds + prompts in parallel
   const [feedX, feedPodcasts, feedBlogs, ...promptTexts] = await Promise.all([
@@ -440,17 +445,17 @@ async function main() {
     `=== OFFICIAL BLOGS 素材 ===\n${buildBlogsText(blogs)}\n` +
     `=== PODCASTS 素材 ===\n${buildPodcastsText(podcasts)}`;
 
-  // 5. GLM remix (失败时降级到原始素材版, 保证日报每天都能产出)
+  // 5. LLM remix (失败时降级到原始素材版, 保证日报每天都能产出)
   let digestText;
   let degraded = false;
   let degradeReason = '';
   try {
-    digestText = await callGLM(systemText, userText, model);
+    digestText = await callLLM(systemText, userText, model);
   } catch (err) {
-    // GLM 欠费/限流/抖动: 不中断, 用原始素材拼一份降级日报, 照常落盘推送
+    // LLM 欠费/限流/抖动: 不中断, 用原始素材拼一份降级日报, 照常落盘推送
     degraded = true;
     degradeReason = err.message;
-    console.error(`GLM failed, falling back to raw-material digest: ${err.message}`);
+    console.error(`LLM failed, falling back to raw-material digest: ${err.message}`);
     digestText = buildFallbackHtml(builders, podcasts, blogs, err.message);
   }
 
