@@ -24,24 +24,242 @@
 </head>
 <body>
 <div class="wrap">
-<h1>AI Builders 日报 · 2026年7月2日</h1>
+<h1>AI Builders 日报 · Friday, July 3, 2026</h1>
+<p style="background:#fef3c7;border-left:4px solid #f59e0b;padding:10px 12px;color:#92400e;">⚠️ <strong>AI 加工暂不可用,以下为原始素材快照。</strong>原因:LLM API 401: 令牌已过期或验证不正确。素材本身完整,LLM 恢复后次日将自动回到精编版。</p>
 <h2>X / 推特</h2>
-<div class="item"><h3>Swyx（Latent Space 播客主理人）</h3><p>AI Engineer 大会上，Christopher Manning 和 absha 两位演讲者凭借实力赢得了双倍时长 Keynote 待遇，现场观众爆满，线上观众数量更是有望超过现场的 <span class="hl">1000 倍</span>。Swyx 解释他只会在确认演讲者和内容都值得时才发出双倍时长邀请，而这两位在 <span class="hl">sandboxing 和 world models</span> 上的分享获得了热烈反响。<a href="https://x.com/swyx/status/2072562702703046855">详情</a></p></div>
-<div class="item"><h3>Peter Yang（AI 教程创作者）</h3><p>Claude Fable 5 强势回归，但免费体验窗口只到 <span class="hl">7月7日</span>。Peter Yang 发布了一套实战教程，覆盖 Fable 5 的五大应用场景：寻找值得 Fable 处理的工作、获取人生和商业建议、让项目达到可发布状态、规划下一个大方向、以及重构项目或代码库。他评价道：「Fable 5 比任何其他模型都高出一个量级，希望 GPT 5.6 能追上这个水准。」<a href="https://x.com/petergyang/status/2072458983886205333">详情</a></p></div>
-<div class="item"><h3>Google Labs</h3><p>Google Labs 宣布将于 <span class="hl">2026年7月31日</span> 停止 MusicFX 和 MusicFX DJ 服务，所有资源将集中投入新一代音乐创作工具 <span class="hl">Google Flow Music</span> 的开发。官方表示：「这些早期实验拓展了 AI 实时音乐创作的边界，我们正在将所有积累的经验整合到一个长期可持续的音乐项目平台上。」用户可继续在 Google Flow Music 创作和混音。<a href="https://x.com/GoogleLabs/status/2072417166952136789">详情</a></p></div>
-<div class="item"><h3>Amjad Masad（Replit CEO）</h3><p>在「构建已变得简单」的时代，Replit 将更多精力转向帮助创业者触达市场、获得第一批客户和第一笔收入。Replit 宣布与 <span class="hl">Whop</span> 达成合作——Whop 是互联网上最好的变现平台之一，现在开发者可以直接在上面销售自己的 Replit 应用，实现从「做出产品」到「赚到真钱」的完整闭环。<a href="https://x.com/amasad/status/2072385092824260748">详情</a></p></div>
-<div class="item"><h3>Guillermo Rauch（Vercel CEO）</h3><p>Vercel 发布了两项重要更新：其一，通过 <span class="hl">Dockerfile версия</span> 配置，可以在 Vercel Fluid 环境（含 Active CPU）上运行 WordPress，连接 PlanetScale 的 MySQL，整个部署流程包括云端 docker build 在内仅需 <span class="hl">30秒</span>，一行命令即可完成。其二，Vercel 正在为 <span class="hl">agentic deployments</span> 引入 dry-run 步骤——AI agent 在正式部署前会先进行模拟检查（类似 tsc --noEmit 或 next build），从而最小化成本和风险。<a href="https://x.com/rauchg/status/2072398926175404250">详情</a></p></div>
-<div class="item"><h3>Alex Albert（Anthropic Research）</h3><p>Fable 终于回来了。Alex Albert 在 Anthropic 官方账号发布欢迎帖，确认所有含用量配额的付费计划均可在 <span class="hl">7月7日前</span> 使用 Fable 5，每周可用量中最高有 <span class="hl">50%</span> 可切换至 Fable 5，超出配额后自动切换回其他模型继续消耗积分。<a href="https://x.com/alexalbert__/status/2072404717490360727">详情</a></p></div>
-<div class="item"><h3>Aaron Levie（Box CEO）</h3><p>Devin 近期推进的 <span class="hl">agentic mapreduce</span> 概念展示了为什么未来需要 <span class="hl">100 倍更多的 AI 推理算力</span>：大量 agent 协同处理海量数据（代码），完成人类根本不可能完成的任务。具体流程是「Devin 跨仓库映射相关信号，向有限分片发送专注型 agent 进行扇出分析，将结果归约成一份报告，然后在隔离沙箱中验证严重漏洞后才标记为确认」。Levie 指出，这类能力通常需要同时部署多种模型（前沿 frontier 模型加低成本模型组合），因为用例涉及的海量 token 是单一模型无法承受的——这将成为应用 AI 层的核心价值主张。<a href="https://x.com/levie/status/2072519377371459836">详情</a></p></div>
-<div class="item"><h3>Garry Tan（Y Combinator 总裁兼 CEO）</h3><p>Anthropic 宣布聘请加州大学伯克利分校 EECS 系主任 <span class="hl">James Landay</span> 担任研究副总裁，这是继一系列重磅人才收购之后 YC 眼中的又一枚「超级引援」。Garry Tan 评价：「Anthropic 正在强势推进，人才吸引力已经进入疯狂模式。」同一天他还指出 GPU 集群向消费级设备扩张是科技界「报道最不充分的故事之一」。<a href="https://x.com/garrytan/status/2072331451270606933">详情</a></p></div>
-<div class="item"><h3>Matt Turck（FirstMark Capital VC）</h3><p>Lime  scooters 在负债 <span class="hl">10亿美元</span>、年营收增长近 <span class="hl">30%</span>、连续三年实现正向自由现金流的情况下完成 IPO，成为 2026 年的明星上市案例。Matt Turck 分析了背后原因：精妙的金融工程（IPO 偿清有毒贷款并转股）、Uber 持股 <span class="hl">22%</span> 并直接导流、作为 micromobility 血战幸存者笑到最后。他感慨：「2026 年的热门 IPO 品牌是 AOL、Evernote、Vimeo 和 Lime scooter。」<a href="https://x.com/mattturck/status/2072419592354529712">详情</a></p></div>
-<div class="item"><h3>Zara Zhang（Builder，Follow Builders 作者）</h3><p>关于如何构建一个 Skill：正确的顺序是「以 Skill 结束，而非以 Skill 开始」——先完整跑通工作流，最后一步才是把工作流封装成可复用的 Skill。此外，她分享了一个实用技巧：可以在 <span class="hl">Codex</span> 中将模型切换为 <span class="hl">GLM</span>，为开发者提供更多模型选择空间。<a href="https://x.com/zarazhangrui/status/2072381929366987087">详情</a></p></div>
-<div class="item"><h3>Nikunj Kothari（FPV Ventures 合伙人）</h3><p>过去两个月，Nikunj 有四位好朋友离开了非常稳定的职位加入 AI 实验室，OpenAI 和 Anthropic 的人才漩涡正在加剧。核心吸引力在于：加入这些机构既能参与「世界上最具影响力的公司建设」，又能获得 <span class="hl">IPO 前流动性的机会</span>。他反驳了一个观点：「大多数 VC 其实赚不到改变命运的钱，最好的 VC 才能存活并繁荣。」<a href="https://x.com/nikunj/status/2072344802570756121">详情</a></p></div>
-<div class="item"><h3>Peter Steinberger（OpenClaw 维护者）</h3><p>Steinberger 表示他在寻找旧金山一个可供 OpenClaw 维护团队私密聚几天的地方，用来「烹饪」一些大项目。同时他高度评价了 Steve Yegge 的远见——「Steve 早就在讲 factory 的故事，大多数 visionaries 都走得很早，现在所有人终于都在建 factory 了。」<a href="https://x.com/steipete/status/2072532278476148881">详情</a></p></div>
-<div class="item"><h3>Aditya Agarwal（South Park Commons 普通合伙人）</h3><p>Aditya 观察到一个有趣的现象：旧金山偶尔会遇到一些非常聪明但天生悲观的人，他们往往来自增长型或华尔街背景。他的第一反应是：「你为什么要来这座城市？我们这里靠乐观运转，你是来这里做悲伤里的逆行者吗？」<a href="https://x.com/adityaag/status/2072449611550380526">详情</a></p></div>
-<div class="item"><h3>Claude（Anthropic 官方账号）</h3><p>Anthropic 官方正式确认 Fable 5 回归：所有含用量配额的付费计划可在 <span class="hl">7月7日前</span> 使用 Fable 5，每周用量中最高 <span class="hl">50%</span> 可分配给 Fable 5，超出后自动切换其他模型，剩余用量可通过积分继续使用 Fable。同时，官方提醒：如果 Claude Code 中误判了某条请求，可以运行 <span class="hl">/feedback</span> 提交反馈，这将帮助团队持续优化分类器、减少误报。<a href="https://x.com/claudeai/status/2072402639644766602">详情</a></p></div>
+<div class="item"><h3>Swyx (achieve ambition with intentionality, intensity, integrity &amp; insanity.
+
+affiliations:
+- @dxtipshq 
+- @cognition
+- @temporalio
+- @aidotengineer
+- @latentspacepod)</h3>
+<p>for what it's worth, i only invite double-length track keynotes when I'm very sure that both speaker and content deserve it. Today, @chrmanning and @abshkbh did double duty at AIE and by all accounts* people loved the opportunity to go deeper on sandboxing and world models. Look at this insane room - and the online audience is going to be &gt;1000x this!!
+
+*i unfortunately have to do show duties so rely on secondhand accounts <a href="https://x.com/swyx/status/2072562702703046855">详情</a></p>
+</div>
+<div class="item"><h3>Thibault Sottiaux (Codex &amp; ChatGPT @OpenAI)</h3>
+<p>It's happening https://t.co/PtS0ZoYL09 <a href="https://x.com/thsottiaux/status/2072410623380468190">详情</a></p>
+</div>
+<div class="item"><h3>Peter Yang (Practical AI tutorials and interviews for busy people | Get my best AI skills and guides at https://t.co/6VAA6p81x6)</h3>
+<p>Claude Fable 5 is finally back, but you only have until July 7 to use it on your Claude subscription.
+
+I made a new tutorial walking through 5 use cases worth trying Fable on:
+
+→ Find Fable-worthy work
+→ Get life and business advice
+→ Make projects ship-ready
+→ Plan the next big thing
+→ Refactor your project or codebase
+
+As usual, it’s no BS, and I show you Fable’s actual output.
+
+📌 Watch now: https://t.co/XElMEV3FwK <a href="https://x.com/petergyang/status/2072458983886205333">详情</a></p>
+<p>As someone still trying to learn how to read code this is great! Installing the explain-diff skill asap https://t.co/lChjp2D7kS <a href="https://x.com/petergyang/status/2072525669704384612">详情</a></p>
+<p>Here's my Fable 5 vibe check:
+
+It's still really ****ing good. 
+
+This is a step function above any other model. Hope GPT 5.6 can match. https://t.co/p9N7cG86QW <a href="https://x.com/petergyang/status/2072470191511113732">详情</a></p>
+</div>
+<div class="item"><h3>Thariq (Claude Code @anthropicai.   prev YC W20, @southpkcommons, @medialab)</h3>
+<p>hello from AI engineer! https://t.co/J8sFn5pbyC <a href="https://x.com/trq212/status/2072360902964511171">详情</a></p>
+<p>HTML mentioned https://t.co/lWYyfXjmWS <a href="https://x.com/trq212/status/2072366310416425053">详情</a></p>
+</div>
+<div class="item"><h3>Google Labs (Google’s home for our latest AI tools and experiments.)</h3>
+<p>Every good chord progression needs a resolution. 🎹
+
+To focus on building @GoogleFlowMusic - our tool for creating, sharing, and remixing original music - we will be saying a fond farewell to MusicFX and MusicFX DJ on July 31, 2026.
+
+These early experiments pushed the boundaries of AI for real-time music creation, and we're taking everything we learned from them to provide a long-term home for musical projects.
+
+Keep jamming at https://t.co/3XMUc2pkzU 🎵 <a href="https://x.com/GoogleLabs/status/2072417166952136789">详情</a></p>
+</div>
+<div class="item"><h3>Amjad Masad (ceo @replit. civilizationist)</h3>
+<p>Now that building is easy, we’ve been increasingly focused on getting entrepreneurs to market, helping them reach their first customer and first dollar.
+
+Whop is one of the best places on the internet to monetize your creations — and now you can sell your Replit apps on there. https://t.co/lEGZGn51Wg <a href="https://x.com/amasad/status/2072385092824260748">详情</a></p>
+</div>
+<div class="item"><h3>Guillermo Rauch (@vercel CEO)</h3>
+<p>WordPress on @vercel Fluid with Active CPU from a single 𝙳𝚘𝚌𝚔𝚎𝚛𝚏𝚒𝚕𝚎.𝚟𝚎𝚛𝚌𝚎𝚕. MySQL on @planetscale. 30s deployments incl. "𝚍𝚘𝚌𝚔𝚎𝚛 𝚋𝚞𝚒𝚕𝚍" in the cloud. Just one command: 𝚗̶𝚘̶𝚠̶ 𝚟𝚎𝚛𝚌𝚎𝚕. https://t.co/q1X5ZOFVIx <a href="https://x.com/rauchg/status/2072463293654942090">详情</a></p>
+<p>Agents love to check their work before they push. 
+
+You probably see it in the form of 𝚗𝚘𝚍𝚎 --𝚌𝚑𝚎𝚌𝚔, 𝚝𝚜𝚌 --𝚗𝚘𝙴𝚖𝚒𝚝, 𝚗𝚎𝚡𝚝 𝚋𝚞𝚒𝚕𝚍, etc all over your agent sessions.
+
+We’re now shipping the dry-run step for agentic deployments, minimizing costs and risk. https://t.co/HpOXSROT3X <a href="https://x.com/rauchg/status/2072398926175404250">详情</a></p>
+<p>I really enjoyed using 𝚙𝚘𝚛𝚝𝚕𝚎𝚜𝚜 by @ctatedev – http was a non-starter for local wp development! <a href="https://x.com/rauchg/status/2072463961597878762">详情</a></p>
+</div>
+<div class="item"><h3>Alex Albert (Research @AnthropicAI. Opinions are my own!)</h3>
+<p>Welcome back to the world Fable!! https://t.co/krcdkuYId8 <a href="https://x.com/alexalbert__/status/2072404717490360727">详情</a></p>
+</div>
+<div class="item"><h3>Aaron Levie (ceo @box - your business lives in content. unleash it with AI)</h3>
+<p>If you’ve ever wondered why we will need 100X more AI inference in the future, and  what it’s going to be driven by, this is another good example. 
+
+Devin pushes forward an idea of agentic mapreduce, which means we’ll now have swarms of agents that are processing large amounts of data (code) to handle tasks that humans never could have done before.
+
+“Devin maps relevant signals across the repo, fans out focused agents over bounded shards, reduces their findings into one report, then verifies serious vulnerabilities in isolated sandboxes before marking them confirmed.”
+
+In this case it’s code security, but there are tons of other use-cases in code and knowledge work. We see this at Box with customers that want to process and understand millions of documents for risk, insights, relationships, and more. This will play out in pharma, banking, and many other industries across all forms of unstructured data.
+
+As an aside, these types of capabilities are generally only possible when you can deploy a variety of models (both the frontier and lower cost) because of the sheer amount of tokens that go into these use-cases. This is going to be a major value proposition for the applied AI layer. <a href="https://x.com/levie/status/2072519377371459836">详情</a></p>
+</div>
+<div class="item"><h3>Garry Tan (President &amp; CEO @ycombinator —Founder @garryslist—Creator of GStack &amp; GBrain—designer/engineer who helps founders—SF Dem accelerating the boom loop)</h3>
+<p>Mega get, head of UC Berkeley EECS omg
+
+Anthropic is on a tear https://t.co/6lTQhG7BIo <a href="https://x.com/garrytan/status/2072331451270606933">详情</a></p>
+<p>Most underreported story in all of tech https://t.co/IfhGLmHwuL <a href="https://x.com/garrytan/status/2072402517397573717">详情</a></p>
+<p>https://t.co/gTrjV7mcxf https://t.co/7r4wY0VvO0 <a href="https://x.com/garrytan/status/2072461457195950446">详情</a></p>
+</div>
+<div class="item"><h3>Matt Turck (VC at @FirstMarkCap.  Host: MAD Podcast; Organizer: Data Driven NYC, Author: MAD Landscape.)</h3>
+<p>Fascinated by Lime going public - in an age where AI gets all the attention, how does a scooter company with $1B in debt pull off a successful IPO literally after expressing "substantial doubt" that they might not even survive the year?
+
+* Impressive financial engineering - the IPO paid off the toxic loans and converted the rest to equity, so the slate is clean
+
+* Uber owns 22% of Lime and refers riders directly to Lime, so obviously a great backstop and partner
+
+* They've actually been FCF positive for 3 consecutive years with revenue growing nearly 30% YoY
+
+* Something about being the last man standing and surviging the micromobility bloodbath (RIP Bird).  Never give up! <a href="https://x.com/mattturck/status/2072419592354529712">详情</a></p>
+<p>The year is 2026 and the hot IPO brands right now are AOL, Evernote, Vimeo and Lime scooters <a href="https://x.com/mattturck/status/2072462125474181623">详情</a></p>
+</div>
+<div class="item"><h3>Zara Zhang (Builder. Dangerously skips permissions. Harvard’17. GitHub: https://t.co/KCuEajezlL YouTube: https://t.co/8xzbGWtf6w)</h3>
+<p>HOW TO BUILD A SKILL
+You don't START with a skill. You END with a skill.
+Building the skill is the last step of your workflow, not the first step https://t.co/ngvvnml9uQ https://t.co/dqohk7MJwT <a href="https://x.com/zarazhangrui/status/2072381929366987087">详情</a></p>
+<p>PSA: You can change Codex's model to GLM https://t.co/G3RQfWiS4j https://t.co/BeGZABjgTQ <a href="https://x.com/zarazhangrui/status/2072391971721884073">详情</a></p>
+<p>Full video on YouTube: https://t.co/FVBCFHXAqK <a href="https://x.com/zarazhangrui/status/2072384777785888875">详情</a></p>
+</div>
+<div class="item"><h3>Nikunj Kothari (partner @fpvventures - investing in seed/A. previous: early hire @meter, @opendoor, @atlassian &amp; others. love @shimoleejhaveri + 👦👧)</h3>
+<p>The talent vortex of @OpenAI and @AnthropicAI is only getting crazier.. in the last 2 months, four personal friends have left VERY established roles to join the labs. 
+
+The dual draw of building one of the most consequential companies plus it being pre-IPO and getting liquidity is just too hard to pass up. 
+
+This means having strong conviction and MASSIVE ambition if you choose to do it on your own.
+
+My only counter to Xavi’s position will be that most VCs actually won’t make a lot of money.. at least life changing money. Some of them have actually deflected to the labs knowing this. Like any role the best ones will thrive and survive! <a href="https://x.com/nikunj/status/2072344802570756121">详情</a></p>
+<p>Murica 🇺🇸⚽️ https://t.co/BWsqCu22Dw <a href="https://x.com/nikunj/status/2072522778327371819">详情</a></p>
+<p>Fable is back https://t.co/ceX26h5PcT <a href="https://x.com/nikunj/status/2072406317617262753">详情</a></p>
+</div>
+<div class="item"><h3>Peter Steinberger (Polyagentmorous ClawFather. Came back from retirement to mess with AI and help a lobster take over the world.
+@OpenClaw🦞 + @OpenAI)</h3>
+<p>I’m looking for a semi-private hack space for a few days in SF for me and some of the OpenClaw maintainers. We need to cook. DM leads my way 🙏🦞 <a href="https://x.com/steipete/status/2072475858435276840">详情</a></p>
+<p>How did I ever function without AI? 
+cc chefcook @theo https://t.co/G0LJNvA3Kb <a href="https://x.com/steipete/status/2072447453622882338">详情</a></p>
+<p>Never thought I give @Steve_Yegge a shoutout. He was just early, like most visionaries. Now everyone is building factories. <a href="https://x.com/steipete/status/2072532278476148881">详情</a></p>
+</div>
+<div class="item"><h3>Dan Shipper (ceo @every | the only subscription you need to stay at the edge of AI)</h3>
+<p>IVE BEEN MEANING TO DO THIS
+
+SO COOL https://t.co/eFxAG4GdYi <a href="https://x.com/danshipper/status/2072436587665797518">详情</a></p>
+<p>FABLE IS BACK!!! https://t.co/H7fsnFZQVV <a href="https://x.com/danshipper/status/2072402230041272669">详情</a></p>
+<p>LET'S RIP FABLE TOKENS FROM THE JACUZZI https://t.co/denvBof2Yp <a href="https://x.com/danshipper/status/2072402843819212906">详情</a></p>
+</div>
+<div class="item"><h3>Aditya Agarwal (General Partner @SouthPkCommons, Co-Founder @Bevel_Health | Ex: Early Eng @facebook, CTO @Dropbox, Board @Flipkart | Optimist, Builder, Dad)</h3>
+<p>Every once in a while, I meet a very very smart but default-pessimistic person in SF. They are often from the growthy/wall-street part of the world.
+
+And my first thought is: "Why would you want to be in this city? We run on optimism. Are you here to be a contrarian in your sadness?" <a href="https://x.com/adityaag/status/2072449611550380526">详情</a></p>
+</div>
+<div class="item"><h3>Claude (Claude is an AI assistant built by @anthropicai to be safe, accurate, and secure. Talk to Claude on https://t.co/ZhTwG8d1e5 or download the app.)</h3>
+<p>All paid plans with usage included can access Fable 5 through July 7. You can use Fable 5 up to 50% of your weekly usage limit, after which you can switch to another model for the remainder of your usage. You can also continue using Fable via usage credits.
+
+More here: https://t.co/5reBCfXAqy <a href="https://x.com/claudeai/status/2072402639644766602">详情</a></p>
+<p>If one of your requests is mistakenly flagged in Claude Code, run /feedback to file a report. On https://t.co/XSKiQaAUU9 and Cowork, you can share feedback through the thumbs buttons. 
+
+This feedback helps us further tune these classifiers and reduce false positives over time. <a href="https://x.com/claudeai/status/2072402640907162072">详情</a></p>
+<p>Read the Fable 5 blog post here: https://t.co/iQymY0jQvY <a href="https://x.com/claudeai/status/2072402642836615273">详情</a></p>
+</div>
 <h2>播客</h2>
-<div class="item"><h3>AI & I by Every · AI Workflows Behind Every's Consulting Team</h3><p>知识工作正在变成「园艺」——你创造条件让植物生长，而不是亲手制造植物。Every 咨询团队负责人 Natalia 深度分享了 AI 落地的真实经验：她们内部部署的 AI agent <span class="hl">Claudie</span> 已能自主管理 LinkedIn、Twitter、经营仪表盘，并拥有独立的信任电池自我评估机制。但核心发现是：AI 在执行<span class="hl">标准化操作流程</span>上表现出色，仍需要两件事——持续监督（确保质量不滑坡）、以及人来发现数据背后的洞察和信号。因此 Every 选择购买专业 CRM（Attio）和项目管理工具（Asana），而不是继续用 Google Sheets + AI 粘合自己维护。Natalia 直言：「在这个时代，你可以用 AI 构建任何东西。问题是：你应该构建并长期维护它吗？」答案往往是——让专业公司来做那些需要持续维护的苦活。<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
+<div class="item"><h3>AI &amp; I by Every — The AI Workflows Behind Every's Consulting Team</h3>
+<p>Speaker 1 | 00:00 - 00:10
+You go and teach executives and other people at big companies how to use AI. And so I think what you're doing is a good window into how great operators and executives are starting to use this stuff.
+
+Speaker 2 | 00:10 - 00:16
+What Codex helped me do was basically create kind of like an operating system. My email knows what's going on
+
+Speaker 1 | 00:16 - 00:16
+Mhmm.
+
+Speaker 2 | 00:16 - 00:27
+More than I do. I'm just so bullish on all of the administrative tasks that will suddenly kind of like be taken care of because now we have this sort of like super alien tool that can support on those things.
+
+Speaker 1 | 00:27 - 01:03
+Knowledge work now is turning into something like gardening, where when you're gardening, you're creating the conditions for the growth to happen, but you're not like making the plant with your hands. Every is the only subscription you need to stay at the edge of AI. If you care about being on top of the latest models and using the latest tools, you have to subscribe to Every to separate out the signal from the noise. Go to every. Tosubscribe today.
+
+Speaker 1 | 01:03 - 01:05
+Natalia, welcome to the show.
+
+Speaker 2 | 01:05 - 01:06
+Thanks, Dan. Good to be back.
+
+Speaker 1 | 01:06 - 01:12
+So for people who missed your last episode, you are our head of consulting at Every.
+
+Speaker 2 | 01:12 - 01:13
+That's right.
+
+Speaker 1 | 01:13 - 01:22
+You are also the manager of Claudi, consulting's AI agent employee, which was, who was the star of our last episode together.
+
+Speaker 2 | 01:22 - 01:23
+Mhmm.
+
+Speaker 1 | 01:23 - 02:18
+And I wanted to bring you on because I feel like every couple months things shift so radically. And for me, you're one of the, like, bellwethers of how things are changing because you're an early adopter yourself, and you go and teach executives and other people at big companies how to use AI. And so I think what you're doing is a good, window into how, like, really great operators and executives are starting to use this stuff. So the last time we chatted, Claudie, which is the the internal AI employee agent that we built to basically help to run the consulting business, to, you know, send out sales proposals and manage the CRM and all that kind of stuff. Claudia was, like, this nascent thing that Mitesh, who's our senior, AI engineer, like, sort of, what's what's the word for it?
+
+Speaker 1 | 02:18 - 02:36
+He was, he was sort of, like, wizard avozing it in the background, like, making it work, minute by minute. And but I feel like now Claudia is, like, actually working. Like, the the model releases over the last couple months have have dramatically changed how much she's able to do. So give us an update on Claudie. How are things going there?
+
+Speaker 2 | 02:36 - 03:10
+You know, it's it's funny with the speed of AI. Claudie it feels like Claudie is, like, just not novel. You know, it's Claudie is an agent that does work for us every day. And Claudia has its own LinkedIn and Twitter feed and you know, manages our dashboards and you know, has a trust battery now that's new. So, you know, it's running on a loop to sort of like self evaluate performance and to improve itself given the feedback that we give it.
+
+Speaker 2 | 03:10 - 03:13
+And Claudie's thriving, I guess.
+
+Speaker 1 | 03:13 - 03:28
+One of the things that's interesting is you hired Claudie to do operations stuff, but you're also now hiring an operations person. So what have you learned about the uses and limits of these sorts of internal agents for stuff that you might want to hire a human for?
+
+Speaker 2 | 03:29 - 03:55
+Yeah, you know, it's really interesting. Think, you know, as we've all been using AI more, I think the thing that we keep coming back to is that AI is really good at executing against a standard operating procedure. And Claudia is exceptional at that. But Claudia still needs two things. One is it needs constant oversight and management to make sure that it's doing those things really well, actually.
+
+Speaker 2 | 03:55 - 04:20
+So you know, the sort of question of like taste and you know, reaching for excellence still requires direction and sort of managerial support, which, you know, can be quite tedious and time consuming. So there's still quite a bit of time involved there. And, and two is when you are working with people, you know, as much as I love working with Claudie, I want to interface with people, right? And I find that
+
+Speaker 1 | 04:20 - 04:25
+I can't really relate, but I, I see I see why someone might feel that way.
+
+Speaker 2 | 04:27 - 04:52
+And the reality is that, you know, while we do have all of these rich dashboards and all of this data that Claudia is populating, we need we need someone to surface what is interesting about that data, what the signals are, and to help lead those conversations. And so actually, I suspect that we will continue to expand the team to build on the data and information that Claudi surfaces so that we can actually do interesting things with it.
+
+Speaker 1 | 04:53 - 05:20
+One of the big things that you went through recently, which I think is super relevant to anyone inside of a big org or anyone running a software company, is you actually bought a CRM. And previously, it was all cloudy, glued together with Google Sheets, and I think there's this whole narrative running around. I think, honestly, SaaS docs are back, so maybe the narrative is a little bit less present than it used to. But it's still on people's minds. It's like, are you just gonna vibe code all SaaS?
+
+Speaker 1 | 05:20 - 05:41
+You know, like, Fable currently is banned, but I'm sure it will be back. Maybe it's even back by the time this episode comes out. But, like, if Fable can just one shot a c CMS, like, why would you use one? But you you you have the ability to make your own CMS, and we have enough resources internally for us to vibe code one, but you decided not to. Yeah.
+
+Speaker 1 | 05:41 - 05:47
+Or you decided to move off the the sort of homemade one onto a professional one. So why would you do that?
+
+Speaker 2 | 05:47 - 05:59
+Yeah. So despite my hopes and aspirations that I could do all of the things and, you know, become an engineer and maintain all of these engineering products that
+
+Speaker 1 | 05:59 - 06:01
+I've This one I can't relate to this one.
+
+Speaker 2 | 06:04 - 06:25
+It turns out there are actually private and public companies whose entire business it is to do these things really well. And sometimes these like very specific things really well. So, you know, we you know, I vibe coded a CRM tool that allowed us to manage our sort of like sales pipeline for a while.
+
+Speaker 1 | 06:25 - 06:33
+And It was managing in Google Sheets. So it was like Claude Claudia was the was the glue between what was going on in Slack and the meetings and Google Sheets.
+
+Speaker 2 | 06:33 - 07:04
+Yeah, exactly. So basically, Claudia had access to was able to read my email, was able to read our meeting note takers notes, was able to digest kind of like an inbound leads that came and then would track this all in a Google Sheet. And then, you know, eventually that became a database that we were managing. And these things just require maintenance, right? In order for the data quality to be good enough that you can do interesting things with it, you need to, you know, almost like Klaviyo need to be on top of the quality of the data.
+
+Speaker 2 | 07:04 - 07:33
+And so, it turns out, this is Atiyo's entire business. And so, know, think one of the challenges with AI, I certainly have is that in, you know, in the era of AI, you can build anything. I think I even said this in the last podcast. The question is, should you build and maintain whatever you actually build? And I think in this case, and probably in other use cases, also rolled out Asana for our project management system.
+
+Speaker 2 | 07:33 - 07:49
+I think we're able to do the scale of the work that we are able to do because of Atio, because of Asana, and be <a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
 <p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
 </div>
 </body>
