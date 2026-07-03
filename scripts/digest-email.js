@@ -7,7 +7,7 @@
 // remix a Chinese digest, and emails it via Resend. Built to run in a GitHub
 // Actions cron — no local agent, no node_modules needed (Node 20 fetch).
 //
-// Env: ANTHROPIC_API_KEY (或 MINIMAX_API_KEY), ANTHROPIC_BASE_URL, LLM_MODEL (default MiniMax-M2.7)
+// Env: GLM_API_KEY, LLM_MODEL (default glm-4.6), LLM_ENDPOINT (默认 GLM 官方)
 // ============================================================================
 
 import { writeFileSync, mkdirSync } from 'node:fs';
@@ -27,12 +27,10 @@ const FEED_BLOGS_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-bu
 const PROMPTS_BASE = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/prompts';
 const PROMPT_FILES = ['digest-intro.md', 'summarize-tweets.md', 'summarize-blogs.md', 'summarize-podcast.md', 'translate.md'];
 
-// LLM 调用: 走 Anthropic 兼容接口(MiniMax-M2.7 等都通过这套协议暴露)。
-// endpoint/base_url/key/model 全部从环境变量读, 换模型只改 secret 不改代码。
-const LLM_ENDPOINT = process.env.ANTHROPIC_BASE_URL
-  ? `${process.env.ANTHROPIC_BASE_URL.replace(/\/$/, '')}/v1/messages`
-  : 'https://api.minimaxi.com/anthropic/v1/messages';
-const LLM_API_KEY = process.env.ANTHROPIC_API_KEY || process.env.MINIMAX_API_KEY || process.env.GLM_API_KEY;
+// LLM 调用: GLM(智谱) 原生 OpenAI 兼容接口。
+// endpoint/model 都从环境变量读, 默认走 GLM 官方。
+const LLM_ENDPOINT = process.env.LLM_ENDPOINT || 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
+const LLM_API_KEY = process.env.GLM_API_KEY || process.env.ANTHROPIC_API_KEY || process.env.MINIMAX_API_KEY;
 const REPO_URL = 'https://github.com/zarazhangrui/follow-builders';
 
 // Truncation budgets — keep total well under GLM's 128K context
@@ -126,14 +124,18 @@ function buildBlogsText(blogs = []) {
   return lines.join('\n');
 }
 
-// -- LLM call (Anthropic 兼容接口, 适配 MiniMax-M2.7 等) ---------------------
+// -- LLM call (GLM / OpenAI 兼容接口) ----------------------------------------
 
 async function callLLM(systemText, userText, model) {
-  // Anthropic Messages API: system 单独传, messages 只放 user/assistant
+  // OpenAI 兼容: system 放 messages 数组, Authorization Bearer 鉴权
   const body = {
     model,
-    system: systemText,
-    messages: [{ role: 'user', content: userText }],
+    messages: [
+      { role: 'system', content: systemText },
+      { role: 'user', content: userText }
+    ],
+    temperature: 0.7,
+    top_p: 0.9,
     max_tokens: 8192
   };
 
@@ -144,17 +146,13 @@ async function callLLM(systemText, userText, model) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': LLM_API_KEY,
-          'anthropic-version': '2023-06-01'
+          Authorization: `Bearer ${LLM_API_KEY}`
         },
         body: JSON.stringify(body)
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(`LLM API ${res.status}: ${data?.error?.message || data?.message || JSON.stringify(data)}`);
-      // Anthropic 响应: content 是数组, 每项 {type, text}; 取所有 text 拼接
-      const content = Array.isArray(data?.content)
-        ? data.content.filter((b) => b.type === 'text').map((b) => b.text).join('\n')
-        : null;
+      if (!res.ok) throw new Error(`LLM API ${res.status}: ${data?.error?.message || JSON.stringify(data)}`);
+      const content = data?.choices?.[0]?.message?.content;
       if (!content) throw new Error('LLM returned empty content');
       return content;
     } catch (err) {
@@ -381,7 +379,7 @@ async function main() {
     console.error('Missing env: ANTHROPIC_API_KEY / MINIMAX_API_KEY (任一)');
     process.exit(1);
   }
-  const model = process.env.LLM_MODEL || 'MiniMax-M2.7';
+  const model = process.env.LLM_MODEL || 'glm-4.6';
 
   // 2. Fetch feeds + prompts in parallel
   const [feedX, feedPodcasts, feedBlogs, ...promptTexts] = await Promise.all([
