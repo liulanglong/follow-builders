@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-05</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @OpenAI)</h3><p>他向社区抛出了一个非常值得深思的问题：有什么事是你觉得惊讶，以至于 Codex 到现在居然还没做好，而且按理说我们早该解决它了？这条推文引发了大量开发者的共鸣和讨论，获得了 1800 多个赞。除此之外，他还分享了一段与 Sol 的有趣互动，Sol 在计算大量敬礼 emoji 时得出了负数，并一本正经地解释说这意味着你"欠了 332 个敬礼"，这种对 <span class="hl">AI 逻辑</span> 的幽默展示让人看到了模型当前处理抽象概念时的奇特表现。<a href="https://x.com/thsottiaux/status/2073551549494596079">详情</a></p></div>
+
+<div class="item"><h3>Nan Yu (Linear 产品负责人)</h3><p>他用一句极具画面感的话点出了 AI 编程时代的新现实：如果你把所有生产环境的数据库表都删了，到底是模型被开除还是你被开除？这个犀利的问题直指当前 AI 辅助编程中 <span class="hl">权限控制</span> 和 <span class="hl">责任归属</span> 的核心矛盾。在另一条推文中，他分享了抓 bug 的最佳实践：不要光靠看代码来推测问题，最好的方法是亲自使用产品并尝试搞坏它，代码审查的重点应该是架构和 API 设计，以此来控制技术债务的增长。<a href="https://x.com/thenanyu/status/2073410944969932877">详情</a></p></div>
+
+<div class="item"><h3>Cat Wu (Claude Code & Cowork @AnthropicAI)</h3><p>他高度赞扬了 <span class="hl">Claude Fable 5</span> 在实际工作中的表现，特别提到了一个让他惊喜的细节：在做用户留存分析时，模型在没有任何提示的情况下，主动使用了倾向得分匹配（propensity score matching）方法，根据用户活跃度进行匹配，从而确保比较的公平性。这种高级的分析判断能力不仅体现在数据工作中，在 Cowork 里写邮件和文档，以及在 Claude Code 中调试复杂错误时，Fable 5 的整体判断力都有了明显提升。<a href="https://x.com/_catwu/status/2073439890482794966">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他制作并分享了一段动画，展示了 Vercel <span class="hl">AI Gateway</span> 上各家的 token 消耗竞赛。这个平台每月聚合了来自数百万开发者的数万亿 token 调用量。从动画中可以非常直观地看到几个关键趋势：各大模型厂商之间的消耗量波动剧烈，Anthropic 在其中展现出明显的统治力，同时开源权重模型的消耗量也在快速攀升。这份数据可以说是当前 AI 开发者生态真实使用偏好的一个绝佳缩影。<a href="https://x.com/rauchg/status/2073563586270781674">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他把矛头对准了旧金山的 <span class="hl">NIMBY</span>（不要在我家后院）群体，认为这些人只会攻击真正在做事的人。他强烈主张旧金山需要尽快大量建造住宅，核心策略是激励并增加供应，而不是一味地补贴需求。他批评那些反对建房的政客，认为他们同时在摧毁住房、工作岗位和城市安全，这种自相矛盾的做法根本说不通。<a href="https://x.com/garrytan/status/2073575065917280331">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw & OpenAI)</h3><p>他预告了 OpenClaw 下一个版本的实用新功能：用户将能清楚地看到重置（resets）何时过期，从而更好地规划自己的 <span class="hl">token 使用策略</span>。他幽默地把这种极限压榨 token 价值的行为称为 "valuemaxxing"（价值最大化），这反映了当前 AI 工具用户在有限的速率限制下，精打细算使用每一份算力的真实状态。<a href="https://x.com/steipete/status/2073482942513565713">详情</a></p></div>
+
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>在美国独立日之际，他表达了对美国建国理念的深厚敬意，称赞这是历史上最令人印象深刻的社会实验。他特别引用了《独立宣言》中的核心精神，认为"生命、自由和追求幸福的权利"这句话真的是 <span class="hl">一语中的</span>。他向过去 250 年建设这个国家的人致敬，也对未来 250 年的传承者寄予厚望。<a href="https://x.com/sama/status/2073635910512726444">详情</a></p></div>
+
+<h2>官方博客</h2>
+
+<div class="item"><h3>Claude Blog: Building intelligent apps for Apple platforms with Claude in the Foundation Models framework</h3><p>Anthropic 发布了一个全新的 <span class="hl">Swift package</span>，让 Apple 开发者可以通过 Apple 的 Foundation Models framework 直接调用 Claude。这个框架本身允许开发者用极少代码调用端侧模型进行本地任务（如摘要提取），而现在当遇到需要多步推理或代码生成等复杂需求时，开发者可以无缝将请求移交给 Claude 处理。这解锁了很多新场景：例如日记应用可以在本地生成每日提示，然后将数月的记录交给 Claude 寻找其中的关联线索；学习应用可以在本地解释概念，当学生追问"为什么这很重要"时再调用 Claude 深入解答。该支持明日正式上线，兼容 iOS 27、macOS 27 等新系统，支持流式输出和工具调用。<a href="https://claude.com/blog/claude-for-foundation-models">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>The MAD Podcast with Matt Turck · Cloudflare CEO: The Internet's Business Model Is Dead</h3><p>核心收获：2026 年上半年，互联网上 <span class="hl">bot 流量</span> 历史上首次超过了人类流量，而整个互联网赖以生存 28 年的广告商业模式即将因为 bot 不点广告而彻底崩塌。Cloudflare CEO Matthew Prince 指出，过去 bot 流量长期稳定在 20% 左右，但近两年被 AI 和 LLM 彻底引爆。他预测未来五年内，网络流量可能会达到今天的一千倍，因为一个用户在买相机时可能只逛 5 个网站，但一个 agent 会逛 5000 个网站。这带来了一个根本性的问题：互联网的基础设施需要更多服务器和 GPU 来支撑，但谁来买单？Prince 认为 <span class="hl">互联网商业模式</span> 必将发生巨变，"bots don't click on ads"（bot 不点广告），过去以点击和浏览为核心的指标体系，未来必须转向全新的衡量标准。<a href="https://www.youtube.com/watch?v=UN47z_opfmo">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
