@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-08</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Sam Altman (CEO @ OpenAI)</h3>
+<p>Sam Altman 正式宣布 <span class="hl">GPT-5.6 sol</span> 将于本周四发布。这条推文获得了超过 1.2 万次点赞，说明社区对新版本的高度期待。结合其他 OpenAI 成员的预热推文来看，这次发布很可能包含在推理速度和多模态能力上的重大升级。<a href="https://x.com/sama/status/2074709023807664454">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3>
+<p>Thibault Sottiaux 发推暗示 OpenAI 即将推出名为 <span class="hl">Sol</span> 的新功能或产品。推文简短而神秘，配文是让大家准备好墨镜。这条推文获得了超过 4100 次点赞，很可能与 Sam Altman 同步宣布的 GPT-5.6 sol 版本属于同一波产品更新。<a href="https://x.com/thsottiaux/status/2074705681920520526">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (CEO @ Box)</h3>
+<p>Aaron Levie 在与几十位企业 IT 领导者交流后，总结了当前企业部署 <span class="hl">AI agent</span> 的核心挑战。他指出，最大的障碍不是技术本身，而是组织架构：大多数公司的部门各自为政，而 agent 最擅长处理跨部门的端到端流程，因此企业急需建立集中管理 agent 的运营模式。此外，<span class="hl">数据碎片化</span>问题依然严重，只要核心业务数据还散落在遗留系统或非标准格式中，agent 就无法给出准确且符合业务规范的答案。他特别强调，当所有企业都能调用差不多水平的超级智能模型时，喂给模型的专有上下文数据将成为企业未来的核心护城河，数据就是新时代的石油。<a href="https://x.com/levie/status/2074719479377109312">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (CEO @ Vercel)</h3>
+<p>Vercel 宣布收购开源认证库 <span class="hl">Better Auth</span> 及其作者 Bereket。Guillermo Rauch 表示，开发者值得拥有更好的认证体验，不仅要服务于人类用户，也要服务于 AI agent。这符合 Vercel 推进的 Open SDK 愿景。此外，他还展示了如何通过定义 <span class="hl">tools/github.ts</span> 文件，让 AI agent 直接获得 GitHub 操作能力，进一步践行其构建开放、可插拔 AI 生态系统的理念。<a href="https://x.com/rauchg/status/2074523653488947338">详情</a></p></div>
+
+<div class="item"><h3>Madhu Guru (前 Product Leader @ Google)</h3>
+<p>Madhu Guru 针对当前 AI 行业对数据评估的误区进行了深入剖析。很多人认为数据和 <span class="hl">evals</span> 只是低门槛的打杂工作，买来直接塞进模型就行。但在实际操作中，模型的生命周期是从模型策略到评估体系，再到与评估对齐的 pre/post 训练，最后才走向市场。这比传统的产品策略难 100 倍，因为构建 LLM 时总会面临让它无所不能的诱惑。真正的挑战在于，如何在面对架构变动、能力回退以及竞争对手发布新闻时，依然死死盯住目标评估集，并在多个检查点之间做出艰难取舍。<a href="https://x.com/realmadhuguru/status/2074734468854899191">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (Creator @ OpenClaw)</h3>
+<p>Peter Steinberger 分享了一个实用的工作流技巧：在使用相关工具时，可以让 <span class="hl">Codex</span> 充当干活的苦力。这条推文获得了超过 3200 次点赞。此外，他还吐槽了作为 Anthropic 的大客户，居然是从记者那里才知道 Anthropic 面临诉讼的消息，而非他们的合作伙伴关系团队告知。他还分享了一个实用的小功能：当 agent 需要人工协助补充上下文时，系统会弹出醒目的提示，而不是像以前那样弹出一个毫无上下文说明的 1Password 授权框。<a href="https://x.com/steipete/status/2074638582418231495">详情</a></p></div>
+
+<div class="item"><h3>Nikunj Kothari (Partner @ FPV Ventures)</h3>
+<p>Nikunj Kothari 再次提醒创业者务必分清 <span class="hl">GMV</span> 和 <span class="hl">ARR</span> 的区别，不要在融资和对外宣传时混淆这两个概念。他还分享了自己目前最喜欢的 Fable 实用案例：先让工具生成关于 Claude Code 的深度洞察，然后将这些信息喂给它并提问，在 Fable 时代应该如何最大化使用 Claude Code 的效用，最后直接让它帮你实现这些优化方案。<a href="https://x.com/nikunj/status/2074597133286851064">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (Builder)</h3>
+<p>Zara Zhang 分享了关于如何在 AI 时代高效学习的思考与方法论。这篇内容引起了较大共鸣，获得了近 300 次点赞。对于在快速迭代的 AI 浪潮中感到焦虑、不知如何系统化吸收新知识的开发者和从业者来说，这提供了一套实用的学习框架。<a href="https://x.com/zarazhangrui/status/2074661564964307153">详情</a></p></div>
+
+<div class="item"><h3>Thariq (Claude Code @ Anthropic)</h3>
+<p>Thariq 展示了使用 <span class="hl">Claude</span> 自动生成视频内容的实验效果。他对 Claude 能将静态的幻灯片自动转化为流畅的动画表示满意，同时也发现 Claude 会自主决定将素材制作成 YouTube Short 短视频格式。不过他也指出，目前的转录文本还比较混乱，且为了加快渲染速度刻意降低了视频画质。这直观展示了 AI agent 在多模态内容生成上的探索现状。<a href="https://x.com/trq212/status/2074622734118924561">详情</a></p></div>
+
+<h2>官方博客</h2>
+
+<div class="item"><h3>Anthropic Engineering: How we contain Claude across products</h3>
+<p>Anthropic 深入解析了如何在赋予 agent 极大权限的同时控制其 <span class="hl">blast radius</span>（潜在破坏范围）。文章指出，一年前他们绝对不会让 Claude 拥有足以搞垮内部服务的权限，但如今这已成为提升开发效率的常规操作。他们发现纯粹依赖人工审批的防御机制非常脆弱，遥测数据显示用户会无脑批准约 93% 的权限请求，导致审批疲劳。因此，他们将重心转向了 <span class="hl">containment</span>（环境隔离与遏制），通过沙箱、虚拟机和出口控制来限制 agent 的行为上限。文章还提到 <span class="hl">Claude Mythos Preview</span> 就是因为潜在破坏范围过大，而在 2026 年 4 月被判定为不宜发布。<a href="https://www.anthropic.com/engineering/how-we-contain-claude">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>Training Data · Inside Zipline's Autonomous System: 140M Miles, Zero Incidents</h3>
+<p>The Takeaway: 构建改变世界的自主系统，真正的壁垒往往不是硬件本身，而是围绕它搭建的整套基础设施与运营体系。Zipline 联合创始人 Keller 及系统安全负责人 Eric 分享了他们在 AI 热潮之前打造全球最大自主无人机配送网络的真实历程。Keller 指出，他们早期犯下的最大错误，是以为那架酷炫的飞行器就是解决方案的全部，但实际上 <span class="hl">硬件无人机只占整体复杂度的 15%</span>。真正困难的是构建库存管理、需求预测、与国家级医疗系统和民航局对接的辅助软件系统。此外，他们还分享了在卢旺达早期的顿悟时刻：当工程师以为用户会反馈飞行器技术细节时，医生们只抱怨为什么你们每天只营业 12 个小时，因为病人是全天候生病的。这让他们深刻意识到，客户根本不在乎背后的黑科技，他们只想要 <span class="hl">瞬间移动</span> 般的可靠服务体验。<a href="https://www.youtube.com/watch?v=6bGxm8gX41o">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
