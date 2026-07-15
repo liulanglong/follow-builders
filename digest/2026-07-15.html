@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-14</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Swyx (Latent Space 主持人 / AI 社区活跃开发者)</h3><p>分享了他目前处理大型项目时的 AI 编码工具组合策略：用 <span class="hl">Sol Ultra</span> 做规划，<span class="hl">Fable 5</span> 做代码审查，Sonnet 5 / Terra Ultra / SWE 1.7 负责核心代码生成，Devin 负责最终的 review 流程。他特别强调，在开始任务前一定要用类似 "grill-me" 或 "interview-me" 的 prompt 来提前明确需求和决策，这能大幅提升 agent 的执行效率。此外，他还在吐槽 Resend API key 频繁出问题，调侃现在连收到妈妈的信息都需要先给 Codex 提供 API key。<a href="https://x.com/swyx/status/2076811977918484795">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3><p>暗示 ChatGPT 明天可能会迎来 <span class="hl">800万活跃用户</span>的里程碑，并发布了 ChatGPT Work 的预告。作为 ChatGPT 和 Codex 团队的核心成员，他的动态通常被视为 OpenAI 即将发布重大功能或达成重要数据节点的前兆。<a href="https://x.com/thsottiaux/status/2076907789763621237">详情</a></p></div>
+
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>分享了他在训练个人模型时获取实时进度更新的体验，感觉就像早期的 vibe coding，只不过这次是在创造个人专属模型。这暗示了 <span class="hl">个人模型训练</span>正在变得越来越平民化和直观，开发者可以像监控普通代码运行一样来跟进模型训练过程。<a href="https://x.com/amasad/status/2076776737074184661">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>指出开源权重模型在网关 token 使用量中的占比已从 4 月份的 11% 飙升至 <span class="hl">29%</span>，反映出市场正快速向更灵活、低成本的开源方案倾斜。他还分享了 Vercel 平台上最受欢迎的两个特性：易用的文件系统 API 和可观测性（Observability），团队正集中资源在这两方面进行深耕。他特别提到，赋予 agent 设置和调整 feature flag 的能力，是构建<span class="hl">自主自优化</span>网站和应用的关键基石。<a href="https://x.com/rauchg/status/2076713720731042174">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>深入分析了企业级 AI 的落地难点：企业最敏感的数据往往因为权限隔离而无法直接打包进模型，这意味着为每个企业单独训练模型比想象中困难得多。他预测了 AI 行业的结构性未来：前沿模型继续推动行业上限，开源权重模型提供低成本且可定制的算力方案，而应用层将通过<span class="hl">模型路由</span>（model routing）实现性能与成本的最优解。他引用了一个案例，指出像 Fable 这样的模型通过"有效委派"（类似优秀管理者的习惯）不仅没有增加成本，反而降低了整体开销，这将成为未来 AI 应用的标准模板。<a href="https://x.com/levie/status/2076764958579446006">详情</a></p></div>
+
+<div class="item"><h3>Ryo Lu (Cursor 设计负责人)</h3><p>宣布 Jenny 加入并领导设计团队，这让他能重新集中精力去构思 Cursor 的未来大方向。同时，他展示了用 Cursor 进行硬件黑客攻击的乐趣：成功构建了定制电子书阅读器固件，支持优美的中英文排版、垂直布局（纵书）以及大字符集，并能与他的个人系统 ryOS 同步阅读进度和书籍。这个固件目前可在 <span class="hl">Xteink X3 + X4</span> 设备上运行。<a href="https://x.com/ryolu_/status/2076689062921150479">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>宣称"<span class="hl">绅士科学家</span>（Gentle Scientist）的时代回归了"。这句话呼应了当前 AI 浪潮下的核心趋势：借助强大的 AI agent 和极简的开发工具，具有远见卓识的个人开发者再次能够独立完成过去需要整个团队才能实现的复杂项目，个人英雄主义在科技圈重新萌芽。<a href="https://x.com/garrytan/status/2076587412516421945">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (独立开发者 / Builder)</h3><p>总结了组织采用 AI 的三个层级，并指出目前大多数公司仍然停留在第二级。她还在三月份与 Ashe 录制了一场 45 分钟的户外对话，深入探讨了 build in public（公开构建）、如何在 X 上不靠水文（slop）来增长受众，以及她对 <span class="hl">vibe coding</span> 的看法和思考。<a href="https://x.com/zarazhangrui/status/2076862290985730481">详情</a></p></div>
+
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>开源了一个实用的 <span class="hl">Ramp-Autofill</span> 自动化技能，利用 Ramp CLI 和 Claude Fable 构建。这个工具能自动从 iMessage 和 Gmail 中抓取收据，通过 Playwright 将网页链接转为 PDF 并附上，结合 Google Calendar 自动填写会议备忘录，甚至能学习你过去的记账风格来自动分类交易。他特别提到，这个工具是他在开车去旧金山的路上，通过语音 prompt 让 Fable 一次性生成（one-shot）的，并在周末成功处理了过去 60 天的费用报销。<a href="https://x.com/nikunj/status/2076775924650107151">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw 创始人 / AI 开发者)</h3><p>分享了使用 "stress test"（压力测试）作为 prompt 的良好效果。他的团队刚发布了 iOS 和 Android 应用的更新，并将维护代码的 agent 迁移到了云端，结果发现这些 agent 已经开始互相"吵架"了，生动展现了多 agent 协作时的<span class="hl">涌现行为</span>。<a href="https://x.com/steipete/status/2076886451455992249">详情</a></p></div>
+
+<div class="item"><h3>Cat Wu (Anthropic Claude Code 工程师)</h3><p>宣布 <span class="hl">Artifacts</span> 功能刚刚迎来了一次重大升级。这次升级大幅扩展了 Claude 在生成可视化内容和交互式组件方面的表达能力。<a href="https://x.com/_catwu/status/2076867882894684314">详情</a></p></div>
+
+<div class="item"><h3>Thariq (Anthropic Claude Code 工程师)</h3><p>详细说明了 Artifacts 升级后的潜力：现在它可以以极具创意的方式进行组合。他最喜欢的用法是在 Claude Tag 中为项目创建一个仪表板，这个仪表板不仅能被其他人编辑，还能与他本地的 <span class="hl">Claude Code</span> 会话进行同步，实现了团队协作与本地终端开发的无缝连接。<a href="https://x.com/trq212/status/2076790799011131735">详情</a></p></div>
+
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>感叹 OpenAI 的模型终于在<span class="hl">设计能力</span>上表现出色，这让他感到不可思议。他还转发了一条看似讽刺的推文，并表示自己一开始以为那是恶搞账号。此外，他似乎在暗讽某些平台的做法："问难题是好事，但前提是我们认为你值得，否则就会默默降低你的优先级，甚至直接拒绝访问。"<a href="https://x.com/sama/status/2076823209589313910">详情</a></p></div>
+
+<h2>官方博客</h2>
+
+<div class="item"><h3>Claude Blog: Building intelligent apps for Apple platforms with Claude in the Foundation Models framework</h3><p>Anthropic 发布了一个全新的 Swift package，支持 Apple 开发者在 <span class="hl">Foundation Models framework</span> 中直接调用 Claude，以处理设备端模型无法胜任的复杂工作流。开发者可以利用 Apple 的设备端模型完成文本摘要或数据提取等快速本地任务，当需要多步推理、代码生成或联网搜索时，即可无缝切换至 Claude。得益于 Apple 框架的 @Generable 注解能返回类型安全的 Swift 值，Claude API 接收到的将是结构化的干净输入而非原始文本。例如，日记应用可以在本地生成每日提示，然后交给 Claude 从数月的记录中寻找深层关联。该功能将于明天上线，支持 <span class="hl">iOS 27 / macOS 27</span> 等全平台。<a href="https://claude.com/blog/claude-for-foundation-models">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>The MAD Podcast with Matt Turck · Inside Nemotron & NVIDIA's AI Lab | Bryan Catanzaro</h3><p>The Takeaway: 如果算力已经触及物理极限，获取更多智能的唯一途径就是提升效率，而开源社区正是推动这种效率革命的核心力量。NVIDIA 应用研究副总裁 Bryan Catanzaro 深入剖析了开源 AI 的发展逻辑。面对"开源模型是否依赖蒸馏闭源模型"的质疑，他反驳称，好主意并不只掌握在少数几个顶级实验室手里，整个人类社区的智慧是无穷的。他将开源 AI 比作互联网的发展历程，强调开放技术能让各行各业以截然不同的方式实现深度变革。他提到："我们打造工具，打造帮助我们解决问题的外部器官。你知道，我们有一个外部的胃，我们叫它厨房。现在我们正在创造一个外部的大脑。"目前，NVIDIA 投入了数百名研究员开发 <span class="hl">Nemotron 3 Ultra</span>，采用了 4-bit 训练、混合 Mamba-Transformer 架构、多 token 预测和多教师蒸馏等前沿技术，发布后迅速成为美国排名第一的开源权重模型。<a href="https://www.youtube.com/@DataDrivenNYC/videos">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
