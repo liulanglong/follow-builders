@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-16</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Swyx (Latent Space 主播 / smol.ai 创始人)</h3><p>Swyx 认为当前的 <span class="hl">CUA (Computer Use Agent)</span> 能力正在以惊人的速度进化，许多人对它的认知还停留在过去，严重低估了现状。他分享了自己从 2017 年的 World of Bits 论文到近期跟踪 Adept、Anthropic Computer Use 等项目的长期观察，指出最新的 GPT-5.6 配合 Superapp 在 CUA 上的表现已经超越了此前所有的方案。他甚至让非技术团队全面使用 CUA 来处理注册支付门户、管理赞助商和参会者数据等繁杂的知识工作，并强调如果在做 AI 决策时低估了 CUA 的能力，将是非常危险的认知错误。<a href="https://x.com/swyx/status/2077475285205958771">详情</a></p></div>
+
+<div class="item"><h3>Josh Woodward (Google Labs / Gemini App VP)</h3><p>Josh Woodward 宣布 <span class="hl">Gemini Spark</span> 正在向全球更多 Ultra 订阅者推送，并带来了四项重要更新。首先，Spark 现在可以直接打开和编辑 Google Docs；其次，它能够读取 Google Sheets 和 Slides 中的评论，确保关键信息不被遗漏；第三，运行速度提升了 50% 以上；最后，它支持跨多个数据源进行并行处理，大幅缩短任务端到端的完成时间。此外，他还发布了首份 Gemini 东南亚报告，指出过去一年活跃用户翻倍，其中 70% 的 prompt 使用本地语言，40% 仅使用语音、图像或视频等多模态输入。<a href="https://x.com/joshwoodward/status/2077471111240204457">详情</a></p></div>
+
+<div class="item"><h3>Boris Cherny (Anthropic Claude Code 负责人)</h3><p>Boris Cherny 提出了一个深刻观点：在 agent 时代，将团队领域知识编码为基础设施比以往任何时候都更加重要。他指出，过去优秀的工程师会编写 lint 规则和端到端测试来放大自己的产出，如今这些自动化不仅加速了 agent，更能一劳永逸地解决整类问题。更重要的是，通过编写 <span class="hl">CLAUDE.md</span>、skills 和文档，团队可以让 Claude 帮助新工程师甚至非工程师在第一天就为陌生代码库提交高质量的 PR。他强调，如果 agent 或非专业人员提交的代码因为不符合架构规范而被拒绝，这本质上是自动化的失败，每个团队都应致力于将领域知识转化为 agent 可读的基建。<a href="https://x.com/bcherny/status/2077460395279692197">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT)</h3><p>Thibault Sottiaux 透露，Codex Plus 和 Pro 取消了 <span class="hl">5小时使用限制</span>，正在向社区征询关于如何在每周配额内更好管理使用量的反馈。针对近期用户反馈 GPT-5.6 意外删除文件的问题，他给出了详细的技术解释：这通常发生在用户开启完全访问模式且未使用沙箱保护时，模型试图覆盖 $HOME 环境变量来定义临时目录，结果误删了真实的 $HOME。团队正通过更新开发者提示、引导用户使用更安全的权限模式以及增加额外的安全围栏来降低风险，并承诺近期发布详细的复盘报告。<a href="https://x.com/thsottiaux/status/2077630111499882637">详情</a></p></div>
+
+<div class="item"><h3>Peter Yang (AI 创业者 / 内容创作者)</h3><p>Peter Yang 指出 <span class="hl">ChatGPT Live</span> 和 Codex 是两款各自优秀却无法互通的产品，这是 OpenAI 当前最大的遗憾。他分享了一次亲身经历：在散步时使用 ChatGPT Live 语音助手，要求它调取 Google Doc，但系统表示无能为力；直到他手动触发 Documents 插件后，语音助手才获得了正确的上下文。他认为，理想的体验是通过语音对话直接调动 Codex 拥有的所有插件、工具和浏览器能力，实现回邮件、排会议、改文档和发代码，而第一步应该就是让 ChatGPT Live 感知到它已连接的插件。<a href="https://x.com/petergyang/status/2077572198655754583">详情</a></p></div>
+
+<div class="item"><h3>Thariq (Anthropic Claude Code)</h3><p>Thariq 总结了他心目中理想的 prompt 技巧框架：<span class="hl">thin prompts</span>（精简的提示词）、thick artifacts + context（丰富的交付物和上下文）以及 thin skills（精简的技能定义）。这一观点获得了社区的广泛共鸣。他还在另一条推文中精辟地定义了软件工程的本质，即"自动化的职业"，这与近期关于 agent 自动执行繁杂任务的行业趋势高度契合。<a href="https://x.com/trq212/status/2077539537992229076">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Guillermo Rauch 分享了 <span class="hl">Vercel Sandbox</span> 的强劲增长数据：日活用户环比保持 100% 的月增长率，每天创建的沙箱数量超过 350 万个。他强调该产品提供了业内领先的 Active CPU 定价模型，目前已经在为 Notion、Airtable、Meta、Zapier 等知名公司提供服务。此外，他还展示了 Web Analytics API 的创新用法，例如让 agent 将访问者和自定义事件与部署演进及性能数据进行关联分析。<a href="https://x.com/rauchg/status/2077559189015335019">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Aaron Levie 在与大型企业 IT 领导者晚宴后，总结了关于 <span class="hl">企业 agent 落地</span> 的八点核心洞察。他指出，变革管理仍是最大挑战，流程需要重构以适应 agent；越来越多公司通过将工程师嵌入业务线来加速 agent 的内部落地。在预算方面差异巨大，部分公司为开发者的编码 agent 预算高达每月 5000 美元，而非编码工作的预算则少得多。此外，几乎所有 IT 领导者都认同未来的企业软件必须是 headless 的，传统软件供应商如果在技术和成本上不适配 agent，将面临巨大风险。<a href="https://x.com/levie/status/2077526010753581156">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator CEO)</h3><p>Garry Tan 认为 <span class="hl">Skill files</span>（技能文件）具有可移植性，能够让开发者摆脱对单一前沿模型的过度依赖，他认为这是一件非常好的事情。这一观点呼应了当前 AI 社区关于降低模型锁定风险、通过可复用技能层来增强灵活性的技术趋势。<a href="https://x.com/garrytan/status/2077626565517590618">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (Builder / Harvard '17)</h3><p>Zara Zhang 分享了一个独特的视角：由于她没有接受过传统的编程教育，使用 coding agent 对她而言纯粹是创造力和自我表达的实践，她甚至把 GitHub 当作自己的 <span class="hl">Substack</span>。此外，她指出如果想让 agent 真正在公司内部发挥作用，就必须重塑公司的信息架构使其对 agent 可读。她以 Shopify 为例，其内部 agent 没有私聊功能，只能在公共频道中运作，这种设计意外地促进了团队间的同伴学习。<a href="https://x.com/zarazhangrui/status/2077388091044635010">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw / AI 独立开发者)</h3><p>Peter Steinberger 引用了 Boris Cherny 关于自动化失败的观点并深表赞同：如果一位工程师提交的 PR 因为没有使用正确的框架而被拒，或者设计师构建的功能因为不符合架构模式而被拒，这些都不应归咎于人，而是 <span class="hl">自动化的失败</span>。他还在另一条推文中评价最新的 GPT-5.6 模型，称其表现是" relentless "（势不可挡的）。<a href="https://x.com/steipete/status/2077544756390088777">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Dan Shipper 指出，即便一切顺利，运营一家估值 <span class="hl">15亿美元</span> 的 AI 创业公司依然是一场近身肉搏。他采访了 Granola 的联合创始人兼 CEO Chris Pedregal，探讨应用层现状。他们深入讨论了为什么克隆会议记录功能并不重要，Granola 如何通过预先生成数百万份会议简报来打造神奇体验，以及为何 Granola 正在全力押注 "bring your own agent" 策略。这场对话对应用层构建者极具参考价值。<a href="https://x.com/danshipper/status/2077410279474770229">详情</a></p></div>
+
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Sam Altman 对部分用户在拥有强大 AI 能力时仍偏好 <span class="hl">silent version</span>（静默版本）表示惊讶。这一感慨触及了 AI 产品设计中的核心分歧：即在执行后台任务时，用户究竟是希望 agent 保持安静无感，还是希望获得更多的语音反馈和互动。<a href="https://x.com/sama/status/2077489177374208000">详情</a></p></div>
+
+<h2>官方博客</h2>
+
+<div class="item"><h3>Claude Blog: Claude Code now supports artifacts</h3><p>Claude Code 正式引入了 <span class="hl">artifacts</span> 功能，能够将代码会话的进展实时转化为可分享的动态可视化网页。无论是 PR 代码审查、系统架构解析、仪表板还是发布检查清单，artifacts 都能利用会话中的完整上下文（包括代码库、连接器和对话本身）自动生成一个无需额外搭建基础设施的动态页面。当 Claude Code 更新内容时，页面会原地刷新，团队成员能立刻看到最新版本，彻底省去了口头汇报 agent 进展的麻烦。所有 artifacts 默认对作者私有，管理员可通过合规 API 进行权限管控。<a href="https://claude.com/blog/artifacts-in-claude-code">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>AI & I by Every · The Founder of a $1.5B AI Company on What Comes After the First Wave of AI Apps</h3><p>The Takeaway: AI 应用层的真正战场不是单一的功能比拼，而是谁能定义 AI 原生时代的工作界面。Every CEO Dan Shipper 与估值 15 亿美元的 Granola 联合创始人 Chris Pedregal 进行了深度对谈。Pedregal 坦言，即便公司发展顺利，创业依然是一场近身肉搏，因为 "Startups are like <span class="hl">knife fights</span>"。面对大厂（如 Notion、Zoom、OpenAI）对会议记录功能的疯狂抄袭，他表现得异常冷静，认为会议记录从来都不是终局，真正的机会在于掌控 AI 时代的工作入口。Granola 目前每天预生成数百万份会议简报，尽管多数人不会打开，但一旦使用便会体验到魔法般的效果。Pedregal 还透露，Granola 正在押注 "bring your own agent" 策略，随着 API 和 <span class="hl">MCP</span> 协议的成熟，让用户自带 agent 将成为下一波产品演进的核心。<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
