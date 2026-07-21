@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-20</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>AI 进步的真正瓶颈不在于模型本身的智力，而在于它与现实世界物理反馈循环交互的速度。Levie 借用一篇关于 AI 扩散的文章指出，编程之所以被 AI 迅速颠覆，是因为代码可以无限生成、测试且无需外部依赖；但新药研发需要数年临床试验，签合同需要双方反复谈判，甚至设计一个 <span class="hl">jet turbine blade</span>（喷气式涡轮叶片）也必须造出实物去测试其断裂极限。因此，单纯依靠模型输出是不够的，市场急需一个 <span class="hl">applied AI layer</span>（应用 AI 层），去改造现有行业的工作流并处理现实世界的反馈。<a href="https://x.com/levie/status/2078864191683969212">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>很多人误以为 AI 成本下降会导致总体 AI 支出减少，但事实恰恰相反。Levie 指出，当 token 变得更便宜时，它的消耗量会激增，因为企业终于有财力将 AI 应用于更广泛的任务中：写更多代码、做更深度的 bug 和安全审查、处理以前无法负荷的庞大数据集。因此，任何能降低 <span class="hl">cost of tokens</span> 的举措都会推高推理需求，这也是为什么即使是开源模型，只要跑在云端基础设施上，算力提供商依然处于黄金时代。<a href="https://x.com/levie/status/2078968158006939716">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>在开源模型性能仅略微落后于前沿闭源模型的当下，对顶尖模型能力实行技术封锁反而会削弱自身竞争力。Levie 认为，即使美国全面禁止开源模型，其他生态系统也不会跟进，他们将获得这些模型的优先使用权，从而在攻防两端占据优势。他警告，面对远超预期的 <span class="hl">open weights models</span>，AI 监管的底层逻辑必须发生根本性改变。<a href="https://x.com/levie/status/2078992778449850769">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>网络安全是衡量超级智能（superintelligence）的最佳基准之一，堪称软件工程的“IQ 测试”。Rauch 认为，让模型去“一键克隆某个应用”来博取眼球很容易，但 <span class="hl">cybersecurity</span> 领域的漏洞挖掘、补丁修复、逆向工程和漏洞利用，要求模型具备超越编程语言和框架的真正推理能力与“极限思维”。这是绝大多数人类都无法精通的领域，因此看到 <span class="hl">Kimi K3</span> 在该领域表现优异，对开源模型社区来说是一个极好的预兆。<a href="https://x.com/rauchg/status/2078912929714356698">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator President & CEO)</h3><p>在当前技术栈以前所未有的速度剧烈演进的时期，Markdown 是最完美的数据格式。Tan 强调，<span class="hl">Markdown files</span> 作为一种通用标准，具有极强的生命力，甚至可以存活上千年。在 AI 快速迭代、各种数据结构随时可能被淘汰的今天，将核心知识与 prompt 保存在 Markdown 中，能确保数据的持久性和跨平台兼容性。<a href="https://x.com/garrytan/status/2078803803659452624">详情</a></p></div>
+<div class="item"><h3>Cat Wu (Anthropic, Claude Code)</h3><p>分享了一个使用 Claude Cowork 高效管理日程的实用 prompt 示例。她给 agent 设定的规则非常具体：每周会议总时长必须低于 20 小时；自动去重冲突会议，并通过分析过往记录来学习她倾向于拒绝哪种会议；晚餐时间不计入这 20 小时内；在更新邀请前必须征求她的同意。她鼓励大家探讨如何利用 <span class="hl">Claude Cowork</span> 建立并不断优化这种个性化的 <span class="hl">skill</span>。<a href="https://x.com/_catwu/status/2079011428380602526">详情</a></p></div>
+<div class="item"><h3>Thariq (Anthropic, Claude Code)</h3><p>预告了即将发布的一篇深度文章，重点分享 Anthropic 团队在实际开发中总结的经验教训，以及如何将这些洞察应用到自定义 <span class="hl">skills</span> 和 <span class="hl">system prompts</span> 的构建中。这篇预告引发了巨大关注（超千赞），开发者们显然非常渴望学习一线 AI 公司的 prompt 工程最佳实践。此外，他还提醒用户遇到特定问题需重启 Claude Code 以加载最新修复。<a href="https://x.com/trq212/status/2078901672441790818">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>AI 文字编辑能力刚刚跨过了一个关键的实用性门槛。Shipper 激动地表示，在过去一周里，AI 已经能够自动完成他们内部约 <span class="hl">70% of the copy edits</span>（70%的文字校对和编辑工作），这些工作以往都必须由人工手动完成。这是他多年来不断尝试 AI 编辑工具后，首次实现如此高比例的自动化替代，标志着 AI 在特定内容工作流中取得了实质性突破。<a href="https://x.com/danshipper/status/2078920115140358585">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder)</h3><p>内容创作者应该拥抱一种全新的思维：<span class="hl">disposable code</span>（一次性代码）。她列举了几个日常例子，比如用 AI 快速生成一个设计模态框来微调视觉效果、生成临时的 HTML 页面来辅助理解代码逻辑，或者随手建一个一次性的数据看板来检查特定指标。这些代码用完即弃，大大降低了试错成本，彻底改变了人们使用软件的方式。<a href="https://x.com/zarazhangrui/status/2078835308905578660">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder)</h3><p>为新手内容创作者提供了一个极简的起步策略：把你现实生活中最常被朋友或同事问到的三个问题，直接变成你的视频或文章主题。她强调，如果你在现实中已经把某件事重复讲了三遍以上，它就绝对值得被做成内容，用你平时说话的口吻直接表达出来即可，这就是你最自然的定位。<a href="https://x.com/zarazhangrui/status/2078830510177128481">详情</a></p></div>
+<div class="item"><h3>Peter Yang (Product & AI)</h3><p>指出了 ChatGPT Work 在面向非技术用户时存在的严重 UX 文案问题。当他尝试将任务“发送到 Codex Web”时，点击链接后却被提示重新下载应用，这种晦涩的指令让普通用户完全不知所措。他强调 <span class="hl">Copy matters</span>（文案至关重要），如果非技术用户连“在云端运行”是什么意思都不明白，产品的破圈就无从谈起。<a href="https://x.com/petergyang/status/2079007381695172797">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>The MAD Podcast with Matt Turck · Stripe's AI Chief: How AI Agents Will Buy, Sell, and Pay</h3><p>The Takeaway: <span class="hl">Agentic commerce</span>（智能体商务）正在从假设走向现实，但随之而来的 token 盗窃和新型欺诈正在成为 AI 时代最被低估的安全隐患。Stripe 数据与 AI 负责人 Emily Sense 揭示了一个令人震惊的数据：超过六分之一的 AI 公司新注册用户实际上都是在进行 token 盗窃等滥用行为，欺诈分子发现直接偷 token 比偷钱更容易。目前，Stripe 已经与 Google、OpenAI 和 Meta 等巨头合作部署了真实的基础设施，让用户可以在 Gemini 或 ChatGPT 内直接发现商品并一键购买。Emily 将这种演进类比为自动驾驶的分级标准（L1 到 L3），指出目前消费者大多停留在 L2 阶段（即依赖 AI 推荐商品但自行决策）。未来 12 个月内，真正的挑战和机遇在于：agent 将如何获得授权，不仅代为购物，甚至能自主经营企业、独立完成买卖并创造利润。<a href="https://www.youtube.com/@DataDrivenNYC/videos">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
