@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-21</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Swyx (Latent Space / smol.ai)</h3><p>Swyx 指出当前"前沿"模型训练中一个公开的秘密：即使不在测试集上直接训练，开发者也可以通过在高度相似的"替身"数据集上进行训练，从而几乎可以操纵任何 benchmark 分数。他提到 Alex 和 Omar 在 RLM 论文中尝试使用标准 NLP 距离指标来分析隐藏的训练轨迹。虽然目前还没有终极解决方案，但这种探索恰好支持了一个发现，即 <span class="hl">RLM</span> 能够泛化到训练中未见过的、但具有潜在结构相似性的任务上。<a href="https://x.com/swyx/status/2079411861150429402">详情</a></p></div>
+<div class="item"><h3>Peter Yang (Product lead)</h3><p>Peter Yang 提出了一个大胆且反直觉的观点：封杀中国 AI 模型最终将重蹈封杀中国 <span class="hl">EV</span> 的覆辙，无异于搬起石头砸自己的脚。此外，他还分享了一个关于 AI agent 系统设计的实用技巧：使用一个 agent 执行任务，再用另一个 agent 根据评分标准进行审查。他引用 trq212 的观点解释说，模型往往对自己的输出存在"自我偏好偏见"，因此引入 <span class="hl">独立验证 agent</span> 可以更客观地评估内容质量。<a href="https://x.com/petergyang/status/2079273815004303477">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Sr Director, AI at Meta)</h3><p>Madhu Guru 认为，通向 <span class="hl">AGI</span> 的道路是由具有经济效益的任务铺就的，这正是企业级 AI 成为最重要前沿阵地的原因，因为那里聚集了大量此类任务。他还对行业趋势发表了幽默而深刻的评论：在 Web3 顶峰的四年之后，如今真正有意义的 tokenomics 争论已经不再是加密货币，而是关于开放与封闭权重、<span class="hl">推理成本</span> 以及模型路由的较量。<a href="https://x.com/realmadhuguru/status/2079369965569003691">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>Amjad Masad 分享了一个引人注目的行业里程碑，他暗示这可能是首个由编程 agent 独立完成交付的实体物理产品。这一动态标志着 AI agent 正在从纯粹的数字软件领域跨越到 <span class="hl">物理产品</span> 的创造与交付，展示了自动化代理在现实世界中日益增长的执行能力。<a href="https://x.com/amasad/status/2079282869063786541">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Guillermo Rauch 提出了一个极具启发性的哲学观点：AI 带给我们的最大启示是"万物皆为代码"。无论是演示文稿、设计稿、宣传视频，还是 Excel 自动化流程，其本质都可以被抽象和转化为代码。他甚至打趣地补充说，连宇宙本身可能也是由 <span class="hl">代码</span> 构成的。这一观点揭示了 AI 将如何彻底改变我们创建和交互所有数字资产的方式。<a href="https://x.com/rauchg/status/2079274102129304026">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Aaron Levie 强调，多模型 agentic 系统显然是未来的核心设计范式。他引用 Cursor 的最新研究指出，在复杂任务中，只有极少数环节真正需要前沿模型的智能（如初始任务分解和设计决策）。一旦由 <span class="hl">前沿模型</span> 组成的规划器消除了模糊性并给出明确指令，就可以交由更便宜的模型去执行，从而带来高达 <span class="hl">15 倍</span> 的成本优化。这种基于任务阶段进行模型路由的架构，将成为 AI 应用层建立差异化优势的关键。<a href="https://x.com/levie/status/2079402164988895293">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator CEO)</h3><p>Garry Tan 发表了一张引人深思的图片梗，暗示当顶级的免费中国开源模型发布时，OpenAI 和 Anthropic 等头部闭源厂商也必须保持警惕。这反映了随着高质量 <span class="hl">开源模型</span> 的不断涌现，AI 行业的竞争正在加剧，即使是处于领先地位的公司也无法高枕无忧。<a href="https://x.com/garrytan/status/2079196804315521332">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder)</h3><p>Zara Zhang 指出现在的公司已经分为两类：一类是在编程 agent 出现前成立的，正艰难地进行流程改造；另一类是在 agent 时代诞生的。后者从第一天起就截然不同：团队不到十人，工作按项目而非部门组织，每个人完成闭环，几乎没有内部会议。她还分享了自己理想的招聘流程：第一轮纯线下且禁止使用 AI 以测试真实专业素养；第二轮则是必须使用 AI 才能完成的任务，不仅评估结果，还要审查候选人与 <span class="hl">agent 的对话记录</span>。<a href="https://x.com/zarazhangrui/status/2079225776545968166">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures Partner)</h3><p>Nikunj Kothari 警告说，许多创始人即将意识到：AI 领域没有护城河，并不意味着"规模和资本"就能成为你的主要壁垒。他列举了 Webvan、MySpace、Yahoo 等历史案例，这些公司曾经在结构和资本上都占据绝对优势，但最终都被拥有更好独特洞察的公司击败，或被自身的规模压垮。创始人真正需要穿过的针眼是：找到一个值得投入十年以上的 <span class="hl">独特洞察</span>，而不是用资本和规模来作为替代品。<a href="https://x.com/nikunj/status/2079328912912355470">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT)</h3><p>Thibault Sottiaux 感叹在 <span class="hl">OpenAI</span> 工作的体验，表示这里永远不会有无聊的时刻，是一个令人难以置信的地方。<a href="https://x.com/thsottiaux/status/2079355529101705264">详情</a></p></div>
+<div class="item"><h3>Thariq (Anthropic Claude Code)</h3><p>Thariq 透露了一个只在生产环境中存活了几分钟的 bug，这是他在深夜写代码时在个人账号上偶然遇到的。这展示了即使是 <span class="hl">Claude Code</span> 这样的顶级工程产品，在快速迭代中也会出现短暂的技术瑕疵。<a href="https://x.com/trq212/status/2079105479125741675">详情</a></p></div>
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Sam Altman 在回应某项产品或功能更新时表示"现在好了"，暗示 OpenAI 刚刚修复了某个问题或发布了某项 <span class="hl">改进</span>。<a href="https://x.com/sama/status/2079258683884917013">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Dan Shipper 宣布正在为其 AI agent 产品招聘高级工程师，要求候选人对 <span class="hl">agents</span> 充满热情。<a href="https://x.com/danshipper/status/2079331654359818503">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>No Priors · Travel Through the Lens of AI with Booking.com CEO Glenn Fogel</h3><p>The Takeaway: 在商业世界里，根本不存在绝对的护城河，长期获胜的唯一方法是持续创新并深刻理解业务复杂性。Booking Holdings CEO Glenn Fogel 分享了他职业生涯中极具戏剧性的经历：他在互联网泡沫破裂前夕加入 Priceline，亲眼目睹公司市值在九个月内从 300 亿美元暴跌至仅剩几亿美元，股价一度跌至 1 美元面临退市风险。然而，通过坚持长期主义，他陪伴公司走过了 27 年，股价从拆股后的 6 美元一路飙升逼近 6000 美元。他强调，不要以为凭借资本就能轻易颠覆一个行业："如果你觉得可以带着钱直接闯进来打倒这些巨头，我建议你先真正弄懂这门业务的复杂性。" <span class="hl">持续创新</span> 和对 <span class="hl">业务本质</span> 的敬畏才是穿越周期的真正武器。<a href="https://www.youtube.com/watch?v=8nj_0wZkbtA">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
