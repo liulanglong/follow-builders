@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-07-26</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item">
+<h3>Thibault Sottiaux (Codex & ChatGPT @OpenAI)</h3>
+<p>他宣布了一个重要里程碑：<span class="hl">ChatGPT Work</span> 的活跃用户数已经正式超越了 Codex。他特别强调了移动端体验的巨大潜力，指出直接从手机端使用该功能是颠覆性的体验，目前该功能已在 ChatGPT App 中全面可用。他对此的总结非常生动："以前你也可以对着电脑说话，但它不会给你什么实质性的回应，不过现在我们修复了这个 bug。"这暗示了语音交互与 agent 执行能力的深度融合已经达到了实用级别。<a href="https://x.com/thsottiaux/status/2081198608293187635">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Guillermo Rauch (Vercel CEO)</h3>
+<p>他提出了一个深刻的观点：<span class="hl">软件工厂本身才是产品</span>。你的产品好不好，完全取决于你搭建了什么样的 agent 来自主维护它。他认为这正是 Elon Musk 在特斯拉悟出的道理，现在这个规律在软件世界同样适用。他分享了自己的工作流：抛弃了各种花哨的 App、知识图谱和 UI，仅仅依靠一个 research/ 文件夹和一个用纯英语编写最佳实践的 AGENTS.md 文件，就能启动 agent 进行深度研究，并且这种方式可以无限扩展。他强调，当你有新想法时，不要去临时写 prompt，而应该思考如何构建一个能启动、维护并扩展你想法的"工厂"。<a href="https://x.com/rauchg/status/2081123293340520642">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Peter Steinberger (OpenClaw & OpenAI)</h3>
+<p>他分享了使用 <span class="hl">Codex</span> 进行大规模并行 QA 测试的实战经验。他通过同时调度 12 个 subagent 来拆分功能测试，自主启动不同端口的开发网关进行压力测试，并设定了寻找 200 个 bug 的硬性目标，要求每次都必须从根本上修复问题而不是简单打补丁。他观察到，现在的模型在理解人类真实意图方面变得极其出色，能够发现复杂的行为问题。而在过去，这种工作流往往会在上下文压缩边界处崩溃，或者模型开始作弊走捷径。<a href="https://x.com/steipete/status/2081175795587072421">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Aaron Levie (Box CEO)</h3>
+<p>他指出，随着 Google 的正式加入，整个行业已经对 <span class="hl">开放权重 AI</span> (open weights AI) 给予了彻底的认可与背书。他认为这对整个 AI 行业来说是一个极具里程碑意义的重大时刻，标志着开放生态成为不可逆转的共识。<a href="https://x.com/levie/status/2081054531908247937">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Madhu Guru (Meta AI 高级总监)</h3>
+<p>他分享了关于 AI 行业认知演变的深刻洞察：在未知领域中，难题的答案只能通过与现实的反复接触来获得。他回顾了美国 AI 社区对 <span class="hl">开放权重模型</span> 态度的惊人转变速度，指出短短一个月前这还不是共识。这种信念的转变归功于一系列公开"实验"的发生，比如 DeepSeek 的崛起、微软与 OpenAI 的关系裂痕、GLM 和 Kimi 的发布等。这些事件共同揭示了不同参与者的激励机制、地缘政治考量以及他们手中的底牌，让大家能够观察到不同方向的一阶和二阶效应，从而更新认知。<a href="https://x.com/realmadhuguru/status/2081141594892415028">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Amjad Masad (Replit CEO)</h3>
+<p>他展示了一个极具挑战性的极客项目：仅使用一个小型 <span class="hl">fine-tuned LLM</span>，在不借助任何外部国际象棋引擎辅助的情况下，让模型自行推算棋路。目前这个引擎的估计水平已经逼近 1200 Elo，他的下一步目标是突破 2000 Elo。他强调，之所以有难度，是因为他严格遵守了两个限制条件：一是只做 fine-tuning 而不搞自定义的预训练或架构改动；二是模型必须完全靠自己生成棋步。如果放宽这些条件，问题就会简单得多。<a href="https://x.com/amasad/status/2081086837263937543">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Nan Yu (Linear 产品负责人)</h3>
+<p>他从产品哲学的角度探讨了为什么行业内至今没有出现真正的 <span class="hl">Software Factory</span> (软件工厂)。他提出了一个递归式的有趣思考：如果你能造出一个软件工厂，那么你理应也能造出一个"生产软件工厂的工厂"。他进一步指出，这种通过设计与执行意图来替代单点功能的逻辑，不仅适用于软件开发，同样可以泛化到公共卫生、法律等其他需要系统性设计的复杂领域。<a href="https://x.com/thenanyu/status/2081195994499133820">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Peter Yang (AI 创业者与内容创作者)</h3>
+<p>他预告了即将发布的一期重磅内容：邀请了撰写了 Codex 官方使用指南的 OpenAI <span class="hl">DevEx</span> 工程师 Jason。在这期节目中，Jason 完整展示了他个人的 Codex 工作系统，包括如何跨 Slack 和邮件运行一个"幕僚长" agent，如何将过往的对话记录转化为新的自动化技能和工作流，甚至如何用它来从零搭建网站以学习架子鼓等新技能。<a href="https://x.com/petergyang/status/2081029209993154980">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Zara Zhang (Builder)</h3>
+<p>她提出了一个直击 AI 时代工作痛点的问题：当你在等待 AI 输出结果时，你都在做什么？这引发了关于 <span class="hl">AI 工作流</span> 中人类注意力分配的讨论。此外，基于她的构建经验，她观察到 AI 原生公司的企业文化与传统企业截然不同，它们更接近于一种开源社区式的文化，强调开放、协作与去中心化。<a href="https://x.com/zarazhangrui/status/2081200367480738098">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Nikunj Kothari (FPV Ventures 合伙人)</h3>
+<p>他对近期某生成式媒体公司收购占星 App 的事件给出了犀利的评论。他认为，能完成这种看似离谱的收购，必须满足两个苛刻条件：一是 CEO 必须对拥有绝对控制权（公司盈利且没有强势的董事会和 <span class="hl">VC</span> 干涉）；二是 CEO 本人必须像 David Holz 一样野心勃勃且行事疯狂。他调侃道，否则你很难向整个团队解释，为什么一家做生成式媒体的公司要去买一个看星座的 App。<a href="https://x.com/nikunj/status/2081017328137916426">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Matt Turck (FirstMark Capital VC)</h3>
+<p>他以幽默的口吻调侃了风投圈的跟风心态：试图在 <span class="hl">Anthropic</span> 上市前，通过 SPV（特殊目的实体）勉强买上三股股票，就为了以后能自称是"早期投资者"。此外，他还分享了一份关于芯片格局的基础科普内容，涵盖了当前 AI 算力竞争的核心玩家，包括 CPU、GPU、NVIDIA、AMD、TPU、Trainium 以及 Cerebras 等关键角色。<a href="https://x.com/mattturck/status/2081098045211439136">详情</a></p>
+</div>
+
+<h2>官方博客</h2>
+
+<div class="item">
+<h3>Anthropic Engineering: An update on recent Claude Code quality reports</h3>
+<p>针对近期用户反馈 Claude 响应质量下降的问题，Anthropic 进行了详细的事后复盘，确认问题源于三个独立的变更，且完全没有影响到 API 层。这三个 bug 分别是：为了降低 UI 卡顿延迟，将 Claude Code 的默认 <span class="hl">reasoning effort</span> 从 high 降到了 medium，但这被证明是错误的权衡；其次是一个清理闲置会话上下文的 bug，导致模型在后续对话中每轮都在遗忘，显得十分健忘；最后是减少冗长输出的 system prompt 指令意外损害了编码质量。Anthropic 坦言，因为这些变更分别在不同时间表上影响了不同的流量切片，导致整体看起来像是大范围的不稳定。目前所有问题已在 v2.1.116 中修复，并为所有订阅用户重置了使用额度限制。<a href="https://www.anthropic.com/engineering/april-23-postmortem">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Anthropic Engineering: Scaling Managed Agents: Decoupling the brain from the hands</h3>
+<p>Anthropic 详细阐述了 <span class="hl">Managed Agents</span> 的架构设计哲学：将 agent 的"大脑"（Claude 及其 harness 循环）与"双手"（执行代码和操作文件的 sandbox）以及"会话"（事件日志）彻底解耦。文章指出，早期将所有组件塞进单个容器的做法，让服务器变成了难以维护的"宠物"（pet），一旦无响应不仅会丢失会话，还因为涉及用户数据而极难调试。通过借鉴操作系统将硬件虚拟化为"进程"和"文件"的思路，Anthropic 为 agent 建立了高度抽象的接口。这意味着底层实现可以自由替换，同时客户也能轻松地将 agent 连接到自己的私有云或 VPC 环境中，彻底解决了基础设施耦合的痛点。<a href="https://www.anthropic.com/engineering/managed-agents">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Claude Blog: New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels</h3>
+<p>Claude Managed Agents 推出了两项重磅更新：支持 <span class="hl">self-hosted sandboxes</span>（自托管沙箱）和 MCP tunnels（MCP 隧道）。自托管沙箱允许 agent 在企业完全控制的基础设施内执行工具，确保敏感文件、代码库和数据绝不离开企业安全边界，同时支持 Cloudflare、Daytona、Modal 和 Vercel 等主流托管提供商。而 MCP 隧道则提供了一种极其安全的方式，让 agent 能够连接到企业内部私有网络中的 MCP 服务器，调用内部数据库或私有 API，且无需向公网开放任何入站端口。这意味着高安全要求的企业现在可以放心地让大模型 agent 在内部运转。<a href="https://claude.com/blog/claude-managed-agents-updates">详情</a></p>
+</div>
+
+<h2>播客</h2>
+
+<div class="item">
+<h3>Unsupervised Learning · Ep 91: Top AI Analyst Unpacks Today's AI Hype Cycle</h3>
+<p>核心收获：不要纠结于争论 AI 是否比互联网或电力更伟大，而应该回顾历史上每次通用技术革命发生时，价值究竟是如何在产业链条中流动的。知名科技分析师 Benedict Evans 在节目中指出，人们总是倾向于认为当下发生的事情是史无前例的，甚至认为 AI 会直接抹除大量工作岗位，但他提醒大家："在电力出现之前人们也不笨"，他们同样在抓耳挠腮地思考新技术的用途。他将当前的基础模型投入与早期的移动网络进行了精妙的对比：移动网络在过去 15 年间流量暴增了成千上万倍，运营商每年砸下 2000 亿美元资本开支，但最终"所有价值都向上层流动了"，他们并没有做成 Uber 或 YouTube。这直接触及了 <span class="hl">LLM</span> 领域最核心的商业追问：当底层模型像运营商一样承担高昂的边际成本时，谁能在应用层捕获最终价值？他还犀利地指出，连 <span class="hl">Sam Altman</span> 试图将 LLM 类比为 Windows 操作系统的说法也站不住脚，因为大模型根本不具备操作系统那样的网络效应。<a href="https://www.youtube.com/watch?v=vDY_ocrkQ5w">详情</a></p>
+</div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
