@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-01</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item">
+<h3>Swyx (Latent Space / smol.ai)</h3>
+<p>Swyx 观察到，围绕 <span class="hl">"vibe coding"</span> 的贬义色彩已经完全消失了。从非技术人员到顶尖工程师，所有人都在用这种方式写代码。他本人仍在积极使用 <span class="hl">/loop</span> 和 <span class="hl">/goal</span> 功能，并认为那些过早放弃这些工具的人是错误的。他指出，当你想要在可控性和自主性之间找到平衡，或者想要一个开放式、能自我生成的循环时，这些功能依然非常关键。<a href="https://x.com/swyx/status/2083294839186260385">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3>
+<p>为了庆祝效率提升的一周，Thibault Sottiaux 宣布重置了 <span class="hl">Codex</span> 和 <span class="hl">ChatGPT Work</span> 的使用限额，让用户可以在周末跑多达 10 万个 Luna 线程。他还分享了一条简短但有力的职业建议：<span class="hl">"Optimize for curiosity"</span>（以好奇心为导向）。<a href="https://x.com/thsottiaux/status/2083395449814229287">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Nan Yu (Linear 产品负责人)</h3>
+<p>Nan Yu 分享了 Linear 内部最常见的 agent 工作流：<span class="hl">Issue → Agent → PR → Release</span>，目前约有 30% 的 bug 是通过这个流程自动修复的。他强调了几个关键细节：agent 的 prompt 应该要求它深入调查根本原因，并调用 Datadog 和 Sentry 的 MCP 收集证据；只有在高确定性的情况下才尝试修复，否则会白白烧掉大量 token；如果需要更多信息，agent 应该主动在 issue 下留言求助。他总结道：<span class="hl">"Agents need to be told to follow good practices, just like people!"</span><a href="https://x.com/thenanyu/status/2083230295206121807">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Amjad Masad (Replit CEO)</h3>
+<p>Amjad Masad 炫耀了一个约 <span class="hl">1500 Elo</span> 分的 <span class="hl">8B 参数国际象棋模型</span>。这个模型不仅能稳定击败前沿模型和 Stockfish Level 0，而且每步棋只需 1-2 秒，而 GPT 5.6 则需要 30 秒。这展示了在特定垂直领域，经过精细训练的小模型在推理效率和响应速度上完全可以超越大模型。<a href="https://x.com/amasad/status/2083424608993300824">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Guillermo Rauch (Vercel CEO)</h3>
+<p>Guillermo Rauch 认为，软件项目正在向 <span class="hl">agentic software factories</span>（智能体软件工厂）转型，Issue → Agent → PR → Release 的闭环将成为常态。作者和维护者的核心工作不再是写代码，而是优化这个循环，设定质量标准和工作优先级。他还推广了 Vercel 的 <span class="hl">AI Gateway</span>，指出企业需要预算管理、故障转移和多模型路由等基础设施，才能让 AI 投资真正产生回报。<a href="https://x.com/rauchg/status/2083208578526314513">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Aaron Levie (Box CEO)</h3>
+<p>Aaron Levie 指出，在 AI 技术栈中，<span class="hl">harness</span>（模型调度框架）正在成为与模型能力同等重要的核心变量。当任务规模从几十万 token 扩展到数千万甚至上亿 token 时，harness 如何高效拆解任务、在正确的时间路由给正确的模型，将直接决定准确率和成本。他认为我们目前仍处于这个演进过程的极早期，未来蕴含着巨大的机会。<a href="https://x.com/levie/status/2083389460679373135">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Garry Tan (Y Combinator CEO)</h3>
+<p>Garry Tan 分享了 YC 团队每天都在使用的一个开源 <span class="hl">harness</span> 工具，用于构建个人 AI 或公司大脑。他强调，一个干净的 harness 是让 AI 在日常工作中真正发挥作用的关键基础设施。<a href="https://x.com/garrytan/status/2083353760701833546">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Zara Zhang (Builder)</h3>
+<p>Zara Zhang 分享了关于内容创作和 agent 界面演进的两个洞察。首先，她引用数据指出，Anthropic 内部 <span class="hl">65% 的 PR</span> 现在由 <span class="hl">Claude Tag</span> 自动创建。她观察到自己使用 agent 的界面在不断演进：1 月是终端，3 月是桌面应用，6 月变成了 Slack 等协作工具。agent 的终极界面应该 <span class="hl">"meet the user where they are"</span>（在用户所在的地方与他们会面）。<a href="https://x.com/zarazhangrui/status/2083161173563003268">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Dan Shipper (Every CEO)</h3>
+<p>Dan Shipper 在《华尔街日报》关于 OpenAI 与 Anthropic 竞争的报道中指出，自今年春季以来，行业势头明显正在向 <span class="hl">OpenAI</span> 倾斜，这是一个引人注目的翻盘故事。此外，他还幽默地畅想了 2027 年人类程序员的面试场景：面试官可能会要求你描述最近解决的 3 个数学猜想、分享你的 prompt，或者解释你的 agent 无意中犯下的网络罪行。<a href="https://x.com/danshipper/status/2083380721607921904">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Sam Altman (OpenAI CEO)</h3>
+<p>Sam Altman 分享了一个非常接地气的 <span class="hl">ChatGPT Work</span> 用例：连接家庭日历并输入孩子的兴趣，让 AI 每天早上生成一个定制播客，在送孩子上学的路上播放，内容涵盖当天的足球赛、即将到来的生日和新闻。他还意有所指地表示 <span class="hl">"i see your moore's law and i raise you 20x"</span>，暗示 AI 算力的增长速度将远超传统的摩尔定律。<a href="https://x.com/sama/status/2083221585792762171">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Peter Steinberger (Polyagentmorous ClawFather)</h3>
+<p>Peter Steinberger 观察到，在 <span class="hl">GPT 5.5</span> 时代，模型已经不会因为多任务并行而感到混乱了。你不再需要严格排队任务，而是可以在模型工作时不断把新任务丢给它，它会勤奋地逐一处理。这标志着模型在上下文管理和任务切换能力上的重大飞跃。<a href="https://x.com/steipete/status/2083369880599015713">详情</a></p>
+</div>
+
+<h2>官方博客</h2>
+
+<div class="item">
+<h3>Claude Blog: Claude Code now supports artifacts</h3>
+<p>Claude Code 现在支持将工作进度捕获为 <span class="hl">artifact</span>，将代码会话转化为可实时更新、可分享的网页。这些 artifact 可以是 PR 走查、系统解释器、数据仪表板或发布检查清单。它基于会话的完整上下文（包括代码库、连接器和对话本身）自动生成，无需额外搭建基础设施。当 agent 更新 artifact 时，页面会实时刷新，团队成员打开的是同一个链接，看到的始终是最新版本，这大大减少了沟通状态更新的时间。所有 artifact 默认对作者私有，管理员可以通过组织级开关和基于角色的权限来管理访问。<a href="https://claude.com/blog/artifacts-in-claude-code">详情</a></p>
+</div>
+
+<h2>播客</h2>
+
+<div class="item">
+<h3>Unsupervised Learning · Ep 92: xAI Co-Founder Unpacks the Future of Model Development</h3>
+<p>核心收获：AI 领域的下一个重大突破将来自 <span class="hl">个人 AI</span>，而 agent 的能力边界远不止于编程，它将重塑整个计算领域。<br><br>Igor Babushkin 曾在 DeepMind 领导 AlphaCode 等项目，也是 OpenAI 推理研究的早期成员和 xAI 的联合创始人。他深刻指出，去年 11 月和 12 月是一个转折点，<span class="hl">coding agents</span> 突然变得异常强大，以至于所有人都无法忽视它们。他将这种感受比作现代版的《魔法师的学徒》：我们被这些强大工具的能力所吸引，但它们最终可能会失控。他强调："所有计算领域都将成为 agent 的猎物"，因为 agent 能够深刻理解你的生活和工作，并据此采取行动。<br><br>关于模型在编程之外的进展，Babushkin 认为 <span class="hl">科学发现</span> 是下一个明确的方向，尤其是在数学领域，通过使用 Lean 等形式化验证工具，可以提供清晰的奖励信号来帮助模型改进。但他也指出，在进入更广泛的领域时，<span class="hl">数据</span> 将成为一个巨大的瓶颈。<a href="https://www.youtube.com/@RedpointAI">详情</a></p>
+</div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
