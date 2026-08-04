@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-03</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item">
+<h3>Andrej Karpathy (深度学习研究者)</h3>
+<p>他继续跟进了一个名为<span class="hl">"pelican on a bicycle"</span>的 AI 视觉生成测试，并上传了可在线浏览和 fork 的源代码供开发者体验。他还调侃说，基于 AI 现在的生成能力，也许我们很快就能看到 <span class="hl">GTA Hobbiton</span>（指《指环王》风格的开放世界游戏）比 GTA VI 还要提前面世。<a href="https://x.com/karpathy/status/2083948654377996480">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Swyx (smol.ai / Latent Space)</h3>
+<p>为了准备关于 <span class="hl">computer use</span>（计算机使用）的播客内容，他正在持续收集 AI agent 令人惊叹的操作案例。他分享了一个非常生动的例子：他让 agent 去和客服支持聊天，以加速问题解决进度，而对方的人类客服完全没有意识到自己在和机器人对话。更绝的是，当客服试图把问题甩锅给用户时，这个 agent 直接调取了完整的交互凭证进行有理有据的反驳。<a href="https://x.com/swyx/status/2084156733027701164">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Peter Yang (AI 内容创作者)</h3>
+<p>他分享了与 Nous Research 联合创始人 Karan 关于 <span class="hl">Hermes</span> agent 框架的深度对谈。Hermes 的核心优势在于能自主构建技能库来辅助人类工作，而防止"技能冗余"（slop）的机制是其关键。Hermes 内部运行着一个名为 <span class="hl">Hermes Curator</span> 的后台任务，它会定期清理和优化 agent 的记忆与技能。由于该系统是开源的，开发者可以自定义"slop"的标准，agent 会据此重写自身的清理循环。<a href="https://x.com/petergyang/status/2083968605432267139">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Thariq (Anthropic / Claude Code)</h3>
+<p>他提出了一个深刻的观察：<span class="hl">Jevons 悖论</span>（某资源的使用效率提高，反而会导致对该资源的需求增加）正在数学领域上演。AI 让数学研究变得更高效、更容易理解，数学家也有更多时间在高抽象层次上进行探讨。因此，社会对懂数学、能深度思考的人才需求不但不会减少，反而会上升，这与当年国际象棋领域的变化非常相似。<a href="https://x.com/trq212/status/2083977795290734975">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Amjad Masad (Replit CEO)</h3>
+<p>他开发的一款由 <span class="hl">LLM 驱动的国际象棋引擎</span>已经正式部署在 LiChess 平台上，开始自主与真实玩家和其他机器人对弈，目前积分达到了 1253 Elo。这款引擎甚至可以同时并发进行多场对局，展示了 AI 在策略博弈中的实时决策能力。<a href="https://x.com/amasad/status/2083926395403821427">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Guillermo Rauch (Vercel CEO)</h3>
+<p>他详细分享了 Vercel 内部名为 <span class="hl">@v</span> 的企业级 agent 架构。这个 agent 已经全面渗透到公司日常的财务、工程、营销等各个环节，且使用量和 token 消耗呈指数级增长。Rauch 强调，企业需要拥有自己的 agent（从源码、运行时到数据完全可控），而不是依赖第三方 SaaS 提供的集成。@v 的设计理念类似于"单体应用"或"单体仓库"，它既是主 agent 也是路由器，能够智能地将任务委派给底层的各类子 agent。<a href="https://x.com/rauchg/status/2084042561690456157">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Aaron Levie (Box CEO)</h3>
+<p>他提出了一个非常反直觉的观点：世界上最"难"的工作（如数学、网络安全和编程）反而会最先被 AI 自动化。因为这些领域的成果具有客观的<span class="hl">可验证性</span>（verifiability），模型在训练时能获得更清晰的奖励信号，在实际运行时也能通过自动化测试验证正确性。相反，涉及复杂人际博弈、主观判断和不断变化的外部环境的工作（如商业决策、法律谈判），由于缺乏即时的反馈机制，自动化进程会缓慢得多。<a href="https://x.com/levie/status/2083965372747882741">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Ryo Lu (Cursor 设计负责人)</h3>
+<p>他回顾了 Rdio、Mailbox 和早期 Apple 应用如何通过创造全新的交互模式，让软件变得直观且触手可及。在 AI 逐渐取代传统<span class="hl">App 界面</span>的时代背景下，他抛出了一个值得深思的设计哲学问题：当我们逐渐抛离传统的 App 形态时，软件中哪些部分应该保持可见？未来的交互体验又该是什么感觉？<a href="https://x.com/ryolu_/status/2083939454017053179">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Garry Tan (Y Combinator CEO)</h3>
+<p>他坚信 AI 将创造难以想象的<span class="hl">经济增长</span>，这是当前时代最积极的信号。此外他强调，在市场中，结果才是真正的"领土"，而所谓的资历或规划只是"地图"；精英主义的本质就是看重领土胜过地图，换句话说，你到底有没有"做出人们真正想要的东西"才是唯一重要的评判标准。<a href="https://x.com/garrytan/status/2083957110711386439">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Nikunj Kothari (FPV Ventures 合伙人)</h3>
+<p>他从投资人的视角犀利地指出，当前的早期 VC 市场已经彻底沦为<span class="hl">"vibes capital"</span>（凭感觉投资），与基本面完全脱节。处于热门赛道的公司即使没有实质性产品也能融到大笔资金，而一些基本面扎实的项目却可能步履维艰。他认为，在巨额待投资金和 AI 风口的双重推动下，这种高波动、高估值的疯狂状态至少还会持续 12 到 18 个月。<a href="https://x.com/nikunj/status/2083873335998333227">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Dan Shipper (Every CEO)</h3>
+<p>他提出了一个非常心理学视角的概念：<span class="hl">agency rupture</span>（能动性破裂）。当 AI 能够完成你曾经引以为傲的工作时，你会经历一种类似"身份丧失"的死亡感。但他指出这是一个可预测的周期：首先是震惊于 AI 的能力，接着是看到 AI 背后需要人类搭建的"脚手架"，最后是重建能动性，此时 AI 退化为隐形的工具。能够快速消化这种破裂感并将其转化为好奇心的人，将在 AI 经济中如鱼得水。<a href="https://x.com/danshipper/status/2084038453831020916">详情</a></p>
+</div>
+
+<h2>播客</h2>
+
+<div class="item">
+<h3>Training Data · Building the Automated AGI Lab: Core Automation's Jerry Tworek and Rohan Anil</h3>
+<p><strong>The Takeaway:</strong> 大规模 pre-training 和 reinforcement learning 的红利已经见顶，限制 AI 迈向真正 AGI 的根本瓶颈在于 <span class="hl">transformer 架构本身</span>，以及实验室训练数据与真实世界 messy（混乱）任务分布之间的巨大鸿沟。</p>
+<p>前 OpenAI VP Jerry Tworek 和前 Gemini 预训练核心负责人 Rohan Anil 创立了 Core Automation。Jerry 分享了一个极其坦诚的反思：他曾经是坚定的 RL 极简主义者，认为只要把 RL 扩大就能解决一切问题。2024 年时他甚至预言 2025 年就是 AGI 降临之年。然而，尽管他们不断训练出新模型，各种 <span class="hl">benchmark 分数</span> 屡创新高，模型在真实世界中的表现依然不尽如人意。</p>
+<p>他意识到核心问题在于：模型在实验室里评估的数据，和它被训练的数据其实是同一枚硬币的两面，但真实世界的任务分布要复杂和混乱得多。正如他所言："所有我们用来评估模型的数据，本质上和训练数据是一样的。但真实世界的分布和任务要混乱、模糊得多。我们的训练数据根本没有真正复制真实世界的使用场景。"因此，他现在致力于从底层架构出发，探索下一代能够真正适应真实世界自动化需求的系统。<a href="https://www.youtube.com/watch?v=2RJiaf0SY8s">详情</a></p>
+</div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
