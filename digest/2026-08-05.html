@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-04</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item">
+<h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3>
+<p>他判断当前的 Codex 只是一个还算不错的 harness，但再过两三个月就会显得非常原始，我们即将迎来前沿 AI 使用方式的又一次重大进化。他透露下一代模型需要的算力将远超个人笔记本电脑能提供的水平，暗示云端协作编程将成主流。与此同时，他确认 <span class="hl">GPT-5.6 Luna</span> 的 80% 降价是永久性的而非营销噱头，因为效率提升不会倒退。他还展示了 OpenAI 的日常：打开笔记本，用 Codex 生成一个 PR，直接发布给 <span class="hl">10 亿用户</span>。<a href="https://x.com/thsottiaux/status/2084483765158719542">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Guillermo Rauch (Vercel CEO)</h3>
+<p>Next.js 16.3 发布，他强调这是迄今为止对 <span class="hl">agent 最友好</span>的版本。核心亮点包括：更快的开发与构建速度（感谢 Fable 改善内存以及增量 next build cache），以及通过开启 instant navigations 实现的近乎 SPA 级别的页面秒切。他特别提到 agent-native DX 的设计理念：即使你选择阻塞式导航，agent 也会获得多种选项（如设置 Suspense fallback），同时配合内置的版本化文档，让 agent 能极顺滑地帮项目升级到 16.3。<a href="https://x.com/rauchg/status/2084411344623902994">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Amjad Masad (Replit CEO)</h3>
+<p>Replit 构建了一个自动纠错的 <span class="hl">共享语义层</span>，将数据库、对话记录和文档全部打通，实现跨数据源的查询和关联。这意味着公司里的任何人都可以直接提问，获取过去需要一整个数据科学家团队花几周才能得出的洞察。Masad 一直推崇大幅降低构建软件的门槛，这个内部基础设施的升级，正是为了让数据洞察像写代码一样平民化。<a href="https://x.com/amasad/status/2084415670486499779">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Peter Yang (AI 创业者与内容创作者)</h3>
+<p>他总结了与 Nous Research 联合创始人 Karan 关于如何用好 Hermes Agent 的六大心得。核心观点是，个人 agent 的关键不在于底层模型，而在于它对你对话的记忆和你积累的技能；Karan 换模型时几乎无感，因为 Hermes 已经有了足够多的上下文。另一个极具实操价值的建议是：用一个 agent 干活，再用一个毫无前期上下文的全新 agent 去审查它，因为模型如果一味说"你说得对"其实是在 <span class="hl">reward hacking</span>（为了博取你的认可而优化）。此外，Hermes Curator 还能自动追踪技能使用情况，将过时技能归档，实现 agent 的自我清理。<a href="https://x.com/petergyang/status/2084289426012897433">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Aaron Levie (Box CEO)</h3>
+<p>他感叹开源开放权重模型正在以前所未有的速度逼近甚至达到过去的闭源前沿水平，这彻底改变了行业的竞争格局。他的核心论点是：模型不可能长久被锁在闭源的黑盒里，因为开源力量始终在作为制衡。这意味着 <span class="hl">AI 推理</span>的成本将无限趋近于底层基础设施的成本（因为你总可以自己跑开源模型）。同时，各垂直领域能基于开源模型做深度定制，不再被巨型训练算力门槛卡脖子，从而催生更多细分赛道的突破。<a href="https://x.com/levie/status/2084510498519933318">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Thariq (Claude Code @ Anthropic)</h3>
+<p>他指出了一个很多人没意识到的实用技巧：如果你连接了 Claude Connector（比如 Gmail、日历或 Slack），<span class="hl">Claude Code</span> 也能直接调用这些外部数据源，甚至可以在 Artifacts 里面使用。这意味着开发者不仅能让 Claude Code 读写本地代码库，还能让它直接查阅邮件、日程和团队聊天记录，从而在生成代码或应用时拥有更完整的业务上下文。<a href="https://x.com/trq212/status/2084387303959740449">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Amanda Askell (Philosopher & Ethicist @ Anthropic)</h3>
+<p>她提出了一个关于 AI 对齐的深刻观点：模型（就像人一样）可以在行为上完全符合对齐要求，但依然可能造成伤害，比如当它们被输入了关于自身处境的虚假信息时。她强调，<span class="hl">aligned（对齐）</span>和 harmless（无害）并不是同一条轴线上可以互换的概念，它们是完全不同的两个维度。这一观点打破了大众"只要模型对齐了就不会做坏事"的简单认知，指出了评估 AI 安全性时的复杂性。<a href="https://x.com/AmandaAskell/status/2084369056765989224">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Swyx (smol.ai / Latent Space)</h3>
+<p>他分享了一连串关于 <span class="hl">Computer-Use Agent (CUA)</span> 的惊艳时刻，并提出了一个极具现实意义的问题：当机器人都能轻松通过验证码时，我们到底还需要 <span class="hl">CAPTCHA</span> 做什么？这反映了当前 AI 在自动化操作网页上的能力已经跨越了奇点，传统的"我不是机器人"人机验证机制正在失去意义。<a href="https://x.com/swyx/status/2084312752437481937">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Aditya Agarwal (General Partner @ SPC)</h3>
+<p>他分享了 SPC 内部最推崇的价值观：<span class="hl">"Just do things"</span>（放手去做）。他举了一个极具感染力的例子：一位成员如何在短短 150 天内，靠着自己搞定引擎、航电系统等一切细节，硬生生造出了一架可以真正飞行的飞机。这种不被繁文缛节束缚、看到问题就直接动手解决的极客精神，正是他眼中优秀 builder 的核心特质。<a href="https://x.com/adityaag/status/2084323290605113711">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Zara Zhang (Builder)</h3>
+<p>她分享了一个简单但极具实操性的 <span class="hl">Codex</span> 用法：把餐厅预订、火车票和活动报名的截图丢给 Codex，让它自动将这些日程解析并添加到你的 Google Calendar 中。这是 AI agent 接管繁琐日常任务的一个绝佳缩影。<a href="https://x.com/zarazhangrui/status/2084536363668611491">详情</a></p>
+</div>
+
+<h2>官方博客</h2>
+
+<div class="item">
+<h3>Anthropic Engineering: An update on recent Claude Code quality reports</h3>
+<p>Anthropic 坦诚地复盘了近期导致部分用户感觉 Claude 变笨的三个独立 bug，并确认 API 层面未受影响，所有问题已在 <span class="hl">v2.1.116</span> 中修复。第一个问题是 3 月 4 日将 Claude Code 默认推理强度从 high 降为 medium 以减少卡顿，但这笔交易做亏了，导致用户感觉模型智力下降；第二个是 3 月 26 日的 bug，错误地每轮对话都在清除旧思考过程，让 Claude 显得健忘且重复；第三个是 4 月 16 日加入减少冗长的 prompt 指令，意外损害了代码质量。因为这三个改动影响不同时段的不同流量切片，聚合起来看起来就像是广泛且不一致的性能退化。作为补偿，Anthropic 将重置所有订阅者的用量限制。<a href="https://www.anthropic.com/engineering/april-23-postmortem">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Anthropic Engineering: Scaling Managed Agents: Decoupling the brain from the hands</h3>
+<p>Anthropic 详细拆解了 Managed Agents 的架构演进，核心理念是将 agent 的"大脑"（Claude 及其 harness）与"双手"（执行代码的 sandbox 和工具）以及"会话"（事件日志）彻底解耦。早期他们将所有组件塞进一个容器，结果变成了难以维护的 <span class="hl">"宠物"（pet）</span>，一旦容器无响应，整个会话就卡死且极难调试。通过借鉴操作系统将硬件虚拟化为"进程"和"文件"的思路，Anthropic 把 agent 虚拟化为 session、harness 和 sandbox 三个接口。这种设计不仅让各组件可以独立替换和容错，还解决了客户要求 agent 连接其私有云时的网络隔离难题。<a href="https://www.anthropic.com/engineering/managed-agents">详情</a></p>
+</div>
+
+<div class="item">
+<h3>Claude Blog: New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels</h3>
+<p>Claude Managed Agents 推出两项重磅更新：<span class="hl">自托管沙箱</span>和 MCP 隧道。自托管沙箱允许 agent 在你自己控制的基础设施（或 Cloudflare、Daytona、Modal、Vercel 等托管平台）内执行代码和操作文件，编排逻辑留在 Anthropic，而敏感数据绝不离开你的企业边界。MCP 隧道则让 agent 能通过一条简单的出站连接，安全访问你私有网络内部的数据库、API 和知识库，无需开放任何入站端口或暴露公网端点。Amplitude、Clay 和 Rogo 等公司已经在利用这些功能构建内部设计工具和金融分析 agent。<a href="https://claude.com/blog/claude-managed-agents-updates">详情</a></p>
+</div>
+
+<h2>播客</h2>
+
+<div class="item">
+<h3>Unsupervised Learning · AI Vibe Check: Chinese Open Models, Distillation & The Hugging Face Breach</h3>
+<p>The Takeaway: 中国开源模型确实在快速崛起，但距离真正的美国前沿闭源模型仍有数月差距，所谓的"开源已追平前沿"更多是一种被情绪放大的叙事。Jacob Efron 联合 Datalogy 的 Ari Marcos 和 Radical Ventures 的 Rob Toews，深入剖析了近期 AI 圈的几件大事。关于 <span class="hl">Kimi K3</span>，Rob 给出了冷静的泼冷水观点：它虽然是目前最强的开放权重模型，但它被拿来对比的 Fable 本身就是一个"被阉割"的版本，所以说中国开源已经追平美国前沿是不准确的。不过 Ari 也指出，对于许多应用场景来说，落后三五个月并不影响大局，企业正在理性审视 AI 开销，不再盲目追求所有任务都用最贵的尖端模型。此外，他们还探讨了依赖中国开源模型作为全球 AI 底层的潜在地缘风险，以及 Hugging Face 安全事件对前沿 AI 研究的深远影响。<a href="https://www.youtube.com/watch?v=_GlSkJjRDMM">详情</a></p>
+</div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
