@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-11</h1>
+
+<h2>X / 推特</h2>
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @OpenAI)</h3><p>OpenAI 正式推出了全新的网络安全防御产品线。他们发布了名为 <span class="hl">Daybreak Blue & Red</span> 的新访问层级，以加速防御方的安全能力，同时推出了专门针对安全领域优化的新模型 <span class="hl">GPT-5.6-Cyber</span>。此外，所有 ChatGPT Work 和 Codex 付费用户的使用量限制已被重置。Sam Altman 也发文呼吁大家使用 OpenAI 的模型来保护系统安全。<a href="https://x.com/thsottiaux/status/2086874565909815403">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Meta 以开放权重发布 <span class="hl">Muse Spark 1.2</span> 是 AI 领域的一个重大时刻，这标志着美国终于在前沿开源模型竞赛中做出了有力回应。此举将大幅降低智能成本，允许企业在本地或私有云上部署模型，并为法律、医疗等高度受限的领域提供了在特定垂直任务上进行 post-train 的可能。尽管闭源前沿模型依然不可或缺，但开源权重的加入为应用层提供了更灵活的路由选择和成本控制。<a href="https://x.com/levie/status/2086802472950239618">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Vercel 的安全审查工具 <span class="hl">DeepSec</span> 已经在公司内部变成了一个动词，成为软件工厂必备的代码安全防线。同时，他强调了 Vercel Sandbox 通过 <span class="hl">microVM</span> 隔离计算环境的重要性：Kimi 的技术报告证明传统容器隔离在应对前沿模型时会发生内核崩溃，而 OpenAI 最近利用 Artifactory 零日漏洞的网络逃逸也证明了网络隔离的必要性。为此，Vercel 已免费开放 egress 防火墙以限制 agent 的异常网络活动。<a href="https://x.com/rauchg/status/2086946535716393209">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 创业者与内容创作者)</h3><p>他总结了来自 Linear 团队关于构建生产级 agent 的五大核心经验。首先是绘制实际工作流，让工作起点留在 Slack 等原生工具中；其次是给 agent 提供寻找上下文的工具，而不是在 prompt 里硬塞信息。第三，从单一高频任务起步，基于真实使用情况扩展。第四，先用 <span class="hl">最强模型</span> 跑通工作流，再通过 evals 逐步降级优化成本。最后，将每一次真实的失败转化为 <span class="hl">eval 评测用例</span> 或产品改进任务。<a href="https://x.com/petergyang/status/2086824976800436676">详情</a></p></div>
+<div class="item"><h3>Thariq (Claude Code @Anthropic)</h3><p>在 AI 时代，从业者最需要的两项关键技能是 <span class="hl">算力分配</span> 和 <span class="hl">思维伙伴</span>。大多数工作并没有现成的"最重要问题清单"，你需要自己判断哪些问题值得投入计算资源。同时，你必须深入理解技术证明的细节，才能确信 AI 给出的结果是真实可靠的。这些技能依然需要深厚的专业技术底蕴和直觉。<a href="https://x.com/trq212/status/2086931647468097932">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监)</h3><p>在面向十亿用户的消费级体验中，AI 需要解决的核心挑战是：如何构建关于用户行为动机的理论，而不仅仅是记录他们做了什么。这要求系统结合显性信号（搜索和聊天）与隐性信号（停留、跳过、回看），并在近乎实时的条件下推理用户的 <span class="hl">生活上下文</span> 与不断演变的兴趣。这是一个极具挑战性的工程难题。<a href="https://x.com/realmadhuguru/status/2086909974668784113">详情</a></p></div>
+<div class="item"><h3>Matt Turck (FirstMark Capital VC)</h3><p>他精准吐槽了数据行业多年来未曾改变的底层痛点：从大数据时代到现代数据栈时代，再到 Gen AI 时代和如今的 <span class="hl">Agentic AI</span> 时代，无论上层的模型、仪表盘还是 agent 做得多好，最终卡脖子的永远是 <span class="hl">底层数据质量</span>。<a href="https://x.com/mattturck/status/2086882606638153882">详情</a></p></div>
+<div class="item"><h3>Ryo Lu (前 Cursor 设计师)</h3><p>在旧金山科技圈沉浸十年后，他宣布离开 Cursor。虽然 Cursor 是那个快节奏、充满野心世界的极致缩影，但他现在需要一种不同的节奏：更慢的时间、不同的天气，以及日常生活中更多的文化与人情味。他计划前往 <span class="hl">亚洲</span> 重新开始，以保持脚踏实地并自由地进行构建。<a href="https://x.com/ryolu_/status/2086854498639822942">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (独立开发者)</h3><p>她分享了一个极佳的设计学习技巧：给 Codex 提供一个优秀的网站，让它分析设计的精妙之处，然后对网站进行完整截图，并直接在图像上 <span class="hl">添加注释</span> 来拆解设计生效的原因。通过案例学习总是优于理论，而标注法让你无需在阅读分析和查看成品之间来回切换。此外，她还分享了北京"AGI Bar"提供无限量免费 <span class="hl">DeepSeek tokens</span> 供顾客边喝啤酒边 vibe code 的趣闻。<a href="https://x.com/zarazhangrui/status/2086758509979316423">详情</a></p></div>
+<div class="item"><h3>Swyx (smol.ai / Latent Space)</h3><p>他吐槽了开发环境中重复占用数十 GB 空间的 node_modules 问题，认为 <span class="hl">worktrees</span> 机制亟需被淘汰。在模型评测方面，他对比了 GPT Luna Max 和 Claude Fable Ultracode 克隆网页应用的表现，发现 Fable 在视觉还原度上更胜一筹，但 Luna 更懂意图，产出了更具可用性的代码。他还提到 pdb 环境正在探索通过 AFS clone 支持实现 <span class="hl">agent native</span> 的版本控制替代方案。<a href="https://x.com/swyx/status/2086962980235939920">详情</a></p></div>
+<div class="item"><h3>Claude (@Anthropic)</h3><p>Anthropic 宣布将 <span class="hl">Claude Sonnet 5</span> 的入门定价永久固定在每百万输入 token 2 美元、每百万输出 token 10 美元的水平。这一在 6 月份推出的优惠价格原本计划在 8 月 31 日结束，现在确认将作为标准价格保留。<a href="https://x.com/claudeai/status/2086891169217122586">详情</a></p></div>
+
+<h2>官方博客</h2>
+<div class="item"><h3>Anthropic Engineering: How we contain Claude across products</h3><p>随着 agent 能力的增强，授予模型足以摧毁内部服务的权限已成为常规操作，核心工程挑战变成了如何控制其潜在的 <span class="hl">爆炸半径</span>。文章指出，由于人类审批容易产生疲劳（数据显示用户批准了约 93% 的权限提示），仅靠 human-in-the-loop 是不够的。Anthropic 转向通过沙箱、虚拟机和出口控制等 <span class="hl">隔离机制</span> 来限制 agent 的能力边界。他们还透露，由于当时风险过高，曾在 2026 年 4 月阻止了 <span class="hl">Claude Mythos Preview</span> 模型的发布，但未来随着防御系统的成熟，类似能力的模型将有望安全推出。<a href="https://www.anthropic.com/engineering/how-we-contain-claude">详情</a></p></div>
+
+<h2>播客</h2>
+<div class="item"><h3>No Priors · Building an Autonomous Enterprise for Real-World Services with Netic Founder Melisa Tokmak</h3><p>The Takeaway: AI agent 正在接管年营收数十亿美元的实体服务企业的核心运营链路，从客户沟通到调度派单全面自动化。Netic 创始人 Melisa Tokmak 分享了他们如何为 HVAC（暖通空调）、管道维修等家庭服务企业构建 AI 系统。在零下 20 度暖气罢工的极端场景中，Netic agent 不仅负责接听电话，还要理解复杂的业务规则，综合评估客户房屋类型、设备型号、客户终身价值（LTV）以及技术人员排班，从而做出最优的派单决策。她指出，这些传统企业高度依赖人力，人员流动大且无法有效应对季节性需求爆发，而 AI 实现了 <span class="hl">AI-first</span> 的无缝扩容。目前超过 70% 的客户互动完全由 Netic agent 首接，这证明了 AI 在复杂、非标准化的 <span class="hl">实体服务业</span> 中已经具备端到端接管真实工作流的成熟能力。<a href="https://www.youtube.com/@NoPriorsPodcast">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
