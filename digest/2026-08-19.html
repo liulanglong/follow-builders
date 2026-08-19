@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-18</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Swyx (Latent Space 主播 / smol_ai 创始人)</h3><p>Swyx 认为 <span class="hl">Trajectory</span> 团队在 Continual Learning(持续学习)方向上的执行品味值得称道。在他组织的 Continual Learning 议程中，Trajectory 的 rronak 系统讲解了他们如何攻克 CL 领域遗留的核心数据问题，包括为什么 <span class="hl">GRPO 不够用</span>、为什么必须转向 on-policy 训练，以及随之而来的一系列问题的修复方案。Swyx 称这是该领域早期领跑者给出的一份高质量综述，并推荐关注整个议程的其他分享。<a href="https://x.com/swyx/status/2089393073327653344">详情</a></p></div>
+<div class="item"><h3>Josh Woodward (Google Labs / Gemini App / Google AI Studio VP)</h3><p>Josh Woodward 公布了 Gemini 体验改进清单的最新进展，共十项更新逐条汇报。亮点包括：改版后的 Workspace 工具将在 1-2 周内开始测试；<span class="hl">Gemini 3.7 Flash</span> 在 tool calling 上有明显提升，后续还会继续加强；新的 <span class="hl">Projects</span> 设计已完成、正在实现中；目前已支持 <span class="hl">49 个 connectors</span> 且数量还在增加。其余多项已完成并逐步放量，其中最大的 over-triggering(过度触发)bug 也已修复。他同时向用户征集下一轮改进建议。<a href="https://x.com/joshwoodward/status/2089520767281324112">详情</a></p></div>
+<div class="item"><h3>Boris Cherny (Anthropic Claude Code 负责人)</h3><p>Boris Cherny 分享了 Claude Code 的最新更新并邀请用户反馈，该帖获得 739 个赞。他随后补充说："Small quality of life improvements like this add up. More on the way"，强调这类<span class="hl">小步快跑的体验优化</span>会持续累积，且更多改进正在路上。对 Claude Code 用户来说，这是观察产品迭代节奏的直接信号。<a href="https://x.com/bcherny/status/2089537919795212565">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3><p>Thibault Sottiaux 发起了一个高互动提问(3726 赞)："在 <span class="hl">Codex</span>、API 或我们的模型上，有什么显而易见、完全做得到、但我们就是还没做的事？"他直接向社区征集那些"100% 在能力范围内、却被遗漏"的产品改进点，这种自上而下的开放征集在 OpenAI 高管中并不多见。他随后还用一首改编歌词调侃 Codex 帮你把失败测试在午夜前全部修好、"在天亮前 ship 出去"的日常。<a href="https://x.com/thsottiaux/status/2089500941842342287">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI Sr Director，此前在 Google 主导 Gemini、Veo、Nano Banana)</h3><p>Madhu Guru 给出了一条实用的 <span class="hl">evals</span> 方法论：练 eval 最好的方式，是挑一个你非常熟悉的工作流，想办法把它的质量变得可度量。具体路径是：先研究真实 traces，也就是典型用户的 prompt 序列，想清楚每一步和端到端结果中"好的回答"长什么样；再研究产品在哪里失败，构造能捕捉这些失败的 traces，比如混乱的 tool call 响应、缺失的上下文等。之后还要让 eval 能<span class="hl">反复自动运行</span>，并确保它随着用户行为演变持续镜像真实流量。他表示这可以写成一个系列。<a href="https://x.com/realmadhuguru/status/2089480958571331623">详情</a></p></div>
+<div class="item"><h3>Thariq (Anthropic Claude Code 工程师)</h3><p>Thariq 提出了一个反直觉判断：最近大量程序化生成艺术、视频剪辑和 <span class="hl">3D 游戏demo</span> 让他更新了认知，<span class="hl">LLM 编程模型在很多创意工作上可能比 diffusion 模型更强</span>。他的论据是代码天然更容易编辑和微调方向，也更容易导出并与现有工具链衔接。他还安利了一个 Claude Code 隐藏玩法：在 CC 里输入 /design 加上你想设计的东西，就能直接上手体验(该帖 880 赞)。<a href="https://x.com/trq212/status/2089415712007938315">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>Amjad Masad 提醒大家：只扫描代码漏洞是不够的，还要用 <span class="hl">pen testing</span>(渗透测试)真正尝试攻破它，安全要靠主动对抗来验证。他还转发点评了一支团队：pitch 里完全没提"AI"两个字，却跑出了 AI 级别的增长速度，而且因为深度用 AI，团队规模只有同类公司的十分之一。这个观察呼应了他一贯的观点：AI 的价值在于内化到产品和工作流，而不是当营销话术。<a href="https://x.com/amasad/status/2089435606338416884">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Guillermo Rauch 宣布了一个略带调侃的里程碑：你现在可以把 repo 托管在 <span class="hl">Cursor Origin</span> 上，再通过 Cursor Origin 部署到 Vercel，而 Cursor Origin 本身也托管在 Vercel 上。他还不忘补一句"而且和 GitHub 不同，它是 online 的"，暗讽 GitHub 近期的服务中断。这条推文获得 <span class="hl">3600 赞</span>，反映出开发者社区对 GitHub 稳定性的不满正在转化为对新托管方案的兴趣。<a href="https://x.com/rauchg/status/2089409162270965858">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Aaron Levie 借一笔数据交易谈"数据是新石油"的真正含义：AI 对数据的渴求如此之大，以至于我们正在进入一个<span class="hl">数据几乎以任何形式都有价值</span>的时代。他的核心判断是：在 AI 时代，信息应当作为一项<span class="hl">资产记入资产负债表</span>，这笔数据出售只是冰山一角。最终，企业如何管理和挖掘自身组织内的 intelligence，将成为未来竞争力和价值创造的决定性因素之一。<a href="https://x.com/levie/status/2089499887905997272">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator President & CEO)</h3><p>Garry Tan 开源了他的 <span class="hl">Personal AGI</span> 项目(他在今年 Startup School 演讲中提到的那个)：一个私有 GitHub repo，包含他验证过的 <span class="hl">70 个 skills</span>，以及一个 Karpathy 风格个人知识 wiki 的起点，全部 MIT 协议、完全免费。使用门槛很低：配合现有的 Claude Code 或 Codex 订阅即可，新建一个目录启动 CC/Codex(桌面端体验更好)，把说明图粘贴进去就能自动搭建你的 agent repo。<a href="https://x.com/garrytan/status/2089425134339961173">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures Partner)</h3><p>Nikunj Kothari 发了一条 1483 赞的辛辣总结：模型商(OpenAI、Anthropic、xAI)、IDE(Cursor、Windsurf)、harness(Cognition、Factory、LangChain)、应用构建器(Replit、Lovable、Bolt)、wrapper(Harvey、Abridge)、推理服务商、语音层、数据标注、AI 基础设施、neocloud、生成式媒体，"AI 圈里 apparently <span class="hl">nobody has a moat</span>，除了 venture firm"。他随后给出自己的"最热观点"：<span class="hl">品牌营销</span>将成为未来公司最重要的差异化资产之一。他强调这不是砸钱拍 launch video，而是想清楚公司代表什么、把握市场 vibe、每周持续输出；如果 agent 成为大多数产品的主要用户，要在注意力稀缺的人类面前持续脱颖而出就更关键。他预测这类人才未来十年将从"二号位"逆袭为联合创始人级别的角色。<a href="https://x.com/nikunj/status/2089486802356961364">详情</a></p></div>
+<div class="item"><h3>Peter Yang (Practical AI 教程与访谈作者)</h3><p>Peter Yang 在寻找用 AI 剪辑 YouTube 口播视频 intro 的工具方案：包括 zoom in、动态字幕、logo 和 b-roll 等。他目前测试的是 <span class="hl">HyperFrames</span>，但想找替代品。他的目标是"只通过和 <span class="hl">Codex</span> 或其他 harness 对话就完成整条剪辑"，这个需求本身也代表了内容创作者对 AI 视频编辑工作流的一个典型方向。欢迎有工具推荐的开发者回复他。<a href="https://x.com/petergyang/status/2089519732336787619">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>No Priors · Chasing Trillion-Dollar Companies, Founder Ambition, Token Budgets, and Regulatory Capture with Sarah & Elad</h3><p>The Takeaway: 过去五年出现了三家公司从接近零冲到万亿美元市值，但这种<span class="hl">五年万亿美元的爆发</span>在人类历史上没有先例，未来三到五年不太可能批量重演，尽管千亿级公司仍会源源不断。Elad 指出，Anthropic 五年前还不存在，OpenAI 当时 GPT-3 刚出，SpaceX 估值也只有八九百亿美元，随后出现了史无前例的估值拐点。而正常路径是 Google、SpaceX 那样的十五到二十年长跑，所以现在人人幻想 robotics、materials 领域会冒出一堆 trillion dollar company，是不现实的："我能想到一家可能做到的，但不会是多加。"他用进化论的 <span class="hl">punctuated equilibrium</span>(间断平衡)来类比技术史：社交、SaaS、crypto 都是一波爆发后进入整合期，AI 无疑还会有下一次能力突破带来的新爆发，但节奏是脉冲式的，不是匀速的。Sarah Guo 则从投资人视角补充：她更常见到的是想象力不足，很多投资人嘴上承认 AI 公司交付的是服务价值，行动上却仍按"每个律师/每个医生一个 seat"的旧 TAM 线性估算市场，而没有认真问"如果公司能按 <span class="hl">outcome 收费</span>会是什么样"。她认为重新思考市场规模仍然是当下任何阶段都被低估的投资能力，coding 领域消费量和价值百倍增长就是现成证据。<a href="https://www.youtube.com/watch?v=6l8oAO_LBx4">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
