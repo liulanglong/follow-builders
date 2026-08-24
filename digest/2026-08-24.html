@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-23</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @OpenAI)</h3><p>Codex 的 rate limit 问题找到了具体原因，OpenAI 明天将修复并给所有付费订阅用户做一次<span class="hl">用量全额重置</span>。团队排查出三个消耗异常来源：长会话多次 compaction 下使用图片的低效问题、Computer History 功能的 <span class="hl">p95+ 高用量</span>，以及一个本应只生成会话标题的功能消耗了超出预期的用量。他透露已组建一支 tiger team 逐项修复，同时还发现了一个与之完全无关的、能显著提升效率的新方法，将在下周投入开发。<a href="https://x.com/thsottiaux/status/2091407991736332689">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 教程与访谈作者)</h3><p>Peter Yang 连发几条关于<span class="hl">隐私管理</span>的实用帖：他演示了一个技巧——在 Chrome 打开 Google 账户的第三方授权页面，让 Codex 或 Claude Code 通过浏览器打开的标签页读取内容，再挑选要撤销的应用让 AI 代办，他借此一口气断开了半数不再需要 Google 信息授权的应用。他还宣布正在开发一个名为 <span class="hl">/fuck-cancer</span> 的 AI skill，目标是帮助癌症患者及家属在整个治疗过程中保持信息通畅，并向网友征集功能建议。此外他确认 Instinct 团队已快速上线外部数据删除功能（他删掉了自己的 36 条 Gmail 记录），并称赞团队响应迅速。<a href="https://x.com/petergyang/status/2091331251211059468">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，前 Google，曾主导 Gemini、Veo、Nano Banana)</h3><p>她的「如何做好 evals」系列更新到第六篇，主题是 <span class="hl">hill climbing</span>：选定一个真正重要的维度持续优化，可以是基于生产数据提升高价值用户路径上的功能质量、扩展相邻用例，或降低成本与延迟。具体手段是改进 harness 和模型选择——prompt eng、context eng、memory、post training、传统确定性代码等。她举例：如果 tool calling 失败最常见，深挖后发现 context 里塞了 20 个工具而每个任务只需 3-5 个，就该用 context eng 在正确阶段给正确的工具。在降本上，她的建议是先用最强模型上线把质量拉满，等用户认可后再换更小更便宜更快的模型做到相近质量。核心前提是：你的 evals 必须能告诉你是否真的在朝正确方向前进。<a href="https://x.com/realmadhuguru/status/2091278653435072523">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>两条短帖透露 Replit 的节奏：一条感叹「pretty soon」最终只用了 <span class="hl">3 个月</span>就兑现了（配图暗示此前的承诺已落地）；另一条则是他标志性的 shipping 文化宣言——一周有 7 天，那就意味着 <span class="hl">7 次发布</span>。<a href="https://x.com/amasad/status/2091217410615644349">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他的核心判断：AI 在企业中的扩散速度，远比多数人意识到的更受限于<span class="hl">好的 evals</span>。每次模型发布时的公开 evals 固然有用，但只能反映通用 AI 进步的形状和模型的相对能力水平。真正更大的空间在于针对企业所有核心工作流、甚至下沉到单个公司具体场景的 evals。原因很直接：你无法自动化你无法评估进展的事情，企业不可能只凭 <span class="hl">vibes</span> 做决策。这个领域长期会非常庞大。<a href="https://x.com/levie/status/2091359223368315050">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder，Harvard '17)</h3><p>两条观察引发共鸣。一条是：「所有在 AI 使用上领先的人，都觉得自己落后了」——拿到 336 个赞，戳中了当下从业者的普遍焦虑。另一条更实质：她观察到<span class="hl">天赋型个体</span>在独立做事时可以借 AI 放大 10 倍潜力，但放进大组织里最多提升 20%，有时甚至下降，这解释了为什么越来越多有才华的人离开大公司（唯一例外可能是 OpenAI/Anthropic 这类顶级 AI lab）。<a href="https://x.com/zarazhangrui/status/2091338374447763481">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他曝光了一起离谱的融资事件：有创业者先在 Twitter DM 里<span class="hl">ragebaiting</span> 激怒投资人，随后直接发 SAFE 文件要求打款——「这不是投资运作的方式」。后续他补充说明：自己平时尽量回复冷启动 DM，这条本不该过线；他不会 doxx 对方，希望对方吸取教训。他最愤怒的是看到真正有实力的年轻人才去玩这种愚蠢游戏，并强调找对建议来源有多重要。<a href="https://x.com/nikunj/status/2091381756012511244">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>两条动态：一是力挺 <span class="hl">agent native</span> 的产品形态；二是宣布 Every 正在<span class="hl">招人</span>。<a href="https://x.com/danshipper/status/2091162447029608735">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>AI & I by Every · Microsoft's Vision for an Internet Made for Agents With CTO Kevin Scott</h3><p>The Takeaway：模型的推理能力已经跑在产品交付前面，行业真正缺的是让 agent 能行动起来的基础设施——一个为 agent 而建的「互联网」。Microsoft CTO <span class="hl">Kevin Scott</span> 提出「capability overhang」概念：scaling laws 依然有效且不再需要反复证明，真正的问题是全行业要 collectively 弥合模型能力与用户实际获得能力之间的差距。他指出当前 agent 的两大短板：一是 <span class="hl">agentic memory</span> 受限，agent 偏事务性，任务结束后记忆可能清零，导致你无法把越来越复杂的任务委托给它；二是 agent 要有用就必须能替你行动、调用工具、访问多样信息源，这需要一个类似互联网的生态。他的类比很精彩：MCP 之于 agentic web，正如 HTTP 之于互联网；NL web 之于 agentic web，正如 HTML 之于互联网。作为 CTO，他在微软内部推动所有系统对内部 agent 讲统一的<span class="hl">标准协议</span>，避免整个世界暴露在 Conway's law（「你发布的就是你的组织架构图」）之下。金句：「If you are really passionate about what you do, you're going to have very strong opinions about how you do it.」<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
