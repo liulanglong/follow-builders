@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-24</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thibault Sottiaux (OpenAI，Codex & ChatGPT 负责人)</h3><p>他的核心判断是：<span class="hl">2026 年将是公司开始真正重视模型效率与可靠性的一年</span>，因为 AI 正在成为关键基础设施。同时他向用户通报了 Codex 的修复进展：重置已同步到所有账户，昨天发现的用量统计问题已修复落地，用户应该能感受到明显改善，并承诺明天会有更多更新、持续保持沟通。<a href="https://x.com/thsottiaux/status/2091688655828246890">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，曾领导 Gemini、Veo、Nano Banana)</h3><p>他继续「如何构建优秀 evals」系列第 7 篇，提出 eval 设计的<span class="hl">「金发姑娘原则」</span>：eval 应该测量各个中间任务(job to be done)的完成质量，而不只是最终答案。他以金融分析 agent 为例：最常见的错误是只建一套「正确答案」黄金集，检查 agent 是否推荐了「对的」股票，但推荐之前其实有四个阶段，包括理解客户(组合、风险偏好、投资期限)、收集证据(宏观数据、Fed 政策、新闻)、分析数据(估值、增长预测)和给出建议。每个阶段都该有独立 eval，这样当最终推荐出错时，你能看到类似「客户理解 92%、证据提取 92%、数据分析 70%、推荐 75%」的分解，立刻知道该去哪里深挖。粒度<span class="hl">不要太细也不要太粗，刚好够你诊断和行动即可</span>。<a href="https://x.com/realmadhuguru/status/2091684812012875981">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>两条动态。第一条谈扩展 fx 的哲学：<span class="hl">坚持开放协议</span>，包括 MCP、Skills、Plugins，而最好的协议是 Unix 哲学：小程序做好一件事、通过组合调用其他程序；libfx 让你可以把它嵌入更复杂的程序，自建 CLI、后台 agent 或软件工厂，本地或云端皆可。第二条谈价格：OpenAI Sol 降价加上 Vercel AI Gateway 的折扣，让 Sol 成为平台上<span class="hl">增长最快的前沿模型</span>，说明对智能的需求极具价格弹性，推理成本下降、用量就快速上升。他直言：如果你还没用 gateway，你正在错过这波价格波动带来的成本优势，<span class="hl">gateway 是必然趋势</span>。<a href="https://x.com/rauchg/status/2091671326897713424">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他给出一个预测：<span class="hl">系统记录(systems of record)必须进化为 AI harness，否则会被 agent 取代</span>。传统企业软件的价值在于「存储权威数据」，但当 agent 成为工作的主要执行者时，只存数据的系统不够，必须成为 agent 可以挂载、驱动和协同的运行框架，这一判断对企业软件创业者和投资人都有直接启发。<a href="https://x.com/garrytan/status/2091742825042030681">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 教程与访谈创作者)</h3><p>他分享了 evals 的两种类型：<span class="hl">自顶向下(top-down)和自底向上(bottom-up)</span>。引用 Shreya Shankar 的说法：自顶向下是「假设你在真空里只拿到任务描述，能想出什么 eval」，Claude 在这类上做得很好；自底向上则是「看了大量真实样本输出后，把你的直觉反馈外化成 eval」，而 Claude 在这方面非常差，只能靠人自己来。他还推荐了 Shreya 和 Hamel 在 Maven 上的 AI evals 课程，<span class="hl">4.7 星、900 条评价</span>，下一期 9 月 5 日开课。<a href="https://x.com/petergyang/status/2091586298779955512">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw & OpenAI)</h3><p>他晒出了团队工作流的最新进展，观点很直接：CLI 固然好用，但<span class="hl">有 UI 可视化、团队协作就在你工作的地方</span>体验更好。他还在 OpenClaw 项目里加入了 USB 旋转协议，让机械爪控制 360 度摄像头四处张望，继续着他的「龙虾接管世界」实验。<a href="https://x.com/steipete/status/2091650136506327253">详情</a></p></div>
+<div class="item"><h3>Ryo Lu (设计师，曾任职 Cursor、Notion、Stripe)</h3><p>他发布了一首长诗「leaving」，宣布<span class="hl">离开</span>。诗中写道：从熟悉的生活圈、烂熟于心的街道、反复相遇的人，走向一个完全未知的地方；把心里藏着的每一样东西一件件取出来告别，清空内心的房间，直到像初来时那样「unfurnished, unclaimed, open」。他反思自己初来时只想做东西、随波逐流，如今要亲手掌舵，不再把波浪当命运、把彼岸当救赎。结合他「让任何人都能做软件」的个人简介，这被广泛解读为一段职业或人生阶段的告别，引发不少关注。<a href="https://x.com/ryolu_/status/2091596272654582062">详情</a></p></div>
+<h2>官方博客</h2>
+<div class="item"><h3>Claude Blog: Building intelligent apps for Apple platforms with Claude in the Foundation Models framework</h3><p>Anthropic 发布了一个全新的 <span class="hl">Swift package</span>，让 Apple 开发者可以通过 Apple 的 Foundation Models framework 调用 Claude。核心思路是分层协作：设备端模型处理快速本地任务(如摘要、抽取)，最少三行代码即可通过 guided generation 返回带类型的 Swift 值；当请求需要<span class="hl">多步推理、代码生成</span>或联网搜索、数据分析时，再无缝交给 Claude，并把 Claude 的流式响应直接回灌到同一个 SwiftUI 视图。由于 Apple 框架通过 Generable 注解返回类型化输出，开发者传给 Claude API 的将是干净的结构化输入而非原始用户文本。官方举了具体场景：日记 app 在设备端生成每日提示，再让 Claude 跨数月条目找线索；学习 app 在设备端定义术语，学生追问「这和我们学过的其他内容有什么关系」时交给 Claude。支持将在明天上线，覆盖 <span class="hl">iOS 27、iPadOS 27、macOS 27、visionOS 27 和 watchOS 27</span>，用 Anthropic API key 登录即可使用，package 自动处理流式传输、工具调用和结构化响应。<a href="https://claude.com/blog/claude-for-foundation-models">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
