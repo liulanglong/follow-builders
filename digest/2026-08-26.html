@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-25</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3><p>OpenAI 宣布明天起在 ChatGPT Work 和 Codex 中恢复 Plus 账户的 <span class="hl">5 小时使用限额</span>。他解释了两个原因：一是限额可以平滑计算负载，让套餐在周用量上保持慷慨；二是 Plus 用户多为轻度或新用户，经常不小心把一周的用量一次耗尽，然后一头雾水，体验并不好。值得注意的是，<span class="hl">Pro $100 和 Pro $200 订阅</span>在未来几个月内不会启用这个限额。另外他放话：<span class="hl">OpenAI DevDay 2026</span> 将是公司史上最好的一届，“而且不会接近”。<a href="https://x.com/thsottiaux/status/2092058556707344708">详情</a></p></div>
+<div class="item"><h3>Peter Yang (Practical AI 创始人)</h3><p>他想用 AI 的语音能力打电话给客服，穿过糟糕的自动语音系统、找到真人来预约或取消订阅，并在征求“最简单的实现方式”。他还分享了一个产品观察：每当他要登录一个新网站/App，或者使用被困在某个网站/App 里的 agent 时，他宁愿直接放弃这个产品（娱乐和游戏除外），并反问“不可能只有我一个人这样”。此外他晒出自己现在同时用 <span class="hl">3 个 AI chief of staff</span>，调侃下一步显然是再加一个。<a href="https://x.com/petergyang/status/2092031413319266382">详情</a></p></div>
+<div class="item"><h3>Nan Yu (产品爱好者)</h3><p>他用 <span class="hl">Codex</span> 配置新电脑的体验很好：一句“下载并安装 handy、slack、chrome、cleanshot、rectangle”就搞定，让他感叹“真希望 <span class="hl">Siri</span> 也能这么好用”。他还转发了一条讽刺大厂晋升文化的段子：所谓 L7 晋升，就是给 Gmail 加上 emoji 反应功能，结果在 iPhone 邮件等其他邮件客户端里显示成带元数据的乱码单字符邮件，而 iPhone 邮件恰恰是地球上最常用的邮件应用。<a href="https://x.com/thenanyu/status/2092048044502192374">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，前 Google，曾主导 Gemini、Veo、Nano Banana)</h3><p>他的“如何做好 evals”系列更新到第 8 篇，这次讲 eval 的<span class="hl">区分度</span>。核心观点：一个好的 hill-climbing eval 必须能把能力有实质差异的 AI 系统分开。他举例：五个系统得分 A:94、B:93、C:95、D:94、E:92，如果你已知 A 和 C 明显强于 D 和 E，但 eval 看不出这个差别，那它就是低区分度的坏 eval，“就像给一群博士做五年级数学考试，人人满分，你什么也没学到”。但这不意味着要把 eval 做得任意难，那样人人挂科，测的也不是系统真正的用途。理想 eval 的甜点是：<span class="hl">真实 + 有难度 + 对能力差异敏感</span>。他还留了个开放问题：随着 harness 和底层模型进步，好 eval 会逐渐饱和，届时该怎么办？<a href="https://x.com/realmadhuguru/status/2092058332735693264">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>他坦言 <span class="hl">Replit Agent</span> 已经在自己日常工作中完全取代了 Claude CoWork，理由是它“更持久、更一丝不苟，并且更善于利用代码和软件来完成任务”。这条推文是对他人观点的认同与补充，显示 Replit 的 agent 产品在真实重度用户（即 CEO 本人）的工作流中站稳了脚跟。他还庆祝了公司达成某个只有少数公司达到的里程碑。<a href="https://x.com/amasad/status/2091962601907638352">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他发现终端进入“坏状态”后运行的 reset 命令出奇地慢，深挖之后发现一个考古级彩蛋：<span class="hl">1979 年 3BSD 的 tset</span> 里有一个 sleep(1)，是为了让机械打印终端“安定下来”。他让 fx 用 <span class="hl">Zig</span> 写了个更快的替代品，把 1 秒压到 <span class="hl">1ms</span>，并感叹技术栈的历史如此悠久、好的系统设计如此经久耐用。他还宣传了另一款产品：更快、更便宜、更强，而且更小，从架构层面就防止软件随演化变得臃肿和缓慢。<a href="https://x.com/rauchg/status/2091957823945216474">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他的核心判断：在 AI agent 会在系统上完成比人类多 <span class="hl">100 倍工作量</span>的世界里，system of record（记录系统）变得空前重要。Agent 会在这些系统里查询数据、处理任务、执行工作流、与人类和 agent 用户协作，因此治理、可靠性、安全、访问控制和业务逻辑比以往任何时候都关键，OpenAI 与 Hugging Face 的事件只是 agent 到处乱跑的未来的一瞥。但前提是这些系统要提供适配 agent 的产品体验、API 和商业模式，整个软件行业正处在巨大的机会与颠覆窗口。另一条推文里他强调 <span class="hl">ZDR（Zero Data Retention）</span>对 AI 增长的隐性贡献：它大幅简化了企业用子处理器的合规流程，企业应用层工具普遍只接入提供 ZDR 的模型，内部治理也多要求只用 ZDR 模型，“没有 ZDR，AI 的扩散会陷入停滞”。<a href="https://x.com/levie/status/2092087679240569126">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他连发几条：一是反驳数据中心负面论调，主张<span class="hl">数据中心实际在创造就业和繁荣</span>；二是分享了一条方法论格言：“形成一个观点，把它变成 artifact 或实验，让它接触现实，不带自欺地读取结果，修改后再跑一遍”，这基本是 YC 式 founder 心法的浓缩；三是推荐 <span class="hl">Conductor Cloud</span>，称它大幅提升了自己的生产力，再也不用一直开着 MacBook Pro 了。<a href="https://x.com/garrytan/status/2092062820229890209">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder，哈佛'17)</h3><p>她抛出一个反共识观点：<span class="hl">黑客马拉松是过时的活动形式</span>，至少按传统办法的黑客马拉松是这样。另外她推荐了 David Senra 主持的一期 <span class="hl">Sam Altman</span> 访谈，称赞 Senra 总能直切要害、让嘉宾展现最自然的一面，而她看过很多 Altman 访谈，感觉这期里 Altman 是最放松、最舒适的一次。<a href="https://x.com/zarazhangrui/status/2092079390301556883">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他揭示了风投行业的内幕：每一个非常规交易在正式打款之前都要“死一百次”，通常需要有一个<span class="hl">内部 champion</span>愿意为创始人担风险，悄悄把交易护送到终点线。他给创始人的建议是：搞清楚谁是你真正的 champion，帮他们掌握基金内部动态，并给他们提供弹药去说服合伙人。其中 <span class="hl">associate 和无投票权合伙人</span>格外有用，因为他们有动力帮你，这也是检验他们未来作为 cap table 上伙伴表现的试金石。<a href="https://x.com/nikunj/status/2092079149028716877">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw & OpenAI)</h3><p>他的一条高赞推文（2400+ 赞）观点鲜明：“我们必须摆脱那些<span class="hl">无法用 prompt 修改的软件</span>”，直指 AI 时代软件应当可被自然语言重塑。他还学到并传播了新词 <span class="hl">prompt kiddie</span>（类比 script kiddie，调侃只会用 prompt 的人），并随口建议更多博客文章应该配上主题曲。<a href="https://x.com/steipete/status/2091923535513928015">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他公开求助：Google 在<span class="hl">零通知、零理由</span>的情况下禁用了 Every 的 YouTube 账号，他询问有没有人有类似经历或知道如何找回账号，并直接喊话 Google、YouTube 和 YouTubeCreators 官方寻求帮助。这对依赖平台分发的媒体公司是个警示：平台单方面封号可以在瞬间切断内容资产。<a href="https://x.com/danshipper/status/2092026065644335446">详情</a></p></div>
+<div class="item"><h3>Aditya Agarwal (SPC 普通合伙人，Ex-Facebook 早期工程师、Dropbox CTO)</h3><p>他预告了本周到访 SPC 的嘉宾 <span class="hl">Hans Robertson</span>：此人早期在 VMware，联合创立 Meraki 并以 <span class="hl">12 亿美元</span>卖给 Cisco，2016 年又联合创立 Verkada 并执掌至今，是连续创业且长期经营的代表人物。同时他邀请有兴趣的创业者申请加入 SPC。<a href="https://x.com/adityaag/status/2091958074827313523">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
