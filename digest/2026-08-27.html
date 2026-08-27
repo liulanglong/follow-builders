@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-26</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>一条只有六个字的公告："we made a chip and it is fast"，收获了超过 3.2 万点赞。虽然没有任何细节，但结合 OpenAI 此前在自研芯片上的布局，这条推文被广泛解读为 OpenAI 自研芯片取得实质性进展的信号，值得持续关注后续官方信息。<a href="https://x.com/sama/status/2092339694210040187">详情</a></p></div>
+<div class="item"><h3>Boris Cherny (Anthropic Claude Code 负责人)</h3><p>宣布 Claude Code 的 <span class="hl">memory 功能</span>迎来一次重要升级，变得更简单也更强大。配套的官方信息显示，Claude 现在在 Chat 和 Cowork 之间拥有统一的记忆：你只需告诉 Claude 记住一件事，它就能在所有界面中保持这个上下文。这条推文获得 1429 个赞，是社区当天讨论热度最高的产品更新之一。<a href="https://x.com/bcherny/status/2092355642363453943">详情</a></p></div>
+<div class="item"><h3>Cat Wu (Anthropic Claude Code + Cowork 工程师)</h3><p>从工程角度补充了这次记忆升级的细节：得益于用户反馈，团队把 Chat 和 Cowork 的记忆做了<span class="hl">跨界面统一</span>。现在你可以让 Claude 记住某个偏好或项目背景，之后无论在哪个界面继续对话，它都带着这份上下文。她还向社区征集下一步想看到的功能，说明记忆系统还有后续迭代计划。<a href="https://x.com/_catwu/status/2092337156455051345">详情</a></p></div>
+<div class="item"><h3>Claude 官方账号 (Anthropic)</h3><p>用三条推文完整介绍了统一记忆功能：Claude 在 chat 和 <span class="hl">Claude Cowork</span> 之间共享同一份记忆，且由你决定里面存什么。你交给 Cowork 一个任务时，它会直接从聊天中已知的信息出发，比如你讨论过的项目、经理的偏好或上个季度的客户。所有记忆以主题列表形式保存在 Settings 里，可以随时查看、编辑或删除，也可以手动说 "remember this" 保存特定内容。健康、宗教信仰等敏感主题默认不进入记忆，需要手动开启。该功能在 Free、Pro 和 Max 套餐上默认开启。<a href="https://x.com/claudeai/status/2092299704864284888">详情</a></p></div>
+<div class="item"><h3>Thariq (Anthropic Claude Code 团队)</h3><p>预告 Claude Code 即将在<span class="hl">可定制性(hackable)</span>方向有更多动作，表示"很兴奋很快分享我们如何让 Claude Code 更 hackable"。这条推文获得 1118 个赞，暗示官方可能在开放扩展点、插件机制或更深度的自定义能力上有所动作，值得 Claude Code 用户留意。<a href="https://x.com/trq212/status/2092303682616627311">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3><p>宣布了需求量很大的团队版方案，定位类似 <span class="hl">Pro 100 美元套餐</span>但面向团队和中小企业：包含所有 ChatGPT、ChatGPT Work 和 Codex 功能，可连接 Google Workspace、Slack、GitHub、Microsoft 365 等服务，提供带 SAML、SSO 和 MFA 的安全工作区、集中计费与管理、用量分析和支出控制，并且<span class="hl">没有 5 小时使用限制</span>。这条推文获得近 3000 赞。他随后补了一句意味深长的话："Good products take time. At least 34 days"，似乎在暗示这个方案的打磨周期。<a href="https://x.com/thsottiaux/status/2092345330272780499">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>一天连发两条产品公告。第一条是 <span class="hl">Run SDK</span>：为 agent 动态执行代码提供的安全 eval 方案。他的核心判断是，agent 写代码时并不总是需要完整的沙箱，可以把代码放在轻量的 QuickJS 安全上下文中运行，更快也更省成本。第二条是 <span class="hl">Vercel Connect 正式 GA</span>，他认为构建 agent 最难的问题是到服务和数据的安全连接，现在可以用一条命令创建 Notion 等服务的 MCP client，以已认证用户身份进行查询。<a href="https://x.com/rauchg/status/2092382653161107534">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 教育创业者)</h3><p>开源了一个名为 <span class="hl">/fuck-cancer</span> 的 AI skill，帮助癌症患者和照护者应对诊断和治疗过程。起因是他分享了母亲患癌的故事后收到大量反馈：患者需要"成为自己的强力倡导者"、需要帮助推进艰难的对话、面对海量的医生、文档和保险文书 easily 被淹没。这个 skill 会生成并持续更新一份实用简报，包含五个部分：患者与医疗团队信息、限三项的具体下一步行动、已知事实与未明事项的区分、医学术语的白话解释，以及照护日志。它基于文档和上下文生成，需要研究时会调用 National Cancer Institute 和 ClinicalTrials.gov API 等可信来源，可保存为本地 Markdown 或更新共享 Google Doc，让全家基于同一份信息协作。他本人配合 ChatGPT/Codex 和 Claude Code 使用。<a href="https://x.com/petergyang/status/2092249012913258946">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，此前在 Google 主导 Gemini、Veo、Nano Banana)</h3><p>发布"如何做好 evals"系列第 9 篇，主题是 <span class="hl">Eval Roadmap 问题</span>。核心论点：大多数 eval 失败，是因为团队把它们当成静态产物，而用户的期望和行为早已进化。他以金融研究 agent 为例：早期用户只要求总结一份 5 页财报，三周后要求回顾 5 份财报讲增长故事，两个月后要求基于 15 份文件构建投资论点，最终要求持续监控组合并主动预警。每个阶段需要不同能力，也就需要不同的 eval：从短上下文到长上下文、单轮 QA 到多轮、段落引用到文档行级引用、简单问答到复杂综合、被动对话到主动 agent。他警告："如果你的 eval 还停在第 1 周而用户已经走到第 3 周，这会直接反映在你的产品和流失率上。"落地方法五步：梳理使用演化维度、排优先级、与用户交流并挖掘生产 trace、为下一阶段构建 P0 eval、跑 eval 找失败模式并爬山优化。<a href="https://x.com/realmadhuguru/status/2092426017118028266">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>推荐了一篇关于大规模落地 applied AI 策略的文章，核心观点是 AI 模型与企业底层工作流之间存在巨大鸿沟，这为 applied AI 公司留下了大量机会。他引用原文："世界想要的不是原始模型和 agent，而是被解决的问题和被达成的结果。溢价将属于那些能把智能扩散到文明每个角落、把原始 token 转化为真实世界结果的公司。"要做到这一点，需要理解上下文、推动变革管理、构建能路由到多个模型的 harness、连接垂直领域的关键业务系统、解决工作流中用户与 agent 的 UX 连接问题，以及理解该领域的 evals。他认为现在正是窗口期，可以建立把智能带入企业关键领域的定义性公司。<a href="https://x.com/levie/status/2092466424694649066">详情</a></p></div>
+<div class="item"><h3>Google Labs (Google 官方实验平台)</h3><p>发布新实验 <span class="hl">Play with Putty</span>，一个协作式 vibe coding 工具，支持多人实时共同构建工具和网站，把"想象力变成多人游戏"。目前开放 waitlist，仅限美国地区 18 岁以上用户，官方希望收集早期反馈。推文获得 1234 个赞。<a href="https://x.com/GoogleLabs/status/2092293667688173593">详情</a></p></div>
+<div class="item"><h3>Aditya Agarwal (SPC General Partner，前 Dropbox CTO、Facebook 早期工程师)</h3><p>对公众反感数据中心建设的现象给出了自己的解释：AI 目前主要帮助的是知识工作者和收入最高的群体，普通人体感收益有限。他判断转折点会出现在 <span class="hl">AI 能找到治愈大众疾病的方法</span>时，并表示已经看到隧道尽头的光，这也解释了为什么一些最聪明的人才开始聚焦这个方向。他还自我批评说，行业长期的 fear-mongering 伤害了自身形象："我们没有描绘一个积极的未来版本，反而在大谈所有应该害怕的理由。"<a href="https://x.com/adityaag/status/2092290497826173186">详情</a></p></div>
+<div class="item"><h3>Swyx (Latent Space 主持人、smol.ai 创始人)</h3><p>发出一条实用警告：现在不要使用 Codex 的 <span class="hl">"locked use" 功能</span>。它目前依赖不稳定的 macOS 特性，本周已经两次把他完全锁在 <span class="hl">macOS Keychain</span> 之外。他感谢 Cheng Lou 找到了 Apple 开发者论坛上承认这是 "known bug" 的帖子，建议大家暂时避开。他也坦言，虽然把一切都放到云端会更省心，但云端方案目前还没到位。<a href="https://x.com/swyx/status/2092492963435946494">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>展示了用 <span class="hl">ChatGPT Codex</span> 加 Railway 构建的 El Niño 监测网站(elneenyo.com)，灵感来自 Odd Lots 播客的一期节目。网站提供来自政府源的实时更新、分区域影响与成本、历史记录、术语表和 FAQ。设计部分借助了 Emil Kowalski 的 skills 和 Kasturi 的生成式 loaders，是 vibe coding 出side project 的一个不错范例。<a href="https://x.com/nikunj/status/2092383834470002922">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>Training Data · Parallel's Parag Agrawal: Building a New Web for AI Agents</h3><p>The Takeaway: 在 Parallel 创始人 Parag Agrawal 看来，<span class="hl">人类点击数据是一种 bug</span>，agent 搜索应该依赖 agent 反馈而非人类反馈，这让创业公司第一次有机会正面挑战 Google 级别的搜索基础设施。Parag 是前 Twitter CEO，把公司卖给 Elon Musk 后重新回到创始人赛道，创办了 Parallel Web Systems，为 agent 时代的 web 构建搜索技术。他解释了为什么这次创业需要"反学习"Twitter 时期的经验：Twitter 是一个拥有数亿日活、反馈循环极强的成熟产品，而 Parallel 服务的是一个"还没到来"的客户，即 agent，团队必须边做边学。他判断 agent 使用搜索的量会是人类的<span class="hl">一千倍</span>，因此需要重造搜索技术和配套的商业模式。关于为什么小公司能做 web 级爬取和索引这个"巨头的游戏"，他的回答是：过去竞争壁垒在于难以规模化获取排序反馈数据，而现在大模型让专家级评分数据的生成成本大幅下降，可以直接把模型研究应用于索引和排序。商业上，Parallel 没有先做搜索引擎，而是先做搜索 agent，让它在查询到达后再爬取 web，配合深度研究场景下用户愿意等待一到十分钟的耐心，逐步构建越来越大的索引，走出一条不需要前置巨额基础设施投入的路径。他的原话点明了核心信念："human click data is a bug, and agent doing work with search should rely on agent feedback, not human feedback."<a href="https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
