@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-27</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 借 Q2 财报长文阐述了他对企业 AI 落地的核心判断：再强的模型，如果接触不到企业内部的知识，也毫无用处。Box 本季度营收 <span class="hl">3.211 亿美元</span>，同比增长 9%(固定汇率 11%，为 14 个季度以来最高)，并上调全年营收指引至 12.9 亿美元。他提到企业技术负责人最关心的问题是如何以安全、受治理的方式把正确的上下文交给 AI agent，并挖掘非结构化数据的价值。他还点名最近 OpenAI 与 Hugging Face 的事件，认为企业将需要提供 guardrails、完整审计日志和实时安全告警的平台，并强调随着 token 用量指数级增长，企业需要能随时更换模型或 agent 的应用层 AI 平台。<a href="https://x.com/levie/status/2092702955292230100">详情</a></p></div>
+<div class="item"><h3>Thariq Shihipar (Claude Code 团队，Anthropic)</h3><p>Thariq 宣布由他主导的改动上线：Claude 现在有了 <span class="hl">SendFeedback 工具</span>，用户不用再手动敲 /feedback 写报告，直接让 Claude 起草并确认即可提交反馈。他表示这些反馈能帮助团队改进产品、理解问题。另一条推文中，他提到多个客户正遭遇欺诈性请求攻击，并肯定了 Stripe 的应对工作，同时指出这类攻击会伤害所有人为合法用户提供服务的能力。<a href="https://x.com/trq212/status/2092696449616376140">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 连发两条产品动态。一是 Vercel 正在推出安全仪表盘和 <span class="hl">vercel security check CLI</span>，类似 is-agnostic，可以让 agent 以 human-in-the-loop 方式改进安全态势，也可以跑在 cron 里，他调侃“谁能想到拯救世界的是 CLI”。二是赞叹全球算力触手可及：多区域、failover、默认支持最多 <span class="hl">10,000 个并发 sandbox</span> 和每分钟 5,000 vCPU 的扩容速度，后续还会增加更多区域。<a href="https://x.com/rauchg/status/2092621371914482026">详情</a></p></div>
+<div class="item"><h3>Matt Turck (FirstMark Capital VC，MAD Podcast 主持人)</h3><p>Turck 认为 NVIDIA 收购 Hugging Face 是“三赢”：NVIDIA 借 Nemotron 和 HF 正式成为开源 AI 的中心；Hugging Face 拿到巨额对价和完美归宿(再也不用被商业模式问题纠缠)；开源 AI 整体获胜。他向 Clement Delangue、Thomas Wolf 等朋友道贺。另一条里他分享了自己罕见地坐上嘉宾席，与 Dan Nathan 聊了为什么“世界上最好的风投可能是 NVIDIA”、“超幂律”、为什么应用公司变成 lab 的速度快于 lab 变成应用，以及 RSI、“AI 泡沫 vs 期限错配”和“别再低估中国”等话题。<a href="https://x.com/mattturck/status/2092808287280329097">详情</a></p></div>
+<div class="item"><h3>Aditya Agarwal (SPC General Partner，前 Dropbox CTO)</h3><p>Agarwal 判断 AI 的前沿将由 <span class="hl">post-training</span> 决定，并宣布投资 post-training 研究实验室 DeepCogito 的 <span class="hl">4300 万美元 A 轮</span>。该团队专注大规模强化学习和递归自我改进，核心方法是迭代蒸馏与放大(IDA)，并且已经在 3B 到 600B+ 参数的模型上公开验证过这套方法。他透露两位创始人相识 14 年，2024 年 3 月以 SPC Founder Fellows 身份结识，本轮投资方还包括 Benchmark、TQ Ventures 等。<a href="https://x.com/adityaag/status/2092679288869019700">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder，Harvard '17)</h3><p>她观察到一个普遍现象：谈到 AI 写作，很多人持双重标准，“我用没问题，你用就不行”。另一条推文中她提出了一个反直觉观点：大公司的 PR 团队大多存在的意义是阻止真正的 marketing 和 branding，一个本该增强品牌的功能反而成了品牌的对立面，颇为讽刺。<a href="https://x.com/zarazhangrui/status/2092773720112988366">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Shipper 情绪高涨地连发数条：先是高调宣布“THEY DID IT FOLKS”(获得 1,367 赞，疑似指重大产品发布)，随后确认 <span class="hl">Codex 原生应用</span>已经上线。他还表示当下是通才和哲学家的“黄金时代”，恰好可以治愈认知上的绝望感，称这是不可思议的时代。<a href="https://x.com/danshipper/status/2092756144447983619">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw，OpenAI)</h3><p>Steinberger 分享了两条观察：Codex 的 <span class="hl">可视化功能</span>已经变得非常好用；同时他抛出一个疑问“也许这真的是个泡沫？”，引发不少讨论(463 赞)。<a href="https://x.com/steipete/status/2092822007843061823">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3><p>他感叹 OpenAI 的节奏：“在 OpenAI 的几周，抵得上其他公司的几年，几天之内就能老好多”，这条获得 9,336 赞。随后他补充说，年纪渐长的好处是已经 20 年没按过 reset 键了，很期待明天能不能找到它并掸掸灰尘，暗示可能迎来新阶段。<a href="https://x.com/thsottiaux/status/2092756702349398036">详情</a></p></div>
+<div class="item"><h3>Josh Woodward (Google Labs / Gemini App / AI Studio VP)</h3><p>Woodward 分享了 Google 正在实验 <span class="hl">multiplayer AI</span>(多人协作 AI)的功能演示。<a href="https://x.com/joshwoodward/status/2092614266818064389">详情</a></p></div>
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Altman 表示下一个模型发布时应该再办一次发布会派对，因为“5.5 派对太好玩了”，并征集大家想让下一次派对更棒的建议，这条获得 9,236 赞。他还转发了一份报告，称“这是一份关于坏事情的好报告”。<a href="https://x.com/sama/status/2092733018838290817">详情</a></p></div>
+<div class="item"><h3>Claude 官方账号 (Anthropic)</h3><p>Anthropic 宣布 Claude 在 Cowork 中拥有了自己的内置浏览器：当任务涉及网站时，侧边栏会自动打开浏览器，Claude 可以导航、填表单、完成任务。内置浏览器与用户自己的浏览器和登录状态完全隔离，无需安装任何东西，将在一周内面向所有付费计划的桌面端推出。同时 <span class="hl">Claude in Chrome</span> 也已在所有付费计划上正式可用(GA)，如果用户已在用则保持默认。<a href="https://x.com/claudeai/status/2092755571455758427">详情</a></p></div>
+<h2>官方博客</h2>
+<div class="item"><h3>Claude Blog: Claude in Chrome 正式可用</h3><p>Anthropic 宣布 Claude in Chrome 在所有付费计划上 GA，并且 Claude 现在可以在浏览器中<span class="hl">自主执行操作</span>，不再需要每一步都人工批准。每次操作执行前会有一个安全分类器验证其安全性和与用户请求的匹配度，不匹配则直接拦截。文章重点阐述了针对 <span class="hl">prompt injection</span> 的三层防御：一是用内部自动化攻击器、外部红队和真实世界监控构建的攻击库持续训练模型，自 2025 年 11 月以来 Claude 对此类攻击的抵抗力大幅提升；二是 probes 在 Claude 行动前扫描网页内容，检测到疑似攻击时提醒 Claude 保持怀疑并在必要时向用户确认；三是操作前分类器审核，机制与 Claude Code 的 auto mode 相同，用户也可在设置中关闭。对用户而言，这意味着 Claude 现在可以访问内部仪表盘、遗留系统和供应商门户这些没有 connector 的工具，用现有登录态读页、点击、填表。<a href="https://claude.com/blog/claude-in-chrome-generally-available">详情</a></p></div>
+<div class="item"><h3>Claude Blog: Claude 在 Cowork 中获得自己的浏览器</h3><p>Claude 桌面端的 Cowork 现在内置了一个浏览器：任务需要用网站时，侧边栏自动打开，Claude 自己导航、阅读、点击、输入。用户可以把任务的网页部分整个交给 Claude，比如填表单、从仪表盘抽数据、操作没有 connector 的供应商门户，无需扩展、无需配置。关键设计是“这是 Claude 的浏览器，不是你的”：Claude 看不到你的标签页、书签和密码，登录态可以按站点从 Chrome、Edge、Firefox 逐个迁移，银行、邮箱和 SSO 站点默认排除。产品定位上，内置浏览器适合把网页任务整体交出去(如收集发票、做调研)，而 Claude in Chrome 适合操作你已打开的页面和已登录的账号(如更新 CRM、处理收件箱)，两者可在 Settings → Cowork → Preferred browser 中切换。该功能一周内推送到 <span class="hl">Pro、Max 和 Team 计划</span>，Enterprise 管理员今天起可为组织开启，并沿用与 Claude in Chrome 相同的 <span class="hl">prompt injection 防护</span>。<a href="https://claude.com/blog/cowork-built-in-browser">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>AI & I by Every · A $10B Hedge Fund's AI Playbook (Best of the Pod)</h3><p>The Takeaway:一家百亿级对冲基金的掌门人亲自示范，CEO 如何以身作则把整个组织转向 AI。嘉宾 Will 是 Walleye 的 CEO 兼 CIO，管理近 <span class="hl">100 亿美元</span> AUM，Princeton 工程出身、牛津数学博士，职业生涯从写算法交易代码开始。他写给全公司的内部备忘录堪称“AI first 宣言”的范本：“Using ChatGPT is not cheating. That's a non applicable idea from academia... Not using these tools is like refusing to use the Internet in 1995 because it wasn't perfect.” 他认为作为对冲基金，忽视能让人更快更聪明的工具等于把钱留在桌上，是可耻的。转变的起点是 2023 年 3 月，一位 TMT 团队的前分析师拿着自己用早期 GPT 工具搭的系统来 demo，试图替代自己做分析师的工作，Will 坦言起初很怀疑，但看完 demo 当即明白“这就是我们的方向”。两年前他们就启动了内部 AI 项目(最先进的内部项目叫 <span class="hl">Current</span>)，如今已大量落地，他强调这不是关于未来的故事，而且“如果我们最终被 AI 颠覆，那是我的责任”，所以他必须冲在最前面。<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
