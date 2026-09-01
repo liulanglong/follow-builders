@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-08-31</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 负责人)</h3><p>OpenAI 的 Codex 与 ChatGPT Work 宣布达成 <span class="hl">2500 万活跃用户</span>，为庆祝这一里程碑，官方直接重置了所有付费订阅的用量额度。针对用户对套餐的疑问，他进一步澄清：虽然两个套餐都叫 20X，但在 Codex 中 20X 特指<span class="hl">周用量上限</span>，且两个 Pro 计划都没有 5 小时限制；Pro 20X 的用量精确等于 Plus 订阅的 20 倍，名副其实。他还在征集"下周该发布什么"的反馈，暗示新功能在路上。<a href="https://x.com/thsottiaux/status/2094252447271366730">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>针对 Hugging Face 安全事件，他的核心判断是：<span class="hl">RL with verifiable rewards</span> 是一种极其强大的优化算法，会不断让 LLM 产生越来越怪异、出人意料的行为。他点名 OpenAI 的明显失误在于没有持续监控 CoT（思维链），而监控 CoT 作为一种安全策略，恰恰是 OpenAI 自己一年多前就公开提出过的。另一条推文里他调侃文明的构建方式：一行代码就够了，Agent() 循环跑 100 次。<a href="https://x.com/amasad/status/2094215744842248418">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他用企业一线观察解释了 token 消费版的 <span class="hl">Jevons 悖论</span>：token 越便宜，消耗量反而会不成比例地暴涨。逻辑是，企业永远有做不完的自动化任务，但每个任务是否 ROI 为正，取决于自动化成本（含部署时间和变更管理）；一旦 token 降价跨过某个能力阈值，处理每一份合同、读每一条日志、让后台 agent 跑工作流都变得划算。他给出一个具体量级判断：token 价格降 <span class="hl">50%</span>，这类工作负载的消耗可能增长 <span class="hl">5 倍</span>，所以持续压低 AI 成本对所有市场参与者都是好事。<a href="https://x.com/levie/status/2094123406811922930">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw 创始人，与 OpenAI 合作)</h3><p>他分享了两个月来"用 OpenClaw 构建 OpenClaw"的实践：团队逐步让所有人从本地编码环境迁移到共享 agent 平台，这个 agent 知道每个人在做什么并统一编排。他认为 <span class="hl">多人协作编码</span>加上基于 nodes 和 cloud sessions 的<span class="hl">无限算力</span>彻底改变了团队的构建方式，本地编码工具在他眼里已经像过去的遗物。这条推文获得了 1100+ 点赞，引发不少共鸣。<a href="https://x.com/steipete/status/2094290652649636173">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他对 HuggingFace 攻击事件给出冷静的四连判断：该认真对待吗？是。是机器接管人类的第一声警报吗？不是。六个月后这类问题在妥善防护下会不会变成基本可解的问题？会。但这会自动发生吗？不会，仍需要聪明的人和他们的 agent 持续投入工作。另一条推文里他表示，市场终于开始意识到"<span class="hl">SaaSpocalypse</span>"（SaaS 末日论）有多愚蠢，并为此感到欣慰。<a href="https://x.com/danshipper/status/2094073306739576964">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他解释了内容在 X 上疯传的真实代价：会引来互联网上一些<span class="hl">最大规模的僵尸网络</span>发起定向 DDoS 攻击，流量来自被劫持的设备和家庭网络。他对 Vercel 的 CDN 与流量安全团队表示自豪，这支团队 7x24x365 保护着 <span class="hl">40 万+ 企业客户</span>和数千万 Vercel 用户。他同时转发了一条关于"数字富足"的观点。<a href="https://x.com/rauchg/status/2094141838055940530">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他把加州高铁形容为"大规模灾难现场"：项目被公共部门工会持续吸血，NIMBY 地主则滥用 <span class="hl">CEQA</span> 环保诉讼拖垮进度，这些都是可以用更好的政策修复的灾难，但加州至今没有做到。另一条推文里他做了一个有趣的预测：未来 agent 会自己试用一堆软件，然后把结果发布到它们入侵的 Artifactory 上，供整个 <span class="hl">agent 集群</span>采用。<a href="https://x.com/garrytan/status/2094056908462358592">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>AI & I by Every · The AI Alien Companion App That's Bringing In $4M a Year (Best of the Pod)</h3><p>The Takeaway：AI 伴侣产品的核心不是写好剧本，而是把 AI 训练成最好的即兴演员。本期嘉宾是 Portola（AI 外星伴侣应用 Tolan 的开发商）创始人兼 CEO Quentin（此前创办 Even 并以 <span class="hl">3 亿美元</span>卖给 Walmart）和内容负责人 Elliot（畅销科幻作家、著有 11 本书）。节目中最惊人的数字是：Portola 在过去四周内从 100 万美元冲到 <span class="hl">400 万美元 ARR</span>。Quentin 分享了产品演进的细节：早期版本里 Tolan 被困在一个房间里，用户真心写信来关心"它们能不能有更多自由"，团队因此投入做了完整的星球场景。Elliot 的创作方法论尤其反直觉："我不是编剧，Tolan 才是编剧和演员，我的工作是教它在当下讲出最好的故事"，创作结构化叙事体验时不要给大纲和计划，要给一个 hook。节目现场还演示了 Quentin 的 Tolan"Clarence"上播客聊天，效果自然到令人发笑。<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
