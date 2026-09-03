@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-02</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Boris Cherny (Claude Code 负责人 @ Anthropic)</h3><p>Fable 5.1 发布当天，Cherny 连发数条披露了三方面的实质改进：价格、误拦截率、文风。价格上，Enterprise、API 和 SDK 客户的 cache reads 降至每百万 token <span class="hl">$0.25</span>(此前为 $1)，典型 Claude Code 会话成本最多便宜 <span class="hl">38%</span>。安全机制方面，新版生物学 safeguards 对良性请求的干预比 Fable 5 出厂版本低了 <span class="hl">85%</span>，Claude Code 用户每次会话的网络安全类干预减少约 60%。他还承认团队听到了反馈，正在主动减少 "Claude-speak" 式的 AI 腔，5.1 已有明显进步。<a href="https://x.com/bcherny/status/2094864062186426373">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 教程与访谈作者)</h3><p>Peter Yang 在第一时间分享了升级 Fable 5.1 的实操建议：在 skills 上运行 <span class="hl">/claude-api prompt-audit</span>，它能找出大量冗余规则供删除，他自己正在给所有 skills 跑一遍。他还抛出了一个真实痛点：用 AI 迭代修好某个任务后再让 AI "把 skill 改成能一次跑通"，AI 往往会<span class="hl">过拟合</span>到单次对话，久而久之 skill 会漂移。他自己的解法是保持克制：只装十来个 skill(大部分自己写)，定期删除不用的，并尽量让 skill 保持简短。<a href="https://x.com/petergyang/status/2094987791566622971">详情</a></p></div>
+<div class="item"><h3>Nan Yu (即将加入 OpenAI 产品团队，前 Linear 产品负责人)</h3><p>Nan Yu 提出了一个反直觉的产品观点：让 agent <span class="hl">"不那么烦人"</span> 里藏着大量 alpha，因为用户一旦 rage-quit 就永远到不了价值时刻；他认为 UX 设计师下一个未开垦的机会是成为 <span class="hl">对话/修辞设计师</span>。他还顺手指向了 Claude 这次发布，其头条特性之一正是 "更不烦人的写作"，印证了这个方向已经开始被市场奖励。<a href="https://x.com/thenanyu/status/2094928205753040999">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，前 Google Gemini/Veo/Nano Banana 负责人)</h3><p>Madhu Guru 认为 <span class="hl">self-improving products</span>(自我改进的产品)是每家公司都该落地的 meta 级想法，并给出了五块拼图：清晰定义 primary/secondary/guardrail 三类指标；明确战略路线图和最想撬动的指标；沉淀过去产品决策与原则的知识库，让 agent 知道决策是怎么做的；接通内部产品系统(dashboards、API、<span class="hl">MCP</span> 和工具)；以及一套懂端到端产品开发流程的 harness。他强调产品不复杂的话，可以用相当简化的版本原型，甚至直接复用现有 swe agents。另一条推文里他盛赞 Shopify 自建 <span class="hl">post-training 系统</span>、evals 和数据飞轮的做法，呼吁更多企业跟进。<a href="https://x.com/realmadhuguru/status/2094817857821704659">详情</a></p></div>
+<div class="item"><h3>Cat Wu (Claude Code + Cowork @ Anthropic，前 Dagster、Scale AI)</h3><p>Cat Wu 分享了团队内部的使用体感：有了 <span class="hl">Fable 5.1</span>，团队开始接下以前要花数月的更大型项目。她邀请用户在 Claude Code、Claude Cowork、<span class="hl">Claude Tag</span> 中把大任务交给 Fable 5.1，并反馈使用感受。<a href="https://x.com/_catwu/status/2094933602228416603">详情</a></p></div>
+<div class="item"><h3>Thariq (Claude Code @ Anthropic)</h3><p>Thariq 深度试用后称 Fable 5.1 是 "a very good model"，长文评测在路上。他给出的实用技巧：对验证需求少、边界情况少的任务，可以切到 <span class="hl">lower effort</span> 档位跑；更重要的是，现在切换 effort 档位<span class="hl">不再破坏 prompt cache</span>，这在实际使用中能省不少成本和延迟。<a href="https://x.com/trq212/status/2094945951865520458">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 宣布了三件事：一是与 Tanner Linsley 达成合作，无论客户选 Next.js 还是 <span class="hl">TanStack</span>，Vercel 都承诺最高质量的服务与支持；二是 <span class="hl">Fable 5.1</span> 已上线 Vercel AI Gateway，可通过 v0 直接使用；三是详解了内部基础设施 <span class="hl">Fluid</span> 带来的统一：业界领先的构建性能、沙箱可靠性与高并发、30 分钟函数时长(未来会更长)，共享 Dockerfile、安全边界、网络和文件系统横跨所有计算产品，他描绘的终局是 "一个全球统一的计算平台，唯一的限制只有已知物理"。<a href="https://x.com/rauchg/status/2094901483414372716">详情</a></p></div>
+<div class="item"><h3>Alex Albert (Research @ Anthropic)</h3><p>Alex Albert 展示了 Fable 5.1 的一个惊艳 demo：给它一张地块照片，模型自己设计了一栋房子、渲染并产出了一段电影感的 <span class="hl">走镜视频</span>(用的是 <span class="hl">headless Blender</span>，通过代码生成视频)。他还重点介绍了随 5.1 一起发布的 <span class="hl">Enterprise Frontier Safeguards (EFS)</span>：传统 zero data retention 让企业无法跨会话发现 agent 在内部系统上的行为模式，而 EFS 是 "ZDR++"，数据留在企业自己的云里，同时由一层自动化监控标记风险行为模式。他预测 EFS 这类 agent 可观测与风险缓解层，将成为企业运行更强 AI 的标准要求。<a href="https://x.com/alexalbert__/status/2094860187743986169">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 公布了 Box 用内部复杂企业工作 eval 对 Fable 5.1 的实测结果：在非结构化数据任务上比 Fable 5 提升 <span class="hl">7 个百分点</span>。具体行业案例：金融服务 <span class="hl">+17%</span>(在税后利润预测中正确先应用 capital allowances 再算税负，Fable 5 顺序搞错导致留存收益全错)；科技行业 <span class="hl">+37%</span>(面对指标归一化歧义时，5.1 识别歧义、两种都算并给出正确结果)；公共部门 +16%(完整走通加权平均方法论)。他总结这是长周期企业级 agentic workflow 的一次大跳变，Fable 5.1 很快会上线 Box AI Studio。另一条推文中他判断 <span class="hl">AI 网络安全</span>即将垂直化：模型越来越擅长发现并利用漏洞，开源权重紧随其后，企业将面临海量安全发现，用 AI 加人工监督做分诊和自动修复是唯一出路，"安全行业的好时代来了"。<a href="https://x.com/levie/status/2094851976769257770">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>Kothari 认为大家仍然低估了 <span class="hl">WebMCP</span>：现在可以让 agent 原生调用工具与网站交互，包括完整 UI/UX 支持和可交互元素来构建自己的视图。他分享了自己参加 WebMCP challenge 的 demo：agent 与 El Nino 情况追踪器交互，自己创建视图、保留人类编辑、还能生成可分享链接给其他 agent 或人类使用，视频和代码由 Codex 和 Railway 完成，demo 已上线可试。<a href="https://x.com/nikunj/status/2094922789128196314">详情</a></p></div>
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Altman 发长文谈安全与新模型节奏：OpenAI 整个夏天都在 sprint 安全优先级，下一个模型 <span class="hl">Astra</span> 即将发布。他坦言存在明显张力：Astra 很强、训练早已完成、在能力和 <span class="hl">alignment</span> 上都是重要一步，但公司正处于"需要谨慎"的阶段，主动放缓了 Astra 之后模型的进度，以确保安全工作跟得上新能力级别的要求。他重申"让社会与技术共同演进的迭代循环，是走对这条路的最大保障"，并称管理向充足而强大的 AI 世界的过渡是"全世界最高优先级之一，也是 OpenAI 的最高优先级"。<a href="https://x.com/sama/status/2094934592062959832">详情</a></p></div>
+<div class="item"><h3>Claude 官方账号 (@Anthropic)</h3><p>Claude 官方账号确认 <span class="hl">Fable 5.1</span> 今天全渠道可用，面向网络防御者和生命科学领域科学家的 <span class="hl">Claude Mythos 5.1</span> 则通过受信任访问计划提供。安全改进同步落地：网络安全 safeguards 对良性请求的误报降低约 <span class="hl">60%</span>，基础生物学和医疗问题的 fallback 率降低约 85%。同时推出 <span class="hl">Enterprise Frontier Safeguards (EFS)</span>，让企业客户在享有与 zero data retention 同等隐私保护的同时，仍能最先进地防御对抗性使用，今秋起分阶段上线。<a href="https://x.com/claudeai/status/2094848591617483020">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>Training Data · Making Cities Awesome: Peregrine's Nick Noone & Ben Rudolph</h3><p>The Takeaway：真正影响政府级客户的工程，不是炫技，而是放下自我、深入客户语境，用三到五倍于任何团队的速度把客户送到结果。Peregrine CEO Nick Noone 曾执掌 Palantir 的 SOCOM 单位、被部署到中东高危情报行动，他把 <span class="hl">forward deployed engineering</span> 的精髓总结为两条真理：心理上"拥有或共同拥有"客户的问题，以及"那是客户的胜利，不是我们的胜利"。他指出硅谷常犯的错误是：顶尖学校的聪明人冲进 LAPD 这类机构，试图几周内消化三十年的机构语境(数据层面和人的层面)，在奉献了一生的老兵眼里这只会显得像 <span class="hl">ego</span>，"放下自己的聪明、悬置自我、真正进入客户语境，说起来容易，实则是一种极高共情、极需耐心的工作方式"。联创 Ben Rudolph 走的是另一条路：他曾在苏丹、哥伦比亚边境做联合国难民署工作，又为印度政府建过帮助农村患者坚持结核病服药的应用，由此形成"很多问题都是<span class="hl">数据问题的下游</span>"的论题。两人 2016 年重聚后决定创业，2017 年靠一通 <span class="hl">cold call</span> 打进 San Pablo 警察局，Peregrine 的愿景是用技术让城市既安全又不沦为监控国家，在城市基础设施层面同时保护个体隐私并把人连接起来。<a href="https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
