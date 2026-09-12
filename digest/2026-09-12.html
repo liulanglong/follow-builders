@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-11</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Boris Cherny (Claude Code 负责人 @ Anthropic)</h3><p>Cherny 公开回复了一封常见读者来信：AI 写的代码到底该怎么把关？他的答案分两层：一次性的原型代码可以完全当黑盒，反正要扔掉、爆炸半径也小；但 Claude 写的 <span class="hl">production 代码</span>标准应该比人写的更高。他透露 Anthropic 内部为此配备了大量 guardrails：lint 规则、海量测试、Claude 驱动的端到端测试、每天运行的 <span class="hl">fuzzer</span>、自动化 code review 和安全审查、自动化重构等。他还给出一套实用建议：用最新 frontier 模型(Opus 5 或 Fable 5.1)、把 effort 调到 high/xhigh、认真打磨 CLAUDE.md 和 skills 来教 Claude 熟悉你的代码库。他的核心结论是："Your job is to hold the bar on code quality"。<a href="https://x.com/bcherny/status/2098217573276131577">详情</a></p></div>
+
+<div class="item"><h3>Boris Cherny (Claude Code 负责人 @ Anthropic)</h3><p>Cherny 强烈推荐最新一期 Threat Intelligence 报告，称其"absolutely terrifying and important"。他的核心判断是：模型越智能，在没有足够 safeguard 和监控的情况下就越危险，因为很多能力天然<span class="hl">双刃</span>：写代码好的模型也能用来攻击关键基础设施，辅助生物研究的模型也可能被用来制造下一场疫情。他认为这些问题复杂、棘手，且越来越需要公众理解，才能让世界对快速升级的风险做出回应。<a href="https://x.com/bcherny/status/2098281805770309686">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3><p>OpenAI 宣布暂停 <span class="hl">$200 Pro 套餐</span>的新订阅。Sottiaux 解释说，这一档用户对系统造成的压力最大，暂停新订是"保证现有用户体验和继续访问 Astra"的最小代价方案，所有其他套餐和 API 不受影响，存量账户不受任何影响，团队正在全力扩容。这条推文获得了超过 1.5 万个赞，可见 Astra 需求之火爆。<a href="https://x.com/thsottiaux/status/2098113585683808624">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3><p>OpenAI 推出了<span class="hl">按需扩展的 agents</span>基础设施 API。Sottiaux 介绍，这套系统就是 ChatGPT Work 底层跑的同款基础设施，现在包装成 API 开放，开发者不到 1 分钟就能上手接入。"Happy building"。<a href="https://x.com/thsottiaux/status/2098238138334548260">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 分享了本周与几十位银行、媒体、保险、咨询行业技术负责人的交流心得，勾勒出企业 AI 落地的真实图景。几大趋势：网络安全被反复提及，AI 带来的漏洞增速让所有人紧张；多数企业同时部署多个 frontier 模型，但预算仍集中在少数几家供应商，<span class="hl">open weights</span>在企业级落地还处于早期；agent 安全与身份管理成为新课题；最大的 ROI 来自用 agent 重塑<span class="hl">工作流本身</span>而非叠加在旧流程上；还有 evals，大多数企业依然没有像样的工作流评测体系，"huge opportunity"。<a href="https://x.com/levie/status/2098218284139311615">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Box 宣布与 OpenAI 深化合作，用户可以在 ChatGPT 里安全地直接处理 Box 中的企业内容。Levie 的判断是软件正在走向 <span class="hl">headless</span>，他坚信未来的工作是 AI agent 在任何地方处理数据、执行工作流。<a href="https://x.com/levie/status/2098135659714085281">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 披露了 Vercel 的规模数据：<span class="hl">每天约 1000 万次部署</span>，累计已达 23.5 亿次，数十亿应用部署同时在全球 CDN 上可路由，是世界上最重的多租户系统之一。CDN 底层是一个全球元数据存储，全球同步在几百毫秒内完成。工程团队刚把这个系统在 <span class="hl">p99 上提速 91%</span>，连带加速了整个 build 到 deploy 的流水线，而且是在 agentic 部署量暴涨带来巨大压力的同时完成的。<a href="https://x.com/rauchg/status/2098091056302833837">详情</a></p></div>
+
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>Masad 对 AI 风险给出了明确的分级判断：AI 确实有很多风险，他自己就非常担心网络安全问题；但"灭绝风险"(字面意义上 100% 的人类死亡)"not remotely one of them"，完全不在他担心的清单上。这条推文获得 516 个赞，算是 builder 社区对 doom 论的一次直接回应。<a href="https://x.com/amasad/status/2098171265924116732">详情</a></p></div>
+
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，前 Google，曾主导 Gemini、Veo、Nano Banana)</h3><p>Guru 的 "How to build great evals" 系列更新到第 10 期，本期的核心观点是：<span class="hl">评测步骤</span>，而不只看结果。就像高中数学，答案对了不够，解题过程才关键。他举了一个例子：两条 agent 轨迹都得出 42，但一条检索对了来源、干净地做了 4 次 tool call；另一条做了 17 次调用、重复搜索 3 次、从 2 个错误里恢复才勉强到达。做法上他建议：清晰定义完整工作流、拆解每步任务、想清楚每步怎么测、把 median 和 hard 任务都纳入 evals，看结果时先研究步骤再看最终结果。<a href="https://x.com/realmadhuguru/status/2098064969464217720">详情</a></p></div>
+
+<div class="item"><h3>Thariq (Claude Code @ Anthropic)</h3><p>Thariq 分享了一个实用 prompt：让 Claude 在对话里用自由文本(或多选时用 askuserquestion 工具)深度采访你，挖掘它还不知道的你的生活背景信息，然后<span class="hl">全部存入 memory</span>。这样 Claude 后续回答会更贴合你的个人 context。这条推文获得 1774 个赞，说明社区对个性化 memory 的需求很旺。<a href="https://x.com/trq212/status/2098157600361861579">详情</a></p></div>
+
+<div class="item"><h3>Google Labs</h3><p>Google Labs 宣布 <span class="hl">Dreambeans</span>正式向所有美国 18 岁以上用户免费开放，iOS 和 Android 均可下载，无需订阅。同时 Dreambeans 现在可以连接 Gemini App，会基于你聊天记录中的细微语义和理解，生成更有洞察、更个性化的每日故事集。<a href="https://x.com/GoogleLabs/status/2098110018289803558">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw @ OpenAI)</h3><p>Steinberger 提出了一个关于 AI 时代代码哲学的判断：<span class="hl">复制逻辑</span>不再痛苦，痛苦的是抽象。过去开发者害怕重复代码，发明了大量抽象层来复用；但在 AI 能随时生成代码的世界里，重复一份逻辑的成本趋近于零，而维护错误的抽象依然昂贵。这条推文获得 2293 个赞，引发了广泛共鸣。他同时提醒 Astra 需求增长太快，想用的要抓紧。<a href="https://x.com/steipete/status/2098089196800098798">详情</a></p></div>
+
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>Kothari 用三句话总结了当前早期投资市场的三个"真理"：人人都想融 <span class="hl">$5000 万的 seed</span>；人人认为自己明年能做到 $3000 万 ARR；每个火热的分阶段 seed 轮的估值都神奇地落在 3 亿美元附近。这是对当下 seed 市场泡沫氛围的辛辣观察，获得 196 个赞。<a href="https://x.com/nikunj/status/2098078391065018816">详情</a></p></div>
+
+<div class="item"><h3>Peter Yang</h3><p>Yang 给出了一个直白的效率评价："In my humble opinion, for getting shit done <span class="hl">Sol &gt; Astra</span>"。对于注重实际产出的用户，他认为 Sol 比 Astra 更好用。<a href="https://x.com/petergyang/status/2098215935467544604">详情</a></p></div>
+
+<div class="item"><h3>Josh Woodward (Google Labs / Gemini App / Google AI Studio 副总裁)</h3><p>Woodward 宣布 <span class="hl">Gemini 正式登陆 Windows</span>桌面端，用户现在可以直接下载 Windows 版应用。<a href="https://x.com/joshwoodward/status/2098131750660772342">详情</a></p></div>
+
+<div class="item"><h3>Claude (Anthropic 官方账号)</h3><p>Anthropic 宣布 <span class="hl">Fable 5.1 Build Days</span>本周启动，9 月 11 日至 25 日期间，Claude 社区将在全球多个城市举办 buildathon，带着问题或想法来，或者空手出现看看能做出什么。<a href="https://x.com/claudeai/status/2098138736642933143">详情</a></p></div>
+
+<div class="item"><h3>Matt Turck (FirstMark Capital VC，MAD Podcast 主持)</h3><p>Turck 发布了与 <span class="hl">Richard Socher</span>的长谈，主题是"AI builds AI"：递归自我改进(RSI)与科学进步。话题覆盖为什么科学进步正在放缓、LLM 能否产生真正原创的想法、幻觉如何驱动发现、AI 加速药物研发与治愈癌症的可能性，以及 Socher 新公司 <span class="hl">Recursive</span>(刚融资 6.5 亿美元)的路线图。访谈已上线 YouTube 及各播客平台。<a href="https://x.com/mattturck/status/2098081448330674182">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
