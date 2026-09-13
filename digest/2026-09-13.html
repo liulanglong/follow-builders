@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-12</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT 负责人 @ OpenAI)</h3><p>OpenAI 的 Astra 出现了一波质量问题，Sottiaux 发长文公开复盘并宣布当天午夜全面 reset。团队与用户协作定位并修复了三类问题：旧模型时代编写的 skills 触发过于频繁、阻止了模型自查；一个 opt-in 的 <span class="hl">context management 实验</span>导致任务提前终止或回复旧消息，粗略估计影响约 <span class="hl">4000-5000 名用户</span>，现已禁用；还移除了一批配置错误的引擎，这些引擎曾对长尾流量造成可测量的质量下降。整体改进后，任务跟进更一致、对最新消息的追踪更准确、执行过程中的自查也更到位。他特别感谢了社区：用户贴出的案例和直接协作的人对快速修复"极其有用"。<a href="https://x.com/thsottiaux/status/2098612714704891959">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT 负责人 @ OpenAI)</h3><p>Astra 本周密集上线了一批能力：<span class="hl">Images 2.5</span>、GPT-Live-1、Agents API、Data Agent、ChatGPT for Financial Services。他强调"这还没到 DevDay"，暗示下周还有更大的发布计划。<a href="https://x.com/thsottiaux/status/2098639827084480864">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT 负责人 @ OpenAI)</h3><p>OpenAI 迎来了 Git AI 团队的 Aidan 和 Sasha。他们在开源社区开发了一款帮助开发者理解 coding agent 如何贡献代码库的工具。Sottiaux 表示，双方合作将让企业更容易看到 Codex 在为个人和团队解决问题时创造了哪些价值，并承诺 Git AI 保持<span class="hl">开源</span>且会持续投入。<a href="https://x.com/thsottiaux/status/2098569976143806918">详情</a></p></div>
+<div class="item"><h3>Peter Yang (Practical AI 创始人，面向忙碌人群的 AI 教程)</h3><p>Peter Yang 公开表达对"软件工厂"的怀疑：除了 verification 和 testing，他认为 AI 还远不能在<span class="hl">没有 human in the loop</span> 的情况下自我改进产品或端到端构建新功能。他用自己的亲身经历作证：每当让任务跑一整夜去构建新东西，只要模型做出一个错误假设，"整件事就变成浪费 token"。他向社区发问：到底有哪些产品或功能是在无人定义需求、无人检查成果的情况下由软件工厂端到端建成的？另外，他宣布了自己的工作流分工：所有本地定时任务交给 Codex，云上任务全部迁移到 <span class="hl">Grok Bot</span>，"一个干净的切分"。<a href="https://x.com/petergyang/status/2098565668241334366">详情</a></p></div>
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监；前 Google，曾主导 Gemini、Veo、Nano Banana)</h3><p>前 Gemini/Veo 负责人 Madhu Guru 总结了大多数企业 AI 项目失败的三大原因。第一，用旧打法做 AI：CEO 指派亲信组建中央 AI 团队，但过去 15 年的渐进式产品方法论在 AI 上失效，"AI 需要的是实验和发明"。第二，<span class="hl">evals 投入不足</span>：多数企业不理解 evals 的重要性和"好"的标准。第三，从外部为内部造工具：中央团队自封平台团队，产出的工具脱离一线员工的真实工作流、上下文和判断力，结果是"勉强采用，但没有任何有意义的生产力提升"。她的建议：雇佣真正成功做过 AI 产品、能赢得业务信任的领导者；把 evals 提升为一等公民；把最好的 AI builder 直接<span class="hl">嵌入</span>要变革的职能里，"和财务一起建、和销售一起建、和客服一起建"。<a href="https://x.com/realmadhuguru/status/2098448235048378456">详情</a></p></div>
+<div class="item"><h3>Thariq (Claude Code @ Anthropic，前 YC W20)</h3><p>Thariq 指出一个行业痛点：如今几乎不可能只看 pass/fail 分数来解读 evals，他看到的大量 benchmark 失败其实源于<span class="hl">过于严苛的隐藏测试</span>，有些情况下模型的答案甚至比预期标准答案更合理。同日他发布了新功能：针对社区反馈"新模型发布后不知道自己的 skills 是否还能用"，Claude Code 推出 <span class="hl">plugin evals</span>，在 plugin 目录下运行 <code>claude plugin eval init</code> 即可为你的插件建立评估。<a href="https://x.com/trq212/status/2098490139798655427">详情</a> 关于 plugin evals 的发布：<a href="https://x.com/trq212/status/2098531560643539440">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>Replit 收购了一家完全构建在 Replit 平台上的公司，Masad 预计这只是<span class="hl">系列收购的第一个</span>。他同时分享了平台上社区用 Astra 做的 3D 实验，以及一个新功能演示：带 <span class="hl">预算控制的 Routines</span>，让自动化例程有了花费上限。<a href="https://x.com/amasad/status/2098548464452055437">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 宣布 Tailscale 的 model router 底层基础设施采用 <span class="hl">Vercel AI Gateway</span>。他抛出一个类比判断："AI Gateway 就是新的 CDN"：你可以直连 origin，但很脆弱；可以自己 DIY，但痛苦又昂贵。他以服务 Tailscale 这家他称为"网络技术的 GOAT"的公司为傲。<a href="https://x.com/rauchg/status/2098531157230969062">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 介绍了一个新集成：现在可以把 Box <span class="hl">挂载到 agent sandbox</span> 里，让 agent 在自己的计算环境中更方便地读写文件。他的判断是：当 AI agent 在企业里执行关键工作流时，"它们将需要人类一直拥有的那些原语"——文件系统访问正是其中之一。<a href="https://x.com/levie/status/2098478938003841123">详情</a></p></div>
+<div class="item"><h3>Ryo Lu (Cursor 设计师，曾设计于 Notion、Stripe)</h3><p>Ryo Lu 宣布 Cursor 上线 <span class="hl">long-lived agents</span>：面向"你的大想法"的长生命周期 agent，可以持续追踪和推进大型任务，而不是一次性的短会话。这条产品发布推文与他个人搬往台北的生活更新形成有趣对照。<a href="https://x.com/ryolu_/status/2098324260867772806">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>Tan 对教育评价体系发表看法：SAT 考到 <span class="hl">1600 满分</span>之后，应该解锁一个更难的第二级考试，叠加一个新分数，"我们应该有更多、更高的卓越度量"。他批评现状是干脆禁掉 SAT，让一切退化为随机抽签，导致卓越无法被识别。<a href="https://x.com/garrytan/status/2098615692425851205">详情</a></p></div>
+<div class="item"><h3>Matt Turck (FirstMark Capital VC，MAD Podcast 主持人)</h3><p>Turck 分享了他的 9/11 亲历长文：2001 年他是纽约创业公司 <span class="hl">TripleHop Technologies</span> 的年轻联合创始人，公司办公室位于世贸中心北塔 <span class="hl">53 层</span>。他们当初因为预算和运气选了 53 层而不是 104 层的大办公室。事发当天他因晚起在家逃过一劫，全队只有 Kenton Beerman 一人在办公室，幸运逃生。凭借事发前几个月刚融到的 500 万美元 A 轮和 CTO 完整的数据备份，公司当天基本恢复运转，最终在 2005 年被 Oracle 收购。他写道："每个人都知道自己 9/11 当天在哪。这只是我的故事。"<a href="https://x.com/mattturck/status/2098517022049190227">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (独立 builder，Harvard '17)</h3><p>Zara Zhang 提出一个反主流观点："一人公司"被高估了。她承认 AI 让一个人能做更多事，但"从零构建新东西是一种深刻的孤独体验"，你需要有人一起头脑风暴、一起吃苦、一起庆祝。她的结论很形象：当你没有和别人<span class="hl">一起把自己绑在桅杆上</span>时，动力极其容易流失。这条推文获得 <span class="hl">704 个赞</span>，显然戳中了很多 solo builder。<a href="https://x.com/zarazhangrui/status/2098483800456179923">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人，seed/A 阶段投资)</h3><p>Kothari 借"成功有许多父亲，失败是孤儿"这句老话，讲了 VC 行业的 credit 归属问题。他看到功成名就的 VC 们为明星 deal 的<span class="hl">attribution</span> 争得头破血流，因为大退出实在太稀有，而下一期基金就靠这些战绩来募。他预测未来几年会看到很多名字被抹去或"恰好遗漏"，大家争相改写历史抢功劳，而许多新兴 GP 由于只能拿 track record 见 LP，正因此拿不到本该属于他们的认可。他的务实建议：短期里把你的 founders 关系维护好，"他们才是真正会为你背书的人"。<a href="https://x.com/nikunj/status/2098550718923997430">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw 创始人，前 PSPDFKit)</h3><p>Steinberger 演示了在云端会话中用 <span class="hl">CUA (Computer Using Agent)</span> 让 OpenClaw 上的 Astra 玩 Doom。他的评价很克制也很有梗："还称不上 AGI，但大概已经打败了苍蝇的大脑。"他随后还给 trycua 框架提交了一个 patch，修复 Linux 下按键可靠性问题，并称赞这是个"dope framework"。<a href="https://x.com/steipete/status/2098527519213604889">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Shipper 分享了 Every 的模型评测方法论演进：benchmark 分数说明不了模型在你真实工作上的表现，所以过去 3 年他们坚持对新模型做 <span class="hl">vibe checks</span>——基于真实工作场景的上手测试写长篇评测。现在团队正在"加倍下注"并走向量化：内部工程师搭建了一个平台，让每个人基于自己的日常工作构建<span class="hl">个人 benchmark</span>，把"纯凭感觉"的 vibe check 变成有数据支撑的评估。<a href="https://x.com/danshipper/status/2098481799047647715">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>No Priors · Coinbase's Everything Exchange: Agentic Finance, Stablecoins, and Tokenization with CEO Brian Armstrong</h3><p>The Takeaway：当 AI agent 的数量超过人类，agent 经济体终将超过人类经济体，而为 agent 提供"银行账户"是打开这个市场的钥匙。Coinbase CEO <span class="hl">Brian Armstrong</span> 勾勒了三大方向：其一是 Everything Exchange，股票、大宗商品、crypto、永续期货、预测市场全部上链、一个账户统一交易加交叉保证金；其二是疯狂增长的 <span class="hl">stablecoin 支付</span>，"低于 1 秒、低于 1 美分"就能把美元汇到全球任何角落，即使比特币下跌也在持续增长；其三是他称之为 Agentic Finance 或 AIFi 的方向。支撑他判断的数据是：目前约 <span class="hl">76% 的 agent 电商交易低于 30 美分</span>，而传统卡组织每笔固定收 30 美分手续费，"花 30 美分去发送一笔 1 美分的付款毫无意义"。最令人印象深刻的一句话是："我们不想让 AI 无人银行服务 (unbanked)。如果我们想让 AI 开户，它们也配得上金融服务。" Coinbase 已推出工具，一条 prompt 粘贴给 agent 就能开立自托管钱包账户，无需 KYC，因为"AI agent 没有政府 ID，也走不进银行网点"。公司孵化的 X402 支付协议已捐给 Linux Foundation，Google、Cloudflare、AWS 都在参与。<a href="https://www.youtube.com/watch?v=uLDK4l_-gUE">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
