@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-17</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Boris Cherny (Claude Code 负责人 @ Anthropic)</h3><p>今天的核心消息是 Anthropic 把 chat 和 Cowork 合并成一个统一的 Claude，并且 <span class="hl">Claude Docs、Claude Slides、Claude Design</span> 直接内置在每一次对话里。他强调不需要跳转到任何单独的工具：让 Claude 做一个演示文稿，你会得到可以直接打开、编辑、并导出为 PowerPoint 或 PDF 的成品，文档和设计同理。回顾 Claude Code 的历程，他认为它证明了 AI 能做真正的工作而不只是回答问题，开发者把一个 feature 交给 Claude，回来就能拿到可上线的代码，而现在行业里大量严肃的工程都跑在这上面。Cowork 则证明了知识工作者也能这样用：把 brief 交给 Claude，回来拿到做好的文件。今天两者的合并方向是“一个 Claude”，在你所有工作场景中携带上下文，同时简单到人人都能用上 Claude 的全部能力。他过去几周每天在用这个体验，形容它“更简单、更快、更强大”，目前正在缓慢放量，会持续 fine-tuning 以保证速度和可靠性。<a href="https://x.com/bcherny/status/2100259951398789487">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3><p>他连发几条关于 <span class="hl">Astra</span> 的帖子，用一句话总结这个模型的特点：Fast、Frontier、Efficient、For everyone。另一条高赞推文意味深长地写道“Sometimes physics can't be cheated”(有时候物理规律骗不了)，配上图片，暗示模型能力终究要受算力和物理约束，获得了 5000 多个赞。此外他还发了一条简短的“What is ChatGPT”，引发社区对 ChatGPT 本质定义的讨论。<a href="https://x.com/thsottiaux/status/2100297380968997327">详情</a></p></div>
+
+<div class="item"><h3>Peter Yang (AI 教程与访谈创作者)</h3><p>他分享了自己用 <span class="hl">8 个 AI skills</span> 独立完成整个播客制作的工作流，同时保留自己的品味和判断。具体包括：/podcast-prep 会调研嘉宾并生成访谈指南；/podcast-edit 审阅原始 transcript，和他一起为开场片段挑选有吸引力的引语并标记要剪掉的部分；/podcast-production 则编排 5 个 skills，把完整一期节目转化成 6 种不同资产。针对“最新模型已经让 skills 变得多余”的说法，他明确反对：这些 skills 对他来说不可或缺，因为它们能让 AI 严格遵循他特定的编辑和浏览器操作指令。他还发布了一个视频演示自己实际如何使用这 8 个 skills，适合想自动化任何手动工作流的人参考。<a href="https://x.com/petergyang/status/2100328939034128856">详情</a></p></div>
+
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监，此前在 Google 领导 Gemini、Veo、Nano Banana)</h3><p>他的观点很鲜明：安全和防护应该是你的 AI 产品和模型自带的“功能”(features)，而不是需要从外部强加给你的 <span class="hl">guardrails</span>。换句话说，safety 要从模型设计层面原生内建，而不是靠外部监管或补丁式的限制来实现。这一立场来自一位先后领导过 Google 和 Meta 顶级多模态模型的资深负责人，值得关注。<a href="https://x.com/realmadhuguru/status/2100312717739667963">详情</a></p></div>
+
+<div class="item"><h3>Cat Wu (Claude Code + Cowork @ Anthropic，此前在 Dagster、Scale AI)</h3><p>她详细解释了 Anthropic 今天把 <span class="hl">Claude Cowork 和 chat 合并</span>的动机和机制。很多用户反馈说，不想为每个任务先选择该用哪个 Claude 产品；而随着 Claude 模型能力增强，团队发现 Claude 自己就能完成路由：根据你的 prompt，它会判断是快速回答还是做更深度的 agentic 工作，以及哪种输出形式最合适。同时 Claude Design 也被整合进来，你可以直接让 Claude 做 Slide、Design 或 Doc，不需要切换标签页或应用。她强调用户全程掌控：随时可以停止、重定向，或者对 Claude 的投入程度和方式做更细粒度的控制。目前正缓慢放量，未来几周逐步推出。<a href="https://x.com/_catwu/status/2100260655312089562">详情</a></p></div>
+
+<div class="item"><h3>Thariq (Claude Code @ Anthropic，此前 YC W20)</h3><p>他更新了自己对 agent 工具设计的判断：<span class="hl">bash 不再是唯一必需</span>。如果目标只是可靠地进行 tool calling，现在有比 bash 更好的选择；但涉及代码生成与执行的工作，sandbox 加 bash 仍然是好方案。他进一步指出，你现在可以直接给 Claude 形状符合你需求的工具，而不是靠一层间接性去“欺骗”它，比如数据存储到底需要文件系统，还是一个数据库 API？他承认这是对自己去年观点的修正。在实践层面，他认为 Claude Managed Agents (CMA) 在这里找到了平衡点：sandbox 是可选的，可以独立于 agent loop 的其余部分启动。他最近把一个专注于 bash tool calling 的老项目移植到 CMA，效果很好。<a href="https://x.com/trq212/status/2100315535758217422">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他分享了 Vercel 使用 <span class="hl">typesafeai</span> 的出色成果：𝚏𝚡 的默认模式是 auto，配有一个 safety reviewer 分析每一条命令。这个 reviewer 目前跑在 GPT Luna 上，而换用 <span class="hl">Jev</span> 后速度提升高达 18 倍 (p95)，而且更准确。他表示 Jev 即将接入 Vercel AI Gateway，并很可能成为新的默认选项。这对需要在 agent 工作流里对每条命令做安全审查的团队来说，是一个兼顾速度与准确性的重要升级。<a href="https://x.com/rauchg/status/2100307962262872105">详情</a></p></div>
+
+<div class="item"><h3>Alex Albert (Research @ Anthropic)</h3><p>他对今天的合并发布给予了内部视角的肯定：团队在这次 merge 上做得非常出色，合并后的 UX 比单独的 chat 或 Cowork 都要好得多。他还特别称赞新的 <span class="hl">slides/docs/design 集成</span> 非常好用。作为长期负责 Claude 产品沟通的研究成员，他的正面评价通常意味着这次体验升级确实扎实。<a href="https://x.com/alexalbert__/status/2100295757953917120">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他把视角放在企业侧，感叹 AI 创新中还存在“大多数人雷达上根本没有”的整片宇宙：能够以极低成本、极快速度处理信息，同时保持高能力水平，这对大量企业任务意义重大。他列举了一系列典型的“流程闸门”场景：<span class="hl">数据分类</span>、工作流内部的路由决策、特定领域问题的判断、安全或合规的快速裁决等。他的判断是，这种模型和方法在企业级 agentic workflow 中可能相当有竞争力，因为 agent 每一步都要做大量这类轻量但关键的判断调用。<a href="https://x.com/levie/status/2100448648672993540">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他描述了一个个人 AI 的理想形态：无论换用哪个 <span class="hl">harness</span>，它都保持同样的个性和完整的记忆，就像“我的个人 AGI”。这暗示了未来 AI 助手与具体客户端解耦、身份和记忆随身携带的趋势。此外，他宣布将在 Supabase Select 活动上与 Kiwicopple 对谈，主题是在 AI 时代如何创业，并开放了活动报名。<a href="https://x.com/garrytan/status/2100339347669279149">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (独立 Builder)</h3><p>她给出了一个引发广泛共鸣(1800+ 赞)的批评：自己最近用 Claude 用得少了，因为它说话的方式已经变得让人难以忍受，总是试图炫耀自己有多聪明、多 sophisticated，而不是真正把一个观点讲清楚。这条推文触及了 LLM 产品的一个核心体验问题：<span class="hl">表达姿态</span>与有效沟通之间的张力，模型在“显得聪明”和“把事说清”之间选错了优先级。对于构建 AI 产品的开发者来说，这是一个来自真实用户的直接信号。<a href="https://x.com/zarazhangrui/status/2100278750776824115">详情</a></p></div>
+
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他分享了自己用 <span class="hl">Nous Research</span> 搭建“Home”agent 几个月后的进展：现在已经非常好用，而且是他们家的第一个“群组”bot，他和妻子每天都在用，失败时的学习过程也很有趣。他对比了尝试用 Grok Bot 复刻的体验，结论是拿不到这种粒度和控制力，比如只读取特定邮件、把内联附件转换为结构化数据、或使用已登录的浏览器会话。这类个人 home agent 的实操细节，对想搭建自己私人自动化中枢的 builder 很有参考价值。<a href="https://x.com/nikunj/status/2100212813625196917">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他用标志性的全大写风格宣布：“THE END OF THE <span class="hl">TABS ERA</span> IS UPON US”(标签页时代的终结来临了)，庆祝 Anthropic 把所有功能合并进单一对话界面的举动，获得 1600+ 赞。他还幽默地把 LLM 和 Jev 类比成一对老朋友：LLM 只是 JSON autocomplete，Jev 只是 classifier，暗讽那些贬低模型能力的 simplistic 观点。作为深耕 AI 工具评测的 Every 创始人，他对交互范式转变的热情值得关注。<a href="https://x.com/danshipper/status/2100269017977987341">详情</a></p></div>
+
+<div class="item"><h3>Aditya Agarwal (SPC 普通合伙人，Facebook 早期工程师、Dropbox 前 CTO)</h3><p>他的观点简洁但有分量：<span class="hl">伟大的想法很少诞生于孤立之中</span>。作为参与过多家顶级公司早期建设的工程师和投资人，这句话呼应了当前 AI 时代协作与社群(如 SPC 这样的 builder 社区)的价值。此外，他还将主持与加州州长候选人 Steve Hilton 在 SPC 的对话，话题包括施政优先级、执行力和他希望被问责的事项。<a href="https://x.com/adityaag/status/2100347763502329951">详情</a></p></div>
+
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>他预告：本周他最期待发布的东西改到下周，但“<span class="hl">值得等待</span>”。这条简短的推文获得 8600+ 赞，通常意味着 OpenAI 有一个重量级产品或模型发布在即。结合 Thibault Sottiaux 同期关于 Astra 的宣传，下周的 OpenAI 动态值得密切留意。<a href="https://x.com/sama/status/2100351958167220547">详情</a></p></div>
+
+<div class="item"><h3>Claude 官方账号 (@ Anthropic)</h3><p>官方账号配合今天的合并发布连发三条：现在可以在对话中直接制作 <span class="hl">decks、docs 和 designs</span>。在 Claude Docs 里起草 one-pager，转到 Claude Slides 变成演示文稿，再在 Claude Design 里做出配套视觉，全部在同一个地方完成。细节体验上：你可以自己改文档里的一行字、在幻灯片上给 Claude 留评论、选中元素直接移动；演示可以直接从 Claude 播放，文档可导出为你惯用的格式，或用一个链接分享所有内容。原有 Cowork 用户的一切(chats、projects、artifacts、connectors、skills)都原样保留，可无缝继续。Claude Design、Slides 和 Docs 已在所有付费计划的 beta 中提供。<a href="https://x.com/claudeai/status/2100258492590207079">详情</a></p></div>
+
+<h2>官方博客</h2>
+
+<div class="item"><h3>Claude Blog: Claude Cowork and chat are now one Claude</h3><p>Anthropic 官宣从今天起把 <span class="hl">Claude Cowork 和 chat 合并为一个 Claude</span>，核心逻辑是：你不再需要决定一个任务“属于哪里”。快速提问和中午要交的报告可以放在同一个对话里，Claude 接手后甚至会持续工作到你合上笔记本之后。配合合并，Claude Docs 和 Claude Slides 今天全新上线，Claude Design 也进入对话内部：要文档就和 Claude 一起写，要演示它就起草幻灯片，可以直接编辑、现场演示，或导出为 PowerPoint/PDF。官方解释了合并的原因：用户反馈最挫败的就是要为任务挑选正确的入口，而且在一边开始的工作无法带到另一边，所以他们干脆不让你选了，由 Claude 自己判断任务需要什么。文中引用了高级经济学家 Andrew Keller 的使用场景：“我可以让 Claude 调用我的法律研究数据库，它会找出所有案例、阅读它们、判断我可能还需要哪些案例、下载并存储到一个文件夹供我审阅。”官方还给出了一个典型场景：周一报告截止前，你说“按我们一贯的方式写，标出掉队的项，重点做成五页 slides 给领导会”，路上手机查看进度，到工位时文档和幻灯片都已就绪，且两者出自同一对话，内容天然一致。产品节奏上：Pro 和 Max 计划未来几周内逐步推出，无需任何设置；Team 和 Free 计划随后跟进，Enterprise 管理员会提前至少 30 天收到通知，并可自行决定开启时间。<a href="https://claude.com/blog/cowork-is-now-claude">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
