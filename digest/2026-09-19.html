@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-18</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Boris Cherny (Claude Code 负责人， Anthropic)</h3><p>他认为新的 <span class="hl">Projects</span> 功能不只改变了人与 Claude 的交互方式，更改变了他写代码的方式：不再需要手动管理 session，而是随时把想法发给 Claude，由它拆分成多个 thread，同时项目会持续记住他的工作习惯。他晒出了自己昨天在 Claude Code CLI 里的真实 prompt 截图作为佐证，并表示这就是他目前大量写代码的地方。新体验正在陆续推出。<a href="https://x.com/bcherny/status/2100669598995816511">详情</a></p></div>
+<div class="item"><h3>Cat Wu (Claude Code + Cowork 工程师， Anthropic)</h3><p>她介绍新版 Projects 体验的核心机制：Claude 会统一协调你的所有 session，让你在更高的抽象层级上工作。具体用法是批量发起一批任务后就去干别的，Claude 对你正在做的所有事情都有上下文，随时可以给出汇总状态更新；同时它还拥有随使用不断演进的<span class="hl">长期记忆</span>。该功能将在未来几周内逐步推出。<a href="https://x.com/_catwu/status/2100641163120423057">详情</a></p></div>
+<div class="item"><h3>Thariq (Claude Code 工程师， Anthropic)</h3><p>他从架构角度解读 Projects：它把 Claude Tag 的架构带进了 Claude Code，即每个项目有一个<span class="hl">主 agent</span>负责管理记忆，并为具体任务派生 <span class="hl">subagent</span>。用户还可以让它主动工作、按时间表定时执行任务。他的体感是这比维护一堆零散 session 舒服得多，邀请大家试用。<a href="https://x.com/trq212/status/2100638355872706571">详情</a></p></div>
+<div class="item"><h3>Claude 官方账号 (Anthropic)</h3><p>官方连续发帖介绍 Projects 的设计细节：项目会随时间累积，每个 thread 都向<span class="hl">共享记忆</span>写入和读取信息，所以 Claude 能记住“发布改到周五了”或“动 billing 服务前要先问谁”；项目的 library 会保存你上传的文件以及 Claude 自己创建的文件。Threads 目前运行在云端，电脑离线也会继续工作，但暂时还无法访问本地文件和内网工具，本地支持“很快”到来。Pro 和 Max 用户现有项目不受影响，将随 rollout 逐步升级。<a href="https://x.com/claudeai/status/2100632684074549309">详情</a></p></div>
+<div class="item"><h3>Google Labs (Google 的 AI 实验部门)</h3><p>Google Labs 宣布面向家庭的 AI agent <span class="hl">CC</span> 正式升级：最多可添加 5 名家庭成员；每天早晨发送共享的 "Your Day Ahead" 简报邮件；自动同步共享 Google Calendar 和 Tasks 的日程与待办；在 Google Chat 中协调任务，比如制定每周菜单、采购学习用品清单；还能代为处理签字表格等文书工作，并记住哪些信息适用于全家（如买菜清单、喜欢的餐厅）、哪些只适用于个人（如饮食限制、所在时区）。目前仅限美国、18 岁以上用户，可加入 waitlist 或升级现有 CC。<a href="https://x.com/GoogleLabs/status/2100653821907366366">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他给出了一个大胆判断：明年产出的软件量可能超过计算史上所有软件的总和。依据是 Vercel 的数据：用了 <span class="hl">10 年才达到 10 亿次部署</span>，但最近 <span class="hl">10 个月</span>又新增了 14 亿次。其中很多将是微小的、个人化甚至一次性的软件，从一个带 JS 的 HTML 文件，到报告、定价计算器、幻灯片，一直到复杂应用、agent 和平台。为此 Vercel 痴迷于部署速度，已把部署、上传、分配域名和全球传播的总时间压缩到 <span class="hl">1 秒以内</span>，且包含全球 CDN、防火墙、不可变部署、可观测性和回滚等完整能力。<a href="https://x.com/rauchg/status/2100698591417499972">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他的判断是：agent 已经占推理（inference）的大头，并且在未来一到两年内会迅速趋近全部推理。世界上的绝大多数 token 将被后台 7x24 小时执行海量任务的 agent 消耗：审查所有代码变更以保障安全、在 workflow 中处理数据、承担招聘和客户拓展中的大部分调研、审阅所有系统的事件流和日志，以及处理个人生活中的事务。他自己的例证是，仅过去一周就上线了多个一个月前在技术上还不可能实现的全新 workflow，新 agent 上线的速度没有放缓迹象。<a href="https://x.com/levie/status/2100799668573946191">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他在推特长文里关注了一家名叫 <span class="hl">Memorable</span> 的公司，认为其找到了一种强大的记忆新方案：用 <span class="hl">embeddings</span> 来优化记忆，而不是靠堆更多 token。这是对 agent 记忆机制的一个重要技术方向。<a href="https://x.com/garrytan/status/2100668489178456268">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他自称痴迷“自动驾驶公司”一年多，试了大量产品都不满意，于是干脆自己上手做了一个带 <span class="hl">Claude</span> 介入的实验：nosugarforkids.com，一个只收录健康儿童零食的目录站（ surprisingly 此前竟然不存在）。网站支持对话式推荐，并基于营养成分建了分级榜单。自主运行侧由一个每天唤醒一次的 Claude agent 负责：检查目录新增、清理失效商品、挖掘内容创意、查看 DataForSEO 和 Google Search Console 数据、撰写编辑文章、保证质量不掺水，甚至主动联系媒体做外链。在零外链、零社交运营的情况下，网站已自然增长到每天约 <span class="hl">6k 曝光、60 次点击</span>。他还在后续推文中提供了配套的完整 MCP（含 WebMCP），可以让其他 agent 直接调用。<a href="https://x.com/nikunj/status/2100714665571737885">详情</a></p></div>
+<div class="item"><h3>Josh Woodward (Google Labs / Gemini App / AI Studio VP)</h3><p>他连发两条推荐 Google Labs 新推出的家庭 AI agent CC，表示“我们家也在用，非常喜欢”，并提到如果在手机上还没用 <span class="hl">Gemini Notebook</span>，那你正在错过一个很棒的产品，还分享了一个相关的精彩故事。<a href="https://x.com/joshwoodward/status/2100616682431807860">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
