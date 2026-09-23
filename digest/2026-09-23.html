@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-22</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 今天连发两条长文，核心判断是：<span class="hl">AI agent 对软件的使用量将达到人类的 100 倍</span>，企业软件的核心原语(数据、安全、业务逻辑编排)不但不会因界面消退而贬值，反而因为 agent 能执行破坏性操作而变得更加关键。他把机会归给两类玩家：既能充当 agent 的安全层和护栏、又能为人和 agent 统一管理数据并编排工作流的平台，无论是全新创业公司还是动作够快的现有平台。第二条推文进一步论证<span class="hl">个人代理的变现潜力</span>：当 agent 能端到端完成任意复杂任务时，大量商业交易将不可避免地流经它们，用户从丢给它琐碎任务开始，逐渐外包更复杂的任务，最终经 agent 的支出会超过从前。他特别提到这对 agent 提供商(如 <span class="hl">Muse</span>)以及面向 agent 的商业、本地服务和 B2B 服务交互层都是全新机会。<a href="https://x.com/levie/status/2102235949430354273">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>Tan 公开安利了自己的新秘密武器：他认为 <span class="hl">Capy</span>(capy.ai)在追踪多步骤工作流和产出大型 PR 方面，独立运行时比 Codex 或 Claude Code 还快。他随后贴出实例佐证：Capy 在 GBrain 上执行了一波雄心勃勃的 bug 修复，任务划分清晰、自动并行化，并产出了干净的 GitHub PR 和 CI 工作流。另一条推文里他还为 <span class="hl">Cluely</span> 辩护，认为它作为实时思考辅助、带持续上下文的半对抗式助手仍然是个好主意。<a href="https://x.com/garrytan/status/2102095924893827501">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 教程创作者)</h3><p>Yang 对广告市场发出警示：如果一家企业的核心业务是向人类展示定向展示广告，那么当 <span class="hl">agent 代替人类浏览网页</span>并直接完成任务时，人类根本看不到你的广告，整个商业模式将迎来 <span class="hl">rude awakening</span>(当头棒喝)。这是对 agent 时代流量变现逻辑的少数清醒追问。他另一条推文分享了自己的使用习惯转变：他已经不再活在邮件和短信里，而是活在和 agent 的聊天窗口中。此外他还介绍了 ChatGPT Finances 的实际案例：产品负责人 Ethan 用积分订酒店后仍被扣款，ChatGPT 发现了这笔错误收费并协同客服拿到了退款。<a href="https://x.com/petergyang/status/2102215701255844074">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 实测了 <span class="hl">Grok 4.7</span>，给了一个相当硬核的题目：逆向工程一个正在运行的二进制文件，结果是"漂亮地解决了，而且速度飞快"。这是目前为数不多的 Grok 4.7 硬核工程能力一手反馈。他还宣布 Vercel 的 <span class="hl">AI Gateway</span> 现在支持通过 HTTP 使用 Jev，并调侃自家类型安全的 TypeSafe AI SDK API 的命名双关。<a href="https://x.com/rauchg/status/2102089968860721335">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>Kothari 分享了自己的 agent 使用版图：他长期把 <span class="hl">Codex</span> 当主力 agent，认为 Mac 版的 Codex 配合 Computer Use"简直无敌"，可以把你手动做的工作流一次性交给它完成(并向 AriX 和 Sky 团队致意)。Instinct 和 <span class="hl">Muse</span> 则在手机浏览器场景表现出色，零配置即可上手，展示了大众级 agent 该有的样子。他同时泼了盆冷水：那些吹嘘 <span class="hl">tokenmaxxing</span>(堆 token 用量)的公司，产品体验往往最差，因为好产品靠的是精心筛选和打理，而不是把一切丢给 agent 让它自己摸索，"less is more 从未如此贴切"。<a href="https://x.com/nikunj/status/2102186665863463199">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw / OpenAI)</h3><p>Steipeter 回应了流传的"Meta 使用 <span class="hl">OpenClaw</span>"传闻：Meta 实际上是在 OpenClaw 的启发下自建了 agent，他称赞 Nat 和团队做得很好。他另一条推文道出了自建 claw 的妙处："自己跑 claw 的好处是：他们没法封你"，这条拿到了 1100+ 赞。他还透露 OpenClaw 接受了审查，结果是"没有发现任何关键问题"。<a href="https://x.com/steipete/status/2102116206371315854">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex & ChatGPT 团队)</h3><p>Sottiaux 发了一条悬念式预告，获得 1.2 万赞："女士们先生们，发动你们的引擎。快到周二了，我承诺过周二会有一次 <span class="hl">reset</span>。还有一些别的东西。很快见。"考虑到他在 Codex 团队的角色，这很可能暗示 OpenAI 将在本周二发布 Codex 相关的重大更新，值得密切关注。<a href="https://x.com/thsottiaux/status/2102254445082116335">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>Masad 发表了一个宏观判断：<span class="hl">AI 正在复兴美国梦</span>。配图链接展开内容有限，但这条推文延续了他一贯的"civilizationist"叙事，即 AI 编程工具大幅降低了创业和创造的门槛建。<a href="https://x.com/amasad/status/2102120769232978174">详情</a></p></div>
+<div class="item"><h3>Thariq (Anthropic Claude Code 团队，前 YC W20)</h3><p>Thariq 分享了一个高频使用的小技巧：他现在每天要打好几次 <span class="hl">"use big pictures and few words"</span>(用大图、少文字)这条 prompt，获得了 1759 赞。简单来说，这是在让模型输出时偏好视觉化、信息密度高的呈现方式，说明视觉输出正在成为 agent 交互的日常习惯。<a href="https://x.com/trq212/status/2102186805034635576">详情</a></p></div>
+<div class="item"><h3>Swyx (Latent Space 播客主理人)</h3><p>Swyx 宣布与嘉宾 <span class="hl">Allen Park</span> 的新一期 <span class="hl">Latent Space</span> 播客已上线，可在邮件、Apple Podcasts 和 YouTube 等各大平台收听。<a href="https://x.com/swyx/status/2102160025666101658">详情</a></p></div>
+<h2>官方博客</h2>
+<div class="item"><h3>Claude Blog: Claude in Chrome 正式全面上线</h3><p>Anthropic 宣布 <span class="hl">Claude in Chrome</span> 正式(GA)面向所有付费 Claude 计划开放，最大变化是 Claude 现在可以在浏览器中<span class="hl">自主执行操作</span>，而不再需要每一步都获得用户批准。这解决了长期痛点：很多日常工具(内部仪表盘、遗留系统、供应商门户)没有 API 或 MCP 连接，Claude in Chrome 让 Claude 直接使用你已有的登录态查看页面、读写文本、点击链接、翻页和填表。安全方面，每一次自主操作前都有一个<span class="hl">安全分类器</span>进行验证，确保操作安全且与你的原始请求匹配，不匹配则拦截。针对 prompt injection(网页、邮件中隐藏恶意指令诱导 agent)的防线也有三层升级：Claude 通过不断增长的攻击库训练识别能力(来源包括内部自动化攻击者、外部红队和真实监控)；probes 在 Claude 行动前扫描网页内容，发现可疑攻击时提醒 Claude 保持怀疑并向用户确认；操作验证机制与 Claude Code 的 auto mode 一致，用户也可在设置中关闭改为手动审批。自 2025 年 11 月首次公布浏览器防御以来，Claude 对这类攻击的抵抗力已大幅提升。<a href="https://claude.com/blog/claude-in-chrome-generally-available">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
