@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-09-27</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Peter Yang (Practical AI 教程作者)</h3><p>他的核心观察是 Claude 的用量限制出现了戏剧性反转：从「勉强能用」直接变成了「几乎无限」，侧面印证了 Anthropic 在容量供给上的激进调整。同时他在动手实践 Google 的新音频 API：用 <span class="hl">Gemini audio API</span> 搭了一个教自己日语口语的应用，设计了 10 节课、每课 10 个短语的课程结构，算是把新 API 直接产品化的一次示范。他还顺带吐槽了首次使用 Google 新工具 Antigravity 时找不到反馈渠道的尴尬。<a href="https://x.com/petergyang/status/2104066667361992892">详情</a> <a href="https://x.com/petergyang/status/2104059554204188833">详情</a> <a href="https://x.com/petergyang/status/2104003094615052443">详情</a></p></div>
+
+<div class="item"><h3>Thariq (Anthropic Claude Code 工程师)</h3><p>他翻出了一年前自己发布的最早一批「用 <span class="hl">Claude Code</span> 生成视频」的帖子，感慨技术迭代速度之快。当时每段视频都需要花大量时间与 Claude 反复迭代，逐个指出细节错误才能做对；如今这类工作流的门槛已经大幅降低。这是一条很好的时间轴对照，直观展示了 AI 编程与视频生成能力在一年内的跃迁。<a href="https://x.com/trq212/status/2103897226154328502">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他提出了一个值得警惕的判断：AI 垃圾内容（他称之为 <span class="hl">slop grenades</span>）正在让「认真阅读」这件事本身贬值。他引用了一个正在走红的案例：有人把一个性能提升归功于编译器变化，但那个 PR 的描述里 AI 自己明明说了提升来自算法和数据结构的改动，换个思路同样能拿到类似收益，说明作者根本没读懂自己贴的材料。他的立场很鲜明：「我要的是 AI 服务于理解宇宙、增强人类认知与创造力」，而不是让人省去阅读和验证。对每天被 AI 生成内容淹没的开发者来说，这是一记清醒剂。<a href="https://x.com/rauchg/status/2103939888513274147">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他分享了自己现在最喜欢的修 bug 方式：用 <span class="hl">Capy</span>（capydotai）配合他自制的 GStack 开启 /autoplan，去处理一个线上生产环境问题，模型用的是 <span class="hl">GPT-6 medium reasoning</span>。这展示了 agent 编排工具加推理模型在真实运维场景中的落地用法，来自一位每天跟大量早期创业者打交道的资深工程师的实际工作流。<a href="https://x.com/garrytan/status/2103989902476259702">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw 核心贡献者，合作方 OpenAI)</h3><p>这位从退休重返 AI 一线的资深开发者感慨「现在我明白为什么有人谈论 AGI 了」，配文只有一句「This is so clever!」。能让一位见惯大风大浪、以挑剔著称的老工程师发出如此感叹，说明某个最新的模型或工具表现确实超出了他的预期，值得点进原帖看看让他折服的到底是什么。<a href="https://x.com/steipete/status/2103883264054505493">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他做了一个很「Every 风格」的实验：先把柏拉图的《Protagoras》改写成小说体，然后让 <span class="hl">Opus 5.5</span> 把它拍成短片，分场景陆续发布。这是把经典哲学文本通过 LLM 转译成视觉叙事的一次完整流水线尝试，从文本改写到视频生成全由 AI 完成，对内容创作者来说是一条可以直接借鉴的作业路径。<a href="https://x.com/danshipper/status/2103850415930708437">详情</a> <a href="https://x.com/danshipper/status/2103894152316645620">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>No Priors · Why Diffusion Will Win AI Inference（嘉宾：Inception 联合创始人兼 CEO、Stanford 教授 Stefano Ermon）</h3><p>The Takeaway：扩散模型不只是图像生成的技术，它很可能在语言推理的速度和成本上对自回归 LLM 构成实质性挑战。Stefano Ermon 是公认<span class="hl">扩散模型之父</span>之一：2019 年他与博士生 Yang Song 提出 score-based 生成模型，即「训练神经网络给图像去噪，再基于去噪器构建生成过程」，这一思路成为今天图像、视频乃至蛋白质生成的主流底层技术。他回忆 2014 年刚到 Stanford 时，生成模型还是冷门方向，在 MNIST 上生成模糊数字就算成功，发论文都得论证「学生成模型是为了帮监督学习提特征」；他当时的动机是构建<span class="hl">世界模型</span>，因为「能想象我站起来走出门会发生什么」这种能力本质上需要生成式建模。转折点在 2024 年：他的团队首次证明扩散模型在 GPT-2 量级（10 亿参数以下）上能追平自回归模型的困惑度和数据拟合质量，同时因为可以并行输出多个 token，文本生成速度快了约 <span class="hl">10 倍</span>。正是这个结果让他创办 Inception，把该技术扩展到商用规模的扩散式语言模型，直接挑战大型实验室的自回归范式。他判断未来几年 AI 竞争的关键词是速度与效率：在连续模态上扩散模型已经全面占优，而它的并行生成加内置纠错机制，正是推理成本战的武器。<a href="https://www.youtube.com/@NoPriorsPodcast">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
