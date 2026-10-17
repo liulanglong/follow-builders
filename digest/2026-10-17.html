@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-10-16</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Boris Cherny (Claude 团队， Anthropic)</h3><p>他宣布 Anthropic 正在联手 <span class="hl">Gray Swan</span> 举办一场针对 <span class="hl">prompt injection</span> 的竞赛。他的核心判断是：过去几年 Claude 模型在抵御 prompt injection 上已有显著进展，但随着 agent 承担的工作越来越多，这个问题必须在整个行业层面被解决，紧迫性正在上升。他对竞赛成果表示期待，并欢迎社区去挖掘模型的安全漏洞。<a href="https://x.com/bcherny/status/2110791698611855624">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他的核心判断是：从「和 agent 聊天」走向「在后台批量启动 agent 干活」，token 消耗会比今天高 <span class="hl">100X 到 1000X</span>。论据是：知识工作的瓶颈从来不在产出而在信息处理(移动数据、审文档、查代码安全漏洞、翻日志、查客户资料)，而人类自己的带宽和 context 限制了并行化；一旦模型够好、成本够低，就可以对任意问题投放任意数量的 <span class="hl">agent swarm</span>，让它们「完成目标再回来」，这些大多是净新增的工作量而非替代。另一条推文中，他盛赞 Meta 发布 <span class="hl">Muse 开放权重模型</span>，认为这是美国开源的巨大进步，企业可以混合使用前沿模型做编排、用低成本定制模型跑可重复工作流，整体会大幅推高 token 消耗。<a href="https://x.com/levie/status/2110622982762803449">详情</a> <a href="https://x.com/levie/status/2110787013809222141">详情</a></p></div>
+
+<div class="item"><h3>Matt Turck (FirstMark Capital VC， MAD Podcast 主持人)</h3><p>在 <span class="hl">Jev</span> 发布一个月之际，他发布了与 TypeSafe CEO Diogo Almeida 的深度访谈，话题覆盖：Jev 是什么、它如何修复 AI 的固有缺陷、为什么 fast-followers 只抄到了界面却抄不到核心。时间轴里的看点包括「<span class="hl">我们去年就可以有 AGI</span>」、System One vs. System Two、RLHF 的谄媚与拒答的隐性成本、RLVR 为什么基准提升不等于可靠自动化，以及为什么 Diogo 对递归自我改进持怀疑态度。<a href="https://x.com/mattturck/status/2110799882952831302">详情</a></p></div>
+
+<div class="item"><h3>Aditya Agarwal (SPC General Partner， 前 Dropbox CTO)</h3><p>他给出了一个强烈的判断：<span class="hl">Goodfire</span> 可能是 SPC 孵化出的最重要的公司之一。理由是，Goodfire 正在证明 <span class="hl">interpretability 和 alignment</span> 可以被当作工程问题(而非纯粹的科学研究)来系统性地解决，这在业内是稀缺的路径。<a href="https://x.com/adityaag/status/2110779602453066224">详情</a></p></div>
+
+<div class="item"><h3>Nan Yu (OpenAI Codex 产品负责人， 前 Linear 产品负责人)</h3><p>他提出了一个反直觉的观点：<span class="hl">taste</span> 不等于审美上的品味。他认为把 taste 定义为美学偏好是最浅层的定义，也正因为人人都能这么理解，反而毫无趣味。这条推文引发了不少产品圈关于「什么是真正的好品味」的讨论。<a href="https://x.com/thenanyu/status/2110730151222980849">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他发了一条对可解释性研究现状的辛辣仿写(致敬 Good Will Hunting 的经典台词)：刚读完 polysemanticity 的人自然以为 interpretability 就是解开 <span class="hl">superposition</span>，下学期找到一个对埃菲尔铁塔有反应的神经元，暑假就开始宣称能对齐超级智能，直到明年才意识到，知道模型认出了埃菲尔铁塔，并不代表你知道它他妈的在盘算什么。这条推文本质上是对「机制可解释性进展被过度解读」的批评。他同日还宣布了与多位 OpenAI 研究者合作的项目正式上线。<a href="https://x.com/danshipper/status/2110831666587713810">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他连发数条庆祝 Vercel 的大动作发布，并调侃道：我们在 <span class="hl">GTA6</span> 之前先拿到了 <span class="hl">Vercel zeppelin 和飞行汽车</span>。虽然这几条推文信息密度不高，但配合 Aaron Levie 同日的「飞行汽车、超级智能、轨道数据中心都会在我们有生之年实现」的乐观论断，可以看出整个 builder 圈对硬件与 AI 同时加速的兴奋情绪。<a href="https://x.com/rauchg/status/2110957024934858815">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (独立 builder， Harvard '17)</h3><p>她分享了一条来自 Ezra Klein 的写作心法：「永远不要低估读者的智力，也永远不要高估他们的背景知识」，这是内容创作者拿捏信息密度的关键原则。她还展示了一个有趣的项目：哈利波特风格的动态报纸 <span class="hl">The Toddler Times</span>，报纸上的图片可以「活过来」，是 AI 生成内容与童趣结合的实验。<a href="https://x.com/zarazhangrui/status/2110815456458412179">详情</a> <a href="https://x.com/zarazhangrui/status/2110984552743309530">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他转发了 <span class="hl">开放权重模型</span> 持续崛起的趋势图，与 Aaron Levie 对 Meta Muse 的欢呼相呼应，显示开源模型势能正成为投资人圈的热议话题。他另一条推文则批评湾区科技圈中某些「在政治聚会上显得酷」的表态实际上制造了危及旧金山亚裔老人的恶性循环，语气相当激烈。<a href="https://x.com/garrytan/status/2110838867213668587">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>The MAD Podcast with Matt Turck · Jev: The AI That Makes Decisions, Not Text - and Why It Changes Everything (Diogo Almeida)</h3><p>The Takeaway: <span class="hl">Jev</span> 的创始人认为，AI 行业最大的问题是「overpromise、under deliver」，而 Jev 反其道而行，用「<span class="hl">intelligence per dollar</span>(单位美元的智能)」下降几个数量级点燃了一场 builder 自驱动的革命。Diogo Almeida 是 TypeSafe 的 CEO，前 OpenAI 研究者，团队在 stealth 模式下打磨了两年才推出 Jev，上线后迅速成为 AI 圈被复制最多的模型。他最令人震惊的表态是：「我在 OpenAI 写过一份文档，说我们去年就可以有 AGI，我至今这么认为」，因为按 OpenAI 对 AGI 的定义门槛其实很低，而模型已经「超级聪明」。他描述自己的模型是「95% Einstein、5% Mr. Bean」：如果模型不能告诉你它什么时候在犯傻，你就没法用它自动化任何事。关于 Jev 爆红的真正领先指标，他认为是 builders 开始用它做以前「因为 AI 太贵而懒得做」的应用，而不是媒体上的用户数和 token 消耗等表面数据。访谈还深入讨论了他对 pre-training 效率的批评、以及「我们是在造产品，不是在造上帝」的工程哲学。<a href="https://www.youtube.com/@DataDrivenNYC/videos">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
