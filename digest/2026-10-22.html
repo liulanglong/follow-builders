@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-10-21</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 判断 AI 正在形成一个明确的新形态：面向特定任务或领域的<span class="hl">自主系统（autonomous systems）</span>，这标志着行业彻底告别了 "LLM wrapper" 时代。他给出三条论据：一是模型的工具调用和计算机操作能力大幅提升，agent 可以像真人一样执行工作流，没有现成软件时甚至能自己造一个；二是模型在法律、生物研究、代码安全、供应链等垂直领域的判断力持续增强；三是 sandbox、文件系统、数据管道等基础设施终于成熟，支撑长时间运行和大规模数据处理的 agent。他认为 IT 自动化、网络安全、药物研发、制造等领域已经在落地，"几乎可以想象经济中每个角色都配一个或多个这样的系统"。<a href="https://x.com/levie/status/2112769686798832013">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux (OpenAI，负责 Codex 与 ChatGPT)</h3><p>Sottiaux 坦承上周末部分用户的用量扣减快于预期，团队定位到约 <span class="hl">40,000 个账户</span>存在用量上限与所选套餐不一致的问题，已修复并逐一联系受影响用户发放 credit，他写道："Sorry we got this wrong." 另外他宣布 API 缓存有效期延长至 <span class="hl">12 小时</span>，Codex 与 Work 的登录用户缓存则永久保留，回到旧对话或中断几小时后恢复都不再有缓存惩罚，保证命中缓存。<a href="https://x.com/thsottiaux/status/2112592264686149749">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 抛出一个愿景式判断：AI 将能精确计算你"懂什么、不懂什么"的差量（delta），帮你渐进式学会任何概念，"你将达到自己能力和智力的上限。终极教育，而且免费。" 在工程层面，他宣布 Vercel 正在把驱动 eve 和 Workflows 的<span class="hl">harness durability</span> 基础设施扩展到 Pi、OpenCode 等所有 harness，就像当年开源 AI SDK 一样，支持本地、Vercel 或自托管。他还透露一个细节：Claude Code 和 Codex 也能借此实现持久化和可观测，但因为它们目前不是为嵌入设计的，效率、可移植性和 sandbox 要求都不如 Pi 或 Fx。<a href="https://x.com/rauchg/status/2112658577110520122">详情</a></p></div>
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Altman 宣布 Aleksander 接受了邀请来负责 OpenAI 的安全事务。他表示："在我们面对超级智能（superintelligence）时，前方的<span class="hl">安全与安保挑战</span>是巨大的，而他拥有应对这一切的出色技能组合。" 他对 Aleksander 接下这个岗位深表感激。<a href="https://x.com/sama/status/2112652656602923366">详情</a></p></div>
+<div class="item"><h3>Aditya Agarwal (SPC General Partner，前 Dropbox CTO)</h3><p>这位老牌工程师观察到一个有意思的类比：Inference time scaling → Subagents → Agent Swarms 的演进路径，和当年 CPU Threads → 多核 CPU → 多节点分布式系统的历史"押韵"得惊人。这条推文获得 <span class="hl">433 个赞</span>，引发不少共鸣。他的核心判断是：agent 架构的发展正在复刻计算机系统几十年走过的路，<span class="hl">历史会重演</span>。<a href="https://x.com/adityaag/status/2112579526379401408">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw / OpenAI)</h3><p>Steipeter 分享了一个实测有效的多 agent 工作流：让 <span class="hl">Astra 做规划、Sol 6.1 写代码</span>，具体做法是 prompt Astra 在 git worktree 中运行 codex cli，效果"远好于依赖 subagents"。关键创新是引入第二个监督 agent 持续挑战 Astra，类似 /goal 但不是同一个 agent 自查文本文件，而是由另一个 agent 提出质疑；他为此写了一个 OpenClaw 插件实现这个 "smart goal" 功能。他还会出席明天的 Cloudflare Connect，与嘉宾聊 agent 相关话题。<a href="https://x.com/steipete/status/2112605703219347503">详情</a></p></div>
+<div class="item"><h3>Josh Woodward (Google Labs VP，负责 Gemini App / Google AI Studio)</h3><p>Woodward 宣布 Gemini App 的 <span class="hl">Trusted Tester 社区</span>跨过一个重要里程碑，大量用户报名希望提前在 Web、Android 和 iOS 上试用新功能；此前已注册的用户无需操作即可全部纳入。他同时引用 Sundar Pichai 的话招兵买马："我们坚定地致力于站在前沿，这是我们的 DNA，我们不会用其他方式做事。"<a href="https://x.com/joshwoodward/status/2112676777290248675">详情</a></p></div>
+<div class="item"><h3>Matt Turck (FirstMark Capital VC)</h3><p>Turck 宣布 FirstMark 加码领投 Daytona 的 <span class="hl">Series B</span>（今年早些时候刚领投其 A 轮），称 Ivan Burazin、Vedran Jukic 和团队"正在打造 AI 时代的标志性公司之一"。同一天 FirstMark 系还有一连串好消息：BabaHQ 的 A 轮、GradiumAI 发布新的 SOTA 开源端侧语音模型，以及 Synthesia 和 Rillet 包下纽约地铁广告。他特别强调 GradiumAI 推出的是一套<span class="hl">轻量级端侧 TTS 开源模型</span>，在开源语音 AI 领域是大事。<a href="https://x.com/mattturck/status/2112570721499042246">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator President & CEO)</h3><p>Tan 认为对任何创业者或需要触达关键人脉的人来说，当前的 AI 工具是"最大的解锁"（greatest unlock）。另一条引发热议的推文中，他猛烈批评加州的资产没收税是在"吃掉下金蛋的鹅"：与其享受无限的金蛋，非要吃掉鹅本身。他还宣布自己的工具 GStack 现已支持 <span class="hl">Capy</span>，能很好地配合其软件工厂功能 Captains 使用。<a href="https://x.com/garrytan/status/2112611824432742493">详情</a></p></div>
+<div class="item"><h3>Zara Zhang (Builder，Harvard '17)</h3><p>Zhang 给早期产品 builder 提出一个反直觉的观察：拥有自己受众的最大优势甚至不是分发（distribution），而是<span class="hl">信号（Signals &gt; distribution）</span>。具体来说，自有受众让你能快速测试不同想法和角度、看哪些真正引发共鸣，并找到最早的 100 个早期采用者。这条推文获得 159 个赞，说明不少独立开发者深有同感。<a href="https://x.com/zarazhangrui/status/2112530473994072225">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Shipper 写了一篇书评，推荐 Meghan O'Gieblyn 的新书 <span class="hl">《Will and Attention》</span>（《God, Human, Animal, Machine》作者），称自己几天内一口气读完。书的底层主题是实用主义（pragmatism）：作者戒酒依靠的是"因为有效所以采纳"的信念，但她发现这会在真实欲望与行为之间撕开一道鸿沟；而一旦开始问戒酒是否"有用"，就打开了"它可能没用"的另一种真相。Shipper 觉得最有意思的是，她最终放弃实用主义、回归不可动摇的真理观，其理由本身却依然是实用主义的：这些信念能阻止欲望把她带回毁灭。<a href="https://x.com/danshipper/status/2112561443249786901">详情</a></p></div>
+<div class="item"><h3>Swyx (Latent Space Podcast 主播，smol_ai 创始人)</h3><p>Swyx 在用 Claude Opus 写作时踩到坑：Opus 写作能力很强，但只要 prompt 里碰巧出现敏感词就会被拒答，他引用 @CompleteSkeptic 的话吐槽 "give me <span class="hl">prod, not god</span>"，意思是要能上生产环境的工程可靠性而非道德洁癖，他无法把这样的模型放进 AI 媒体机构的关键路径里。他还尝试让 Codex 制作动画讲解视频，结论是 "ngmi"（成不了）。<a href="https://x.com/swyx/status/2112772374823407870">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
