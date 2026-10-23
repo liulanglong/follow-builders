@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-10-22</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 判断网络安全将成为 AI 落地最深远的领域之一：我们第一次拥有了一支不知疲倦的 agent 劳动大军，可以狩猎、发现、修补或攻击任何系统与软件。攻防双方都会用 agent：防守方扫描每一条日志、每一行代码、每一份流量，攻击方也在加速发现环境漏洞，他估计这个攻防循环消耗的 token 量会是如今想象的 <span class="hl">100 倍以上</span>。他在后续推文里进一步指出，网络安全将是 AI 创造就业最多的方向之一：即使工作变得 agentic 和自治，仍然需要更多人才指挥 agent、审查发现、打补丁、响应事故。<a href="https://x.com/levie/status/2112964214818283917">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 宣布 Vercel 已在官方补丁发布之前，主动为今天的 <span class="hl">Node.js RCE 漏洞</span>部署了防火墙级缓解措施，所有部署的流量都自动受到保护，并正在滚动升级 managed runtime。他还在另一条推文里回顾了业界如何提前数周通过一个 Slack 频道协同保护全球基础设施、缓解 php2shell 攻击，并提醒大家后续还会有更多漏洞，「练好 patch → redeploy 肌肉」。另外，<span class="hl">DeepSeek v4.1 Flash</span> 已纳入 Vercel Token Pass：便宜、快速、零数据保留，非常适合跑由大模型规划、小模型执行的 subagent。<a href="https://x.com/rauchg/status/2113050053724221732">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Shipper 第一时间评测了 Anthropic 刚发布的常驻个人 agent <span class="hl">Claude Duet</span>，称这是第一个他愿意称为「专业工具」的个人 agent。团队测试两周后，他从几乎只用 ChatGPT 变成 ChatGPT 与 Claude 各占一半，是近一年来使用 Anthropic 最多的时期。他列举了亮点：独立 app（iOS/Android/Web）、按工作与生活分区而不是单一聊天、内置 todo 列表、可直接编辑文档和 slides；也点出短板：还不是 chief of staff，无法指挥他电脑上的 Claude session，邮件草稿不如 dot，语音只有转写不能对话。结论是「vibes are good」，他每天都会打开。<a href="https://x.com/danshipper/status/2112997559463506059">详情</a></p></div>
+
+<div class="item"><h3>Claude 官方账号 (Anthropic)</h3><p>Anthropic 官方连发三条推文介绍 <span class="hl">Claude Duet</span>：它基于 <span class="hl">Claude Opus 5.5</span> 构建，具备判断什么需要你亲自处理、什么可以等待、什么时候先来确认的判断力，并直接继承 Claude 账号的记忆、skills 和已连接的应用。目前作为早期 research preview，通过 waitlist 面向美国 Pro 和 Max 用户开放。安全方面，它从不直接看到你的密码，新增分类器防止敏感信息外泄，重要决策仍保留在人手中。<a href="https://x.com/claudeai/status/2112984666437546104">详情</a></p></div>
+
+<div class="item"><h3>Cat Wu (Anthropic，Claude Code + Cowork)</h3><p>Anthropic 的 Cat Wu 宣布 <span class="hl">Claude Duet</span> 正是回应用户「希望 Claude 主动分担更多工作」的反馈：它会主动注意到需要完成的工作，在你开口之前就把它做掉。目前已开放 waitlist 注册。这与 Dan Shipper 的评测相互印证：常驻、主动式 agent 正在成为 Anthropic 的新方向。<a href="https://x.com/_catwu/status/2112988751576330487">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (OpenAI，Codex & ChatGPT)</h3><p>OpenAI Codex 团队的 Sottiaux 发布了名为 <span class="hl">Dot, Dotter, Dottest</span> 的更新（点赞近 4000），并补充说明新功能完全包含在 Pro 套餐内，不占用每周使用额度。结合 Dan Shipper 评测中提到的「dot 的邮件草稿」，OpenAI 似乎也在推进自己的个人 agent 产品线。<a href="https://x.com/thsottiaux/status/2113029655095836957">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw + OpenAI)</h3><p>Steinberger 爆料：本周即将掀起腥风血雨的那个 PHP 漏洞，是被 <span class="hl">GPT-5.6 Sol</span> 发现的。这条推文获得超过 1.1 万点赞，也印证了 Aaron Levie 的判断：AI agent 已经在实战中承担漏洞挖掘工作。结合 Rauch 提到的 php2shell 攻防，这一轮 PHP 漏洞事件成了 AI 安全能力的公开演示。<a href="https://x.com/steipete/status/2112913060709228764">详情</a></p></div>
+
+<div class="item"><h3>Aditya Agarwal (SPC General Partner，前 Dropbox CTO)</h3><p>面对 PHP 漏洞事件，这位早期 Facebook 工程师只留下一句「Fucking PHP, It's always fucking PHP」，收获 285 赞，堪称工程师对 PHP 的经典怨念。他另一条更有深度的推文分享观察：儿子看《星球大战》只花了 3 小时，却用约 20 小时制作相关的游戏，而且做完几乎不玩，乐趣在于「做」。他感慨编程本身的快乐过去只有程序员能体会，而 AI 可能会让所有人都能体验到这种创造的乐趣。<a href="https://x.com/adityaag/status/2112923959176106056">详情</a></p></div>
+
+<div class="item"><h3>Matt Turck (FirstMark Capital VC)</h3><p>Turck 连续庆祝两家投资组合公司的大额融资：企业财务规划平台 <span class="hl">Pigment</span> 宣布 2.5 亿美元 Series E，法律科技平台 <span class="hl">WeAreLegora</span> 宣布 5.5 亿美元 Series E。他的核心观点是：在 tokens、API 和 agent 的时代，世界正在转向 <span class="hl">持续财务规划</span>（continuous financial planning），而 Pigment 正是承载这一趋势的平台。<a href="https://x.com/mattturck/status/2112927524321726921">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (Builder)</h3><p>Zara 演示了用一个 prompt 就能把照片变成 <span class="hl">3D 立体弹出卡片</span>，并把完整 prompt 公开分享，获得 284 赞。她另一条推文提出「<span class="hl">个人网站是新的简历</span>」，引发不少讨论。两条都体现了 vibe coding 工具让个人表达和展示变得前所未有的容易。<a href="https://x.com/zarazhangrui/status/2113055591954526444">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>AI & I by Every · How a Frontier Team Can Help Your Company Keep Up With AI</h3><p>The Takeaway：跟上 AI 是一份全职工作，所以每家公司都需要一支 <span class="hl">frontier team</span>，专职追踪前沿，让其他人安心做事。Every CEO Dan Shipper 与企业 AI 负责人 Natalia 解释了核心困境：普通员工要么忽略前沿、等着被 agent native 的竞品颠覆，要么追逐一切新工具、永远做不出持久的东西。Frontier team 实现了关注点分离：团队里要有「海盗」（快速粗糙地狂试新东西）也要有「建筑师」（把混乱的实验压缩成可维护的系统），实验成果要么变成好内容，要么被推进产品，而不必让全公司持续焦虑。Head of Evals <span class="hl">Mike Taylor</span> 提到存在大量 capability overhang（模型能力远超我们尝试的速度），他正在帮每个人建个人 benchmark，把 vibe check 量化；最惊艳的发现是 Opus 极擅长视频剪辑：他让 Opus 翻遍自己的 Slack 消息和 Granola 会议笔记，自动剪出一支带出处的产品解说视频。<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
