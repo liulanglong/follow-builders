@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-01</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Swyx (Latent Space 主播 / smol_ai 创始人)</h3><p>Swyx 认为 AI 辅助编程时，与其拉满模型的 effort 参数，不如用 <span class="hl">低 effort 加上人工 critique 循环</span>，尤其适合 throughput 受限的场景，他还在 GitHub 上开源了对应的 skill 包 swyxio/skills/babysit-runs。他还顺手爆料：Karpathy 在最新项目 Hackertube(当天发布)里用的是 Opus 5.5 的 medium effort 档位。他的结论是，在 effort 档位上争强斗狠就像当年的 tabs vs spaces 之争，纯属口味问题，"虽然我的口味肯定比你的高级"。<a href="https://x.com/swyx/status/2116642586387730593">详情</a> <a href="https://x.com/swyx/status/2116773135668404286">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 给出了一个判断自己 AI 用得够不够狠的试金石：<span class="hl">如果你用 AI 做出来的东西，在没有 AI 的时代也能做出来，那你大概率还没把 AI 用到位</span>。他的依据是，半年前 AI 最多帮你把原本要做的东西做快一点，而现在进入了一个新阶段：产品原型不该只是能跑，而应该比以前的功能明显更强；工程架构应该能拿到以前根本追不到的性能提升；项目调研应该穷尽每个维度的所有事实；业务流程应该能从过往失败中学习，以人类做不到的方式运转。他承认"智能依然很参差"(intelligence is still very jagged)，但在足够多的维度上 AI 已经比我们聪明，与人擅长之处结合后会产生质变性的结果。<a href="https://x.com/levie/status/2116652002830963114">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁 & CEO)</h3><p>Tan 分享了一段关于<span class="hl">劣币如何上位</span>的思考：当一个社会充满失败的计划政治时，为什么最差的人反而爬到顶层？他引用的观点是，计划一旦失败(而计划总会失败)，就需要强制手段，需要愿意做诚实之人拒绝之事的人；系统选拔的不是最优秀的人，而是没有底线的人。而要把多数人团结在计划周围，最有效的莫过于制造一个共同敌人：富人、外国人、异见者。这条推虽非 AI 话题，但反映了他当下对制度与权力结构的关注。<a href="https://x.com/garrytan/status/2116640529232609515">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>Latent Space · Using Agents for Long-Horizon Financial Work — Aman Singh, Arca</h3><p>The Takeaway: Arca 证明 AI agent 在金融领域最有效的定位不是取代顾问，而是<span class="hl">取代顾问周围的一切工作</span>，让人类只保留共情和信任这一层。Aman Singh 是 AI 原生财富管理公司 Arca 的 AI 平台负责人，公司刚融了 6400 万美元；他在 AI Engineer New York 大会现场接受采访。技术选型上 Arca 保持 model-agnostic:主力用 Claude,也用 OpenAI 前沿模型，并靠<span class="hl">内部 benchmark</span> 而非外部榜单做决策，比如外部评价很高的 Luna 模型在他们场景里又慢又贵，直接淘汰。架构上按任务复杂度分模型层级：税务规划这类重活用 Opus 级模型，后台监控类任务用低档模型，顾问完全无感知，选择全部由内部 harness 自动完成。最值得借鉴的是他的 guardrail 设计：一个跨度十天的税务调仓流程中，分析部分(客户资金如何配置、如何最优化地变现 10 万美元)全由 agent 自动完成，但<span class="hl">动钱、清算资产、直接联系客户这三件事必须 human in the loop</span>，agent 只负责把可审阅的执行方案和合适的人拉进来。他说："Agents prompt people more than people prompt agents",agent 是 7x24 小时主动运转的服务，而不是被动等指令的工具。<a href="https://www.youtube.com/@LatentSpacePod">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
