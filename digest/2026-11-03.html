@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-02</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Andrej Karpathy（前 Tesla AI 总监、OpenAI 联合创始人）</h3><p>Karpathy 周末用 Claude Code 造出了 <span class="hl">HackerTube</span>：把 <span class="hl">20 年 HN 的 4300 万条评论</span>筛成 6,454 个被反复推荐的视频，取代 YouTube 的推荐算法，观看体验"显著更好"。整个项目只花了约 2 小时，用的是 Claude Code 桌面版 + <span class="hl">Opus 5.5</span>。他强调自己全程只和 Claude 对话，唯一的"手动工作"是去浏览器里申请 Google Cloud API key、开 VPS、买域名，然后把 IP 丢给 Claude，让它自己完成更新、加固、部署和优化。他的结论是：过去要花几周甚至几个月的项目，现在早餐时间就能 few-shot 出来。<a href="https://x.com/karpathy/status/2116957135661945283">详情</a></p></div>
+<div class="item"><h3>Peter Yang（Behind the Craft 主持人）</h3><p>Peter Yang 给出了他当前的 AI 工具分工：浏览器/电脑操作用 <span class="hl">ChatGPT + Codex</span>，设计/视频剪辑/"品味"类任务用 <span class="hl">Claude</span>，7x24 agent 和定时任务用 Grok Bot，另外他认为 Gemini 的写作能力被低估了，但还需要更多测试。他的结论是：目前没有任何一个工具能通吃所有场景，每个品类都有明显的赢家。<a href="https://x.com/petergyang/status/2116946320674152810">详情</a></p></div>
+<div class="item"><h3>Amjad Masad（Replit CEO）</h3><p>Masad 发出警告：如果你正在享受"被补贴的 AI 订阅"，准备好被 <span class="hl">rug pull（抽地毯）</span>吧，意思是当前的低价订阅模式不可持续，涨价或降级迟早会来。另外他演示了 Replit 的一个实用功能：开启 "feedback widget" 开关后，用户的站内反馈会自动变成 <span class="hl">agent 的 prompt</span>，直接驱动 agent 去构建改进。<a href="https://x.com/amasad/status/2117010858845089805">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch（Vercel CEO）</h3><p>Rauch 的核心主张是"<span class="hl">Own your intelligence</span>"（拥有你自己的智能）：任何反对这一点的人，大概率是想把智能卖回给你的人。他承认本地跑超大规模模型暂时不现实，但正因如此更要保持选择权：拥有你自己的 harness、数据、连接、运行时和 agent，并拥抱 <span class="hl">开源</span>。另外他分享了在 v0 上用 Gemini 做高复杂度项目的体验，称表现"很棒"。<a href="https://x.com/rauchg/status/2117000819623243925">详情</a></p></div>
+<div class="item"><h3>Aaron Levie（Box CEO）</h3><p>Levie 判断：工作角色正在从"agent 帮我们更快干活"转向"<span class="hl">我们帮 agent 干活</span>"，越来越多岗位的新职责是管理一支 agent 团队，而非带着 AI 杠杆的个人贡献者。受影响最大的将是信息密集型工作：编程、网络安全、法务、生物科技、工程等。更激进的推论是：你的产出将逐渐与工作小时数<span class="hl">脱钩</span>，因为 agent 可以并行执行任意多的任务。先想明白这一点并围绕它重组流程的人和组织，会获得复利式的优势。<a href="https://x.com/levie/status/2117134917847093491">详情</a></p></div>
+<div class="item"><h3>Garry Tan（Y Combinator 总裁兼 CEO）</h3><p>Tan 两条观点值得关注：一是"YC 就是硬科技（hard tech）的 YC"，并称 <span class="hl">实用机器人</span>时代已近在眼前；二是他看好 <span class="hl">Particle-1</span> 这个模型，认为它在 agentic retrieval 任务上媲美大得多的模型，价格却只有 <span class="hl">1/23</span>。<a href="https://x.com/garrytan/status/2116941191526895975">详情</a></p></div>
+<h2>官方博客</h2>
+<p>今日无更新。</p>
+<h2>播客</h2>
+<div class="item"><h3>Unsupervised Learning · Ep 95: Modal CEO on the Future of Inference, the Chaos of the GPU Market & Origins of the Sandbox Bet</h3><p>The Takeaway：GPU 算力市场远非高效市场，而是一场由深夜 WhatsApp 群聊和高尔夫球场人脉驱动的"露天交易会"，可靠性聚合本身就是生意。Modal 创始人兼 CEO Erik Bernhardsson（本次由 Redpoint GP Patrick Chase 代班主持）描述了他去 <span class="hl">GTC</span> 大会的观感："像一个露天毒品市场，只不过交易的是 <span class="hl">GPU</span>"，人们在大堂里交换联系方式，Modal 甚至曾通过销售 VP 表亲在高尔夫球场上认识的人拿到 GPU。他认为算力在结构上长期都会"笨重低效"，因为 compute 不是可互换的标准化合约：集群规模、芯片型号、网络、磁盘、地域都千差万别。Modal 目前与 <span class="hl">25 家云厂商</span>合作、每周敲定两到三笔算力交易，靠聚合供需和自动踢掉不可靠的 neo cloud（很多是前挖矿公司转型的，缺乏 7x24 运维经验）来创造价值。他还透露目前公开的 GPU 定价指数并不准确，Modal 内部采购价与公开报价经常对不上。<a href="https://www.youtube.com/@RedpointAI">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
