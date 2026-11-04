@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-03</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thariq（前 Anthropic Claude Code 成员）</h3><p>他用了一周后的核心结论是：做出好工作根本不需要无限 token，<span class="hl">200 美元档订阅</span>已经非常够用。他进一步抛出一个大胆判断："这是 intelligence 未来最便宜的价格"，也就是说，现在就是 AI 能力性价比的历史低点，只会越来越便宜。这条推拿到了 6700+ 赞，说明这个反直觉观点击中了很多纠结要不要上高价订阅的开发者。<a href="https://x.com/trq212/status/2117305792923889731">详情</a></p></div>
+<div class="item"><h3>Thibault Sottiaux（OpenAI Codex & ChatGPT 团队）</h3><p>他发了一条 "Le GPT Fat" 的调侃推（2500+ 赞），同时透露团队终于可以公开一些 <span class="hl">Git-fu</span> 相关的工作，并特别感谢了 tnm 和团队。另一条更值得关注：他描述了 "dot"（你的 AI 助手）的工作方式——它会<span class="hl">为任务的每个部分自动选择最合适的模型</span>，不同环节调用不同的模型，而不是一个模型包打天下。这算是 OpenAI 内部对多模型路由思路的一次少见表态。<a href="https://x.com/thsottiaux/status/2117283355427495983">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch（Vercel CEO）</h3><p>他公开表达对 <span class="hl">WebMCP</span> 的强烈看好。另一条推更有料：他认为"无状态 sandbox 是错误的 benchmark"，因为 agent 只有随身携带自己的 workspace（身份、技能、repos、记忆）才有实用价值。他顺势披露了 Vercel Sandbox 团队的成绩：在保证延迟和吞吐 SLO 的同时兼顾可靠性和安全，沙箱已覆盖 <span class="hl">19 个全球区域</span>，每周上线新功能，客户需求以每周两位数百分比增长。<a href="https://x.com/rauchg/status/2117338179535810957">详情</a></p></div>
+<div class="item"><h3>Amjad Masad（Replit CEO）</h3><p>他转发金融行业的某类乱象并判断"封禁大锤就要落下了"（771 赞）。随后给出建设性观点：AI agent 应该运行在<span class="hl">组织专属受控环境</span>里，每个任务只能访问其必需的<span class="hl">最小资源集合</span>，也就是把最小权限原则应用到 agent 架构上。这两条连起来看，是他对 agent 安全与治理的一贯立场。<a href="https://x.com/amasad/status/2117499074496872882">详情</a></p></div>
+<div class="item"><h3>Peter Yang（AI 教程作者，Ramp 前产品负责人）</h3><p>他的核心吐槽是："最好的写作和编辑模型被它的 harness 拖累了。"他实测让 ChatGPT 和 Gemini App 给同一篇草稿提修改建议，ChatGPT 的建议几乎全不行，Gemini 的建议却真的好用。但问题是 Antigravity 的浏览器使用还不好使，他只能把 Gemini 的建议手动粘回 ChatGPT 里执行。发这条推是<span class="hl">公开催 Antigravity 迭代</span>，也点出了<span class="hl">模型能力与 harness 体验脱节</span>这个真问题。<a href="https://x.com/petergyang/status/2117333424403042330">详情</a></p></div>
+<div class="item"><h3>Nan Yu（OpenAI Codex 产品，前 Linear 产品负责人）</h3><p>他直言：除了极少数场景，<span class="hl">群聊是多玩家 AI 体验的糟糕形态</span>，"基本保证产出 slop"。这个判断来自他做产品的直接观察：多人共用一个 AI 上下文会让输出质量迅速劣化。对正在设计多人 AI 协作产品的团队来说，这是一条值得认真对待的反面经验。<a href="https://x.com/thenanyu/status/2117432599559716940">详情</a></p></div>
+<div class="item"><h3>Garry Tan（Y Combinator 总裁兼 CEO）</h3><p>他连续分享三个观察：一是呼吁废除 <span class="hl">CEQA</span>，认为它是 NIMBY 阻止医院、高铁和住房建设的主要法律工具（504 赞）；二是注意到小模型的一个有趣新用法——<span class="hl">直接操纵权重</span>（direct manipulation of weights，477 赞）；三是实测 <span class="hl">Capy Captains</span> 让他修 issue 的吞吐量一夜之间提升了约 5 倍，能跨 captain 和子线程协调被他称为"疯狂的解锁"。<a href="https://x.com/garrytan/status/2117410016730964358">详情</a></p></div>
+<div class="item"><h3>Dan Shipper（Every CEO）</h3><p>他给出了对 Argon 的直接评价："Argon 好得不行"，并解释原因的另一面：Antigravity 还停留在 2025 年，没有那些疯狂的功能和复杂度，反而显得干净好用。他还引导读者去看 Every 对 Argon 的 <span class="hl">vibe check</span> 测评，算是给这场编辑器之争提供了一个视角：功能堆砌不等于产品好，克制本身就是优势。<a href="https://x.com/danshipper/status/2117363007340609556">详情</a></p></div>
+<div class="item"><h3>Swyx（Latent Space 主播，smol_ai / Cognition 相关）</h3><p>他的一条观察是：随着 <span class="hl">weight-space programming</span>（权重空间编程）的出现，我们正进入"exhalation"（呼气阶段）的第二段，暗示 AI 发展正在从堆算力的"吸气期"转向更精炼的工程化阶段。他也预告 CompleteSkeptic 和 typesafeai 的后续内容会在推特上引发轰动。<a href="https://x.com/swyx/status/2117492548780589510">详情</a></p></div>
+<div class="item"><h3>Aditya Agarwal（SPC General Partner，前 Dropbox CTO）</h3><p>他宣布欢迎 SPC 校友回归：四度创业者、IOI 奖牌得主 tankots，现为 <span class="hl">WisprFlow</span> 联合创始人兼 CEO。WisprFlow 刚完成 <span class="hl">2.8 亿美元 B 轮融资，估值 20 亿美元</span>。他将于 11 月 12 日参加 SPC 的活动，名额有限需申请。<a href="https://x.com/adityaag/status/2117313674981355761">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari（FPV Ventures 合伙人）</h3><p>他用 Groq 分析了 17 个案例后得出一个讽刺性结论：从创业公司（或 CEO）含糊地暗示收入数字，到正式宣布融资，平均间隔只有约 <span class="hl">11 天</span>，所谓"明年才融资"基本是烟雾弹。另外他正在 SF 启动一个叫 <span class="hl">Slice for Thought</span> 的线下活动系列，首期嘉宾是 OpenRouter 洞察负责人 Peter J. Walker，每周三中午、Chatham House 规则、限 10-12 人。<a href="https://x.com/nikunj/status/2117362283223687621">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>Latent Space · Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora</h3><p>核心收获：法律 AI 的胜负手不是等"神级模型"，而是把工程做到极致。Legora CTO Jacob Lauritzen 坦言，大量法律工作其实不需要 Mythos 级别的智能，"初级律师消失、律师助理消失"并不是他们实际看到的情况。他举了一个生动例子：某次引用(citation)功能表现不佳，"我们什么都没做，下一个模型发布就把准确率从 70% 干到了 99%"。但面对 4 亿美元的并购交易，你还是会想要 Legora 这样深耕法律场景的产品。这家从斯德哥尔摩地下室起家的"underdog"公司如今扩张到纽约和旧金山，团队约 100 名工程师，他却在琢磨"公司能不能永远只保持 20 个工程师，然后打赢所有比我们大得多的对手"。产品层面，Legora 从"带瑞典法律检索的 ChatGPT"起步，逐步演进为能起草文书、编辑 Word 文件、跑复杂分析的 agent，其 <span class="hl">Tabular Review</span>（批量提取和审阅海量合同）甚至成了行业术语，连 Claude for legal 都在用他们的词汇。团队还在探索模型路由：主模型让律师可选，但具体工具（如 Tabular View）内部按任务细分并路由到不同模型。他也在思考一个更大胆的问题：<span class="hl">产品里有多少可以纯粹就是 agent 本身</span>？<a href="https://www.youtube.com/@LatentSpacePod">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
