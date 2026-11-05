@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-04</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Box CEO Aaron Levie</h3><p>Levie 的核心判断：AI 带来的生产力差距正在拉大到前所未有的程度——采用最广的同时，产出分化也最剧烈。他回顾道，几年前即使在 coding 这种最适配 AI 的领域，顶尖使用者也只能拿到 <span class="hl">30-50%</span> 的生产力提升，还要花大量时间清理模型错误；而现在模型能处理更长任务、训练数据覆盖更多领域、系统支持同时调度多个 agent，上限已经提升到 <span class="hl">5-10 倍</span>。他断言，站在前沿与否的差距已经是数量级的，而且随着 <span class="hl">RSI</span>（递归自我改进）的推进只会继续扩大。<a href="https://x.com/levie/status/2117505799937577263">详情</a></p></div>
+
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Altman 发表了一条颇具分量的立场声明：人必须始终掌控未来。他明确表示 OpenAI 反对“人退居次要位置、只做 AI 系统认为值得奖励的事”这一观念，并强调人不应该把对未来的控制权让给 <span class="hl">superintelligence</span>，而且这一要求最终应该成为 <span class="hl">约束 AI 进步</span>的条件。这条推文获得了超过一万次点赞，可以视为 OpenAI 对“AI 对齐最终目标”的一次公开表态。<a href="https://x.com/sama/status/2117794005165748448">详情</a></p></div>
+
+<div class="item"><h3>Cat Wu (Anthropic Claude Code 及 Cowork 团队，前 Dagster、Scale AI)</h3><p>核心信息：Claude Code 背后的重要成员 Cat Wu 宣布离开 Anthropic。她回顾了自己两年前加入的契机：当时 Claude Code 还是内部小工具，她让它搭一个 RL 环境，“引导了几十个小时但没手写过一行代码”，从此被彻底征服。她指出产品使用方式的巨大演变：刚发布时大多数用户手动批准每个权限提示，主要用 Claude 问答和写测试；而今天默认是信任 Claude 的判断自动批准，Claude 能完成大型迁移并构建新产品。她称把 Claude Code 打造成<span class="hl">行业定义级产品</span>是一生难忘的旅程，并感谢团队和用户。这已引来 Peter Yang 等人感慨 AI 原生公司的人才流失速度。<a href="https://x.com/_catwu/status/2117731934340337676">详情</a></p></div>
+
+<div class="item"><h3>Thariq (前 Anthropic Claude Code 团队，现已离职)</h3><p>Thariq 提出了一个大胆观点：这就是<span class="hl">Bitter Lesson</span>（苦涩教训）在起作用。他认为最聪明的模型需要的 token 会越来越少，不再需要验证自己的工作或检查 bug，“它们就是会对”。这条推文获得六千多次点赞，呼应了他从 Claude Code 一线工程经验中得出的判断：与其在 harness 层面做大量验证循环，不如等待模型本身变强。这一观点恰好与 Swyx 转发的 Sonar 研究（每个循环都需要独立验证）形成对立面。<a href="https://x.com/trq212/status/2117670540148347273">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (OpenAI Codex 及 ChatGPT 负责人)</h3><p>Sottiaux 的核心信息：行业仍处于极早期，一切还会不断变化。他坦承今天的 agent 已经非常强大，但“仍然让人沮丧”，团队正迫不及待地想破解难题、找回<span class="hl">flow state</span>（心流状态），前方的路还很长。这条推文获得了八千多次点赞，被视为 OpenAI 内部对 agent 产品现状最诚实的一段表态——既是自信也是自我批评。<a href="https://x.com/thsottiaux/status/2117746467058405665">详情</a></p></div>
+
+<div class="item"><h3>Boris Cherny (Anthropic Claude 团队)</h3><p>Cherny 宣布了一个实用的新功能：为了免去逐个登录公司插件的麻烦，Claude 现在可以<span class="hl">自动连接</span>企业插件。Team 和 Enterprise 管理员统一配置后，团队成员首次使用插件时即自动完成连接。这条推文获得近两千次点赞，反映出企业用户对<span class="hl">减少配置摩擦</span>的真实需求。<a href="https://x.com/bcherny/status/2117693181651542387">详情</a></p></div>
+
+<div class="item"><h3>Vercel CEO Guillermo Rauch</h3><p>Rauch 宣布 Vercel 将内部使用的安全 agent 正式开放给所有用户。他透露 Vercel 内部有一个“惊人有效”的安全 agent（昵称 hacker），每一行代码都会被自动审计。他解释了为什么需要它：不能指望工程师每次都装好某个 skill、在 prompt 里写“请确保安全”，也不能赌模型第一次生成的代码就是安全的。他还强调这个产品完全由 Vercel 安全团队开发，称这是目前最接近“把一支安全团队当软件下载下来”的方案，而且不要求你把服务托管在 <span class="hl">Vercel</span> 上。另外他建议各 CLI 产品都加上 doctor 子命令（vercel doctor），方便用户自检环境问题。<a href="https://x.com/rauchg/status/2117734833824948373">详情</a></p></div>
+
+<div class="item"><h3>Replit CEO Amjad Masad</h3><p>Masad 的判断：企业和 agent、vibe coding 的融合正处在<span class="hl">混沌阶段</span>。这条短评获得四百多次点赞，虽未展开细节，但呼应了他一贯的观点：企业采用 agent 的过程不会是平滑曲线，而是充满试错、治理混乱和实践磨合的漫长过程。<a href="https://x.com/amasad/status/2117761721750475146">详情</a></p></div>
+
+<div class="item"><h3>Replit 背景 · Swyx (Latent Space 主持人和 AIE 大会组织者)</h3><p>Swyx 发布了两条重要内容。其一，AI Engineer 大会公布最后一个 track 主题<span class="hl">Raising your Ambition</span>，嘉宾包括 jxnlco、Thariq、Jarred Sumner、sqs、mitsuhiko、dexhorthy、BuiltByJustin，以及上个月“克隆了整个 Adobe 全家桶”的 echelon 的首次大型露面，届时上千名 agentic 工程师将齐聚旧金山。其二，他推荐了 addyosmani 关于 Anthropic 如何以“dark factory”方式每天<span class="hl">yolo 3 万次代码变更</span>的演讲，以及 SonarSource 的 Kapmani 关于“每个循环都需要独立验证”的研究，称这已是 AIE NYC 最受欢迎的演讲之一。<a href="https://x.com/swyx/status/2117679157035602065">详情</a></p></div>
+
+<div class="item"><h3>Peter Yang (AI 教程和访谈创作者)</h3><p>Yang 分享了两条有实质内容的帖子。一是关于人才流动的观察：以前在公司待不满两三年会被视为跳槽频繁，但现在优秀人才在 AI 原生公司待一到两年甚至更短就离开已越来越常见，他质疑这类工作尤其是对有孩子的人的可持续性。二是他详细介绍了 Grok Bot 的新<span class="hl">电话功能</span>，并列出五个使用场景：议价（让 AI 打给 Comcast 砍网费）、取消订阅（拒绝挽留并拿到确认号）、代接排队电话（等航空公司人工客服并要求退款）、订餐厅、以及打电话给三家承包商比价并整理成表格。目前只支持美国号码。<a href="https://x.com/petergyang/status/2117783921748558185">详情</a></p></div>
+
+<div class="item"><h3>FirstMark VC Matt Turck</h3><p>Turck 重点介绍了投资组合公司 <span class="hl">SurrealDB 4</span> 的发布。他指出做数据库是极其漫长的苦活：开源爆红之后还要经历多年不起眼的打磨才能成为世界级产品，而 SurrealDB 4 就是那个成果——多模型（向量、图、文档）、<span class="hl">ACID</span> 兼容、重构了引擎、原生支持 Postgres/MySQL，并借助 Cloudflare 实现每秒百亿行以上的峰值扩展性。他称其为“agent 时代的现代数据库”。<a href="https://x.com/mattturck/status/2117741948609949932">详情</a></p></div>
+
+<div class="item"><h3>FPV Ventures 合伙人 Nikunj Kothari</h3><p>Kothari 分享了两个他认为被低估的 Claude Code 内置 skill：<span class="hl">/insights</span> 和 <span class="hl">/playground</span>。他给 insights 设了每两周跑一次的 cron 任务，用来持续优化自己的 Claude Code 配置，并结合 X 书签里的行业新玩法形成一个自我改进循环；playground 则用来可视化工作流，他最喜欢的新用法是让 Codex 和 Claude Code 配合，用它分析冷门 GitHub 仓库的架构、找出死代码、热点路径和延迟优化点。他还感慨现在会同时高频使用 ChatGPT Codex、Claude 桌面版等多个 agent 应用，称这是未来回望时的奇点时刻。<a href="https://x.com/nikunj/status/2117773647868018897">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>Unsupervised Learning · Ep 96: Nebius CTO on Racing the Hyperscalers Before AWS Wakes Up</h3><p>The Takeaway：AI 云市场远未饱和，Nebius 赌的是一个不隶属任何巨头、专门服务中型玩家的独立 AI 云市场，未来三年需求可能增长十倍到百倍。Nebius CTO 在节目中剖析了为什么 AWS、GCP、Azure 没有吞掉整个市场：对超大规模云厂商来说，AI 不只是销售问题，还需要改造为其他工作负载建造的大规模基础设施，这笔投资需要足够大的潜在业务来支撑，而现在还没到那个规模。他直言讨厌 "NeoCloud" 这个词——起步时这个标签下只有五到七家公司，现在可能有三百到五百家，Nebius 的心态是“我们是 <span class="hl">AI Cloud</span>，下一个竞争对手是 AWS 和 Google Cloud”，尽管收入只有 AWS 的约 <span class="hl">1%</span>。他强调软件才是护城河：“让消费数万张 GPU 的客户和跑半小时单卡的自助客户用同一个平台服务，这是我们最初的价值主张。”他还指出市场表面繁荣之下其实才刚起步：“如果拿现在和两年前比，我们只是刚刚碰到表层，未来三年的总需求会增长十倍，也许百倍。” 节目还聊到了 Nebius 从 <span class="hl">Yandex</span> 分拆出来的起源，以及 Elon Musk 的 Colossus 这类私有集群本质上服务于内部需求、并不向市场开放。<a href="https://www.youtube.com/@RedpointAI">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
