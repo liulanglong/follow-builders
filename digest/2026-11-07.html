@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-06</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3><p>他的核心判断：AI 将带来“人人可用的超安全基础设施”，但在到达终局之前会经历一段动荡期。他直言“人类从来就不擅长写安全的基础设施”，言下之意是 AI 生成的代码加上形式化验证才是出路。第二条推文进一步展开：对<span class="hl">数千万行代码做形式化验证</span>已不再荒谬，设计新系统时应当把这类验证纳入考量。两条推文分别获得 3558 和 543 个赞，在安全圈引发广泛共鸣。<a href="https://x.com/thsottiaux/status/2118569235953893573">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>核心观点：企业里的 <span class="hl">AI agent 数量将达到员工的 100 倍</span>，而每次 agent 部署的成败都取决于能否拿到关键上下文。他给出的依据是：企业 90% 的数据是非结构化数据，藏在文档、合同、营销素材、研究材料、财务计划和设计文件里。为此 Box 宣布与 <span class="hl">NVIDIA</span> 合作推出高级上下文检索能力，在 Box 内结合词法搜索与语义搜索，并全程遵守企业的安全、访问控制和数据治理策略，确保 agent 只接触被授权的数据。他还不忘调侃一句："Files 🤝 GPUs."<a href="https://x.com/levie/status/2118498574497665316">详情</a></p></div>
+
+<div class="item"><h3>Thariq (前 Claude Code @ Anthropic)</h3><p>他分享了自己最喜欢的一类 agent prompt：<span class="hl">基于位置的提醒</span>。具体例子是让 Instinct 这类 agent 追踪洗衣记录，如果超过 5 天没洗，就在工作日到家 30 分钟后提醒，并且持续“骚扰”直到确认或推迟。这个例子之所以获得 2351 个赞，是因为它展示了 agent 从“被动问答”走向“主动介入生活节奏”的实用形态。<a href="https://x.com/trq212/status/2118399561324699655">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他宣布 <span class="hl">SpaceX 与 Vercel 合作</span>：Grok 和 Cursor 现在可以构建、部署并扩展应用。更大的判断是“<span class="hl">长期替你做事</span>是 agent 的杀手级应用”：Muse 和 Instinct 会在夜间整合记忆、早晨提醒事项、隔几天主动发消息。他配套介绍了 Vercel Schedules，称其为“类固醇版 Cron”，可以在运行时定义、无限扩展，且位于 Sandbox 之外，从而按需低成本调用计算资源。他还描绘了完整闭环：订阅 X、用 Grok/Cursor 构建、部署到 Vercel、在 X 上发布分发、用 X Money 变现。<a href="https://x.com/rauchg/status/2118464177211940997">详情</a></p></div>
+
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>核心数据：凭借<span class="hl">自定义 Kernel 构建</span>，Replit 能避开 96% 的 Linux 零日漏洞，他在新发布的沙箱设计博客中详细阐述了这一方案。另一条推文中他强调 Replit 是市面上唯一支持协作的 AI 编程系统，直接对标 Cursor 等单机式工具的短板。<a href="https://x.com/amasad/status/2118503241390665776">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>两条重磅观点。第一，他认为刚出现的<span class="hl">PE/IB 长周期基准测试</span>是首个针对金融行业的高时长基准，“解决高端金融问题正走在通往 AGI 的路上”。第二，他对本周的政策结果表示乐观，认为两党罕见地有机会联手遏制 Big Tech 滥用市场支配力：发明强大的 AI 只是一半工作，如果几家万亿美元公司能封锁新产品触达用户，AI 的红利就无法普惠。他呼吁国会为 <span class="hl">Little Tech</span>（小科技公司）开放市场，让上千家初创公司竞争降本，而不是让权力进一步集中于掌控分发的巨头。<a href="https://x.com/garrytan/status/2118527182092071179">详情</a></p></div>
+
+<div class="item"><h3>Swyx (Latent Space 主持人、smol_ai 创始人)</h3><p>他就近期引发争议的 Sequoia 相关话题降温：“大家放下草叉吧”，解释说他与对方沟通后了解了自己缺失的上下文，这只是他个人遇到的一个小缺口，并非 Sequoia 全公司层面的问题，与本周宣布的<span class="hl">Sequoia 组织架构调整</span>无关，且被引用的推文存在他无法公开纠正的不准确信息。另外他推荐了 scout 投资人 Britt Walker，称她“在很多事情上比我更敏锐”。<a href="https://x.com/swyx/status/2118538896434999759">详情</a></p></div>
+
+<div class="item"><h3>Claude (Anthropic 官方账号)</h3><p>重磅产品发布：推出 <span class="hl">Personal Finance</span> 功能（美国区 beta）。用户可选择连接自己的账户，Claude 就能基于你自己的余额和交易记录，用日常语言回答财务问题。两个关键设计约束：访问是<span class="hl">只读</span>的，Claude 不能移动、管理或投资你的钱；整个功能没有广告和赞助推荐，也不提供投资建议。该功能正逐步向美国区 Pro、Max 和 Ultra 订阅用户开放，首条推文已获超 3 万点赞。<a href="https://x.com/claudeai/status/2118403114890137895">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw 创始人)</h3><p>他抛出一个尖锐问题：Apple 关于 Safari 性能的说法是否是在撒谎？他的第一手体验是：为 Safari 开发或使用它时，速度更慢、功能更少、bug 稀奇古怪、大量网站干脆跑不起来，想要接近 <span class="hl">Chrome 的性能</span>都要费尽功夫。这条吐槽获得 378 个赞，引发不少开发者的共鸣。<a href="https://x.com/steipete/status/2118492097917628704">详情</a></p></div>
+
+<div class="item"><h3>Aditya Agarwal (SPC 普通合伙人、前 Dropbox CTO)</h3><p>一句写给创始人的融资忠告：“有人愿意以某个估值投你，不代表这个估值对你的公司是正确的。”他借此提醒创业者：投资人给出的估值反映的是对方的预期和博弈，而不是公司真实价值的判定，接受过高的估值可能给后续轮次埋雷。<a href="https://x.com/adityaag/status/2118477020325884357">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他发布了 Every 的新内容《Thesis: 2027》，在布鲁克林现场录制，探讨未来一两年的 AI 趋势判断。<a href="https://x.com/danshipper/status/2118421854666838338">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>Unsupervised Learning · Ep 97: Jev Creator on Decision Models, Benchmark Fatigue & Why the Labs Missed It</h3><p>The Takeaway：Jog (TypeSave CEO，Jev 背后的创始人) 认为 <span class="hl">AI 的未来是 machine native</span> 的，而大多数模型公司押注错了方向。他反复追问一个核心问题：如果把 LLM 当作被软件调用的 API，那么流向 LLM 的调用里，有多少是给人看的（措辞和风格重要），有多少是给机器消费的？他相信最“字符串原教旨主义”的人也会承认，绝大多数调用终将是机器原生的，问题只是何时发生。Jev 正是从这个“认知核心”倒推设计出来的，他坦承“Jev 还没到那里，还有很多工作要做”。关于 Anthropic 即将到来的 IPO，他给出了辛辣评价：一些人的估值建立在“建造上帝等于无限价值”的误解之上，“‘让他们治愈癌症’会像玛丽·安托瓦内特的‘让他们吃蛋糕’一样”，即 <span class="hl">miscalibration（定价失准）</span>几乎不可避免。他还反思了自己在 OpenAI 的经历：联创曾怀疑他是否有使命感，他自认当时属于“使命感最低的那批人”，如今在 TypeSave 才真正找到了使命。谈及为何顶着“pacing the frontier”讨论期的逆风发布产品，他说所有人都劝他别发，但团队觉得“这已经是让我们真正骄傲的东西”，与其等待完美时机，不如让开发者社区一起参与、发现短板、共同进化用例。<a href="https://www.youtube.com/@RedpointAI">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
