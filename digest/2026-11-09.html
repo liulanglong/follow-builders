@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-08</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Andrej Karpathy(前 Tesla AI 总监、OpenAI 联合创始人)</h3><p>Tristan 发布了一份优质 YouTube 频道榜单后，Karpathy 直接上手把它变成了一个产品 <span class="hl">TristanTube</span>:聚合了 <span class="hl">4.7 万个</span>硬核技术向视频，还带了一个适合躺着看的 TV 模式。最能说明 AI 编程现状的细节是，整个项目他用 <span class="hl">Claude Code</span> 一把梭，只花了 3 分钟就跑通了。对关注 AI 辅助编程效率的人来说，这是一个很直观的 demo 级案例。<a href="https://x.com/karpathy/status/2119114537442189652">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux(OpenAI Codex & ChatGPT 负责人)</h3><p>针对社区对 Pro 订阅档位的困惑，他明确澄清：所有 Pro 方案都没有 <span class="hl">5 小时用量限制</span>，相对 Plus 的用量倍数分别是 Pro 100 为 <span class="hl">10 倍</span>、Pro 200 为 20 倍、Pro 500 为 50 倍且可使用 <span class="hl">ultrafast</span> 模式。他随后还发起投票，问社区「Pro 50 这个档位是否合理」，收获近 1400 赞，显示 OpenAI 正在认真收集定价反馈。<a href="https://x.com/thsottiaux/status/2119296267545419987">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie(Box CEO)</h3><p>Levie 给出一个相当激进但论据扎实的判断：在合适的 harness、对领域的深度理解、较新的代码库、多 agent 并行经验和低摩擦部署流程的组合下，AI 辅助编程的产出已经能看到比 AI 之前<span class="hl">高一到两个数量级</span>的实例。更反直觉的是，他认为这个差距不仅没有收敛反而在扩大：原本基础越深、现在越愿意换打法的人，获得的杠杆越大，而且随着模型能承担更大、更难的任务，这种优势还在复利式增长。目前这在软件工程中最明显，但他预计 <span class="hl">agent 敏感型领域</span>(科学研究、AEC、金融、网络安全)都会跟进。<a href="https://x.com/levie/status/2119111328099168409">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie(Box CEO)</h3><p>另一条推文里 Levie 分析了 AI 推理的部署地理学：与大多数技术不同，AI 推理对用户侧延迟不那么敏感，尤其 <span class="hl">long-running agent</span> 正在成为常态，任务可以丢到远端「AI 工厂」里跑完再把结果传回。因为任务的经济价值远高于延迟损失(比如一个自动化任务返回 500 美元价值，多等一秒无所谓)，而且推理是临时过程、数据可以加密进出并不长期留存，AI 数据中心可以被视为<span class="hl">临时性系统</span>。他的结论是：这给了选址巨大灵活性，抓住机会的州或国家赢得经济红利，放弃的则输掉这一轮。<a href="https://x.com/levie/status/2118953909524050288">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan(Y Combinator 总裁兼 CEO)</h3><p>Tan 抛出他眼中未来十年的定义性政治议题：我们能否通过 <span class="hl">superintelligence</span> 在科学、医学和工程上实现人类进步、走向 <span class="hl">abundance</span>(富足)，还是选择「黑暗」。这是把 AI 发展从技术议题抬升到政治哲学层面的判断，呼应了他一贯的乐观主义立场。<a href="https://x.com/garrytan/status/2119146939514278238">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang(独立 Builder,Harvard '17)</h3><p>她反对一种常见的宿命论叙事：很多人谈创业时预设立场，比如「X 这个想法永远不会成」「Y 的市场太小了」。她的核心观点是<span class="hl">创业的命运是被创造出来的，不是预先注定的</span>：同一个想法有一千种执行方式，一百个人会走出一百条不同的路。她引用观察作为依据：聪明的人加聪明的执行，经常能在本来一无所有的地方创造出现象级产品，或者让看似不可能的事在事后显得理所当然。<a href="https://x.com/zarazhangrui/status/2118968862557475298">详情</a></p></div>
+
+<div class="item"><h3>Nikunj Kothari(FPV Ventures 合伙人)</h3><p>他发了一条长推讽刺「如何让投资人 FOMO 你的 A 轮、拿到七份 term sheet」,自嘲「整体是 satire,但每一句单独看都是真的」。套路包括：发没有 Y 轴只有向右数字的收入曲线图，配「i see an exponential when I see one」这类模糊话术；连发多个功能发布视频刷曝光；找头部客户和 labs 的文章背书；甚至可以向投资人定向投放广告；关键时刻喊出「long horizon agent swarms」「world models」「physical AI」的咒语组合；以及最重要的：你没有 deck,因为「我们没在融资」，然后「被 pre-empt 了」。这是对当前 <span class="hl">AI 融资泡沫话术</span>的一篇辛辣解剖。<a href="https://x.com/nikunj/status/2119162212044742938">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger(OpenClaw 与 OpenAI,知名 iOS 开发者)</h3><p>针对 Asahi 项目的争议他表态鲜明：Asahi 的初心就是把封闭受限的东西<span class="hl">开源开放</span>，如今反过来添加让其他项目更难在其上构建的新限制「不是正道」，而直接<span class="hl">拒绝 AI 参与</span>贡献更是「很蠢」。这条获得超过 1000 赞，折射出开源社区当前在 AI 生成贡献问题上的激烈分歧。<a href="https://x.com/steipete/status/2119264334627090514">详情</a></p></div>
+
+<div class="item"><h3>Aditya Agarwal(SPC General Partner,前 Dropbox CTO、Facebook 早期工程师)</h3><p>他的推理链条很清晰：如果建<span class="hl">数据中心</span>变得更难，那 obvious 的结论是超配持有<span class="hl">现有产能</span>的人，也就是 hyperscalers。因为对算力(他戏称为 the spice)的需求只会继续上涨，不 会消失，所以「手上有香料的人会赢麻」。而真正受损的是新模型训练的节奏，他半开玩笑地总结：「看来我们终究要给 frontier 定速了，body politic 说了算。」<a href="https://x.com/adityaag/status/2119157297167372646">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>No Priors · Tokenization, Agentic Trading, Harmonic: Robinhood's Mission to Expand Ownership with CEO Vlad Tenev</h3><p>The Takeaway:Robinhood 不再只是一个免佣炒股 App,而是一家以「ownership」为唯一使命、覆盖 120 多个国家的金融集团，而 <span class="hl">agentic trading</span> 已经拿到清晰的产品市场验证。Vlad Tenev 分享了超过 <span class="hl">15 万客户</span>已经开设了 agent 交易账户，这个数字本身就是零售金融 AI 化最硬的证据。他的个人叙事也很有说服力：生于保加利亚，1991 年当地通胀 170%,1997 年高达 2000%,祖父发工资后第一时间换成铜锅存在柜子里，那是我见到的第一个「真世界资产」。这段经历让他坚信：一个没有广泛所有权的社会本质上是不稳定的，而 ownership 会把人变成体系的守护者。对 AI 的态度上他直言现状「too centralized」,大型 AI 公司用秘密模型在大数据中心里做所有工作，这也是他做 <span class="hl">Harmonic</span>(数学超级智能)时思考分布式科学发现的原因。他对 <span class="hl">prediction markets</span> 的定义也值得记住：「预测市场是新闻的进化，你通过赔率就能看到正在发生什么、以及未来可能发生什么。」<a href="https://www.youtube.com/@NoPriorsPodcast">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
