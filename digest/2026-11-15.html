@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-14</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Peter Yang (AI 教程作者，Elevate 创始人)</h3><p>他发布了一个开源的 /fuck-cancer skill，教大家用 AI 对抗重大疾病：把病人全部病历上传到 Google Drive 文件夹，然后让 ChatGPT 或 Claude 安装这个免费 skill，指向文件夹即可生成一页病情简报、检索合适的临床试验等。他鼓励大家 fork 这个 skill 改造用于其他长期疾病，核心信息是「用 AI 的全部力量去打败糟糕的病」。这条推获得了 434 个赞，是他近期最实用的分享。另他对 <span class="hl">WSJ 关于 Alice Huang 是间谍的报道</span>提出质疑，引用新加坡政府的公开信息说明结论尚不明确，并附上一位 NVIDIA 员工的亲身讲述，呼吁读者自己做独立调研。<a href="https://x.com/petergyang/status/2121430386685395022">详情</a></p></div>
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>他公开支持 <span class="hl">Stand with Jensen</span> 联名信并呼吁大家签名，该话题下他两条推合计近 4000 赞。有趣的花絮：这封联名信的网站本身就搭建并托管在 Replit 上，他专门和站长合作提高了 rate limit，确保签名潮来临时网站能撑住规模。此外他还宣布与 <span class="hl">Visa</span> 在 agentic commerce 方面的合作进展顺利，后续会有更多功能和用例上线。<a href="https://x.com/amasad/status/2121377395244749097">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他认为 <span class="hl">Workflow SDK 5 和 Vercel Workflows</span> 是 agent 基础设施的一次跨越式升级：agent 的「首步耗时」和「步与步之间的延迟」大幅改善；团队在加密和安全上加倍投入；系统可靠性已在超大规模场景下验证，跑通了大量灾难恢复场景。他还特别提到把底层 <span class="hl">durable log</span> 做成了可复用组件，任何 agent harness 都能直接用，即所谓 durable-harness。他还断言「Vercel Sandbox 是不可避免的」，并转发支持 Stand with Jensen 联名信(获 3392 赞)。<a href="https://x.com/rauchg/status/2121277727940776114">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他签名支持 <span class="hl">Stand with Jensen</span>，主张 Jensen 应获得正当程序而非现在这种对待方式。技术侧他做了一个开源 harness eval 仓库，在 Claude Code 2.1.322 里跑 52 个编码任务的结论是：继续把 <span class="hl">Opus 5.5</span> 当默认编码模型，因为 Fable 5.2 解题率接近(82.7% vs 84.6%)，但每个解题任务的成本是 <span class="hl">2.80 倍</span>。不过他也承认这些任务 Opus 本来就能解掉大部分，要真正区分两个模型需要更难的任务。<a href="https://x.com/garrytan/status/2121462697787342932">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他点出今天的 <span class="hl">FAA 全国航班停飞</span>有多罕见：这是现代史上第三次，前两次分别是 9/11 和 2023 年的 NOTAM 系统故障，这次原因不明，「祝所有庆祝黑色星期五的 agent 们周五快乐」。另一条推他直接开炮 benchmark 刷分文化：原以为 Llama 4 之后大家不再拿刷分当炫耀，结果「卡特尔又回来了」。他认为真正重要的 benchmark 极少，行内人都知道是哪几个，其余基本是为了营销而做 hill climbing，短期有效但长期走不远，唯一的替代方案是把模型真正跑进自己的工作流里检验。<a href="https://x.com/nikunj/status/2121366466905981435">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他提出了一个值得琢磨的问题：即使 Fable 5.2 已经能 vibe code 出任何东西，为什么团队还是愿意为软件付费？答案指向企业采购背后更深层的信任、维护和责任需求。他还在琢磨「AI 里最重要的公式」，并关注一类越来越常见的 AI 相关问题，认为「所有做 AI 的人都应该愿意帮忙把它修好」。<a href="https://x.com/danshipper/status/2121248233510818003">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>Training Data · A Model For Everyone: How Ronak From Trajectory Is Building Products For Continual Learning</h3><p>The Takeaway: 真正的 continual learning 应该像 Google Maps 一样在线实时更新，而不是现在这种离线批量式的「伪持续学习」。Ronak 曾在 Windsurf 参与训练模型，他的联合创始人分别来自 DeepMind(Gemini Robotics)和 Apple(Vision Pro)，三人都在各自岗位上解决同一个问题：如何把真实世界的反馈转化成模型改进。他用了一个很妙的类比：现在的 agent 像拿着 AAA 纸质地图自驾，想改路线只能回门店做一次大批量更新；他要做的是先到 <span class="hl">MapQuest</span> 阶段(人人都能自己定制和训练模型)，最终到 Google Maps 阶段(每一次使用都在在线学习)。他透露在 Windsurf 训练前沿模型花了 6 到 9 个月和数亿美元的 <span class="hl">研发算力</span>，这正是 Trajectory 要消除的门槛：把训练、eval 和部署放进一个产品里，「把好用的旋钮留给你，其余全部打包封装」。产品哲学直接师承 <span class="hl">Apple</span>：像把互联网装进手机一样，把训练闭环装进每个人的工作流。他还回应了 Rich Sutton 和 David Silver「当前架构做不了持续学习」的观点，指出 DeepSeek v4.1 flash 等新模型内部已经在改造基础架构(快慢记忆、跨层 skip connection)，架构演进正在发生。<a href="https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
