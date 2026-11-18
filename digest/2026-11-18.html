@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-17</h1>
+<h2>X / 推特</h2>
+<div class="item"><h3>Thariq (前 Anthropic Claude Code 成员)</h3><p>他的核心判断是：<span class="hl">software factory</span> 只是个过渡性问题，模型迟早会自己学会搭建这些流水线，真正值得思考的是如何构建一个 agent 能与人协作的工作空间。这条推文获得了近 <span class="hl">5000 个赞</span>，引发大量共鸣。他还附了一个实际例子：展示自己如何与 agent 协作开发游戏里的新角色，说明人机协作式工作流已经可以落地。<a href="https://x.com/trq212/status/2122438326431154210">详情</a></p></div>
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他的判断是：企业人均 token 消耗曲线还远没到顶，"token 只会越来越多"。论据是一条清晰的递进逻辑：过去 <span class="hl">12 个月</span>编程能力才从"基本不可用"变成"真正好用"；一旦 agent 能写代码、会用电脑和任意工具，就能切入金融、生命科学、网络安全等此前无法自动化的知识工作；更进一步的 agent swarm 和后台 agent 会以"远超想象"的规模烧 token，在企业工作流里做数据处理、验证、研究和决策支持。<a href="https://x.com/levie/status/2122508098351038532">详情</a></p></div>
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他宣称"软件的新时代来了"：个性化、完全自主拥有、开源，而且质量超过被替代者，这条获得近 <span class="hl">4000 个赞</span>。在另一条推文中他给出了新旧开发范式对比："老方式是用户是人，你做用户访谈；新方式是用户是 agent，你跑 <span class="hl">evals</span>，evals 驱动软件工程闭环"，并分享了 Vercel 内部如何做评估。他还列出"掌握自己 intelligence 路线图"的四步：用开源 SDK 和 harness、用 Gateway 掌控模型选择、拥有自己的 traces 和数据并执行 ZDR、用私有推理拥有自己的模型。<a href="https://x.com/rauchg/status/2122396034186014919">详情</a> <a href="https://x.com/rauchg/status/2122415506451841215">详情</a></p></div>
+<div class="item"><h3>Peter Yang (AI 教程作者)</h3><p>他整理了 Nate Parrott 关于"如何让 Claude 做出不带 AI 味(slop)设计"的五条心得：提前给 Claude 上下文(截图、喜欢的页面、过往作品)；让 Claude 研究成熟的 <span class="hl">UX 模式</span>而不是凭空发挥；明确告知 Claude 它自己的设计偏见，他引用原话："The model has no idea what its own biases are"，比如在 design.md 里禁止衬线字体、米白背景、卡片边缘条这些"AI 味"特征；先做 <span class="hl">wireframe</span> 验证核心流程再深入字体配色；让 Claude 一次出 5 个方案，挑选后混合再出 5 个。<a href="https://x.com/petergyang/status/2122347721298510021">详情</a></p></div>
+<div class="item"><h3>Peter Steinberger (OpenClaw / OpenAI)</h3><p>他吐槽 Apple 与 AI 社区完全背道而驰：大家恳求减少权限弹窗，让 agent 在 macOS 上不再需要人肉看护，结果 Apple 的回应是又加了新的吓人弹窗。这条讽刺推文获得超过 <span class="hl">1000 个赞</span>，反映出 agent 开发者对 macOS <span class="hl">权限系统</span>体验的普遍不满。<a href="https://x.com/steipete/status/2122463466304971068">详情</a></p></div>
+<div class="item"><h3>Google Labs & Josh Woodward (Google Labs VP)</h3><p>Google Labs 官宣欢迎 Howie 团队加入：Howie.ai 多年来深耕日程安排和日历管理，Google Labs 期待与他们一起为小企业打造下一代直观的 AI 工具。Josh Woodward 同步展示了 <span class="hl">Gemini Notebook</span> 的新能力：把你的资料源变成可交互的网站，比如用周期表元素名做了一个交互页面，"容易制作、容易分享"。<a href="https://x.com/GoogleLabs/status/2122461899178820069">详情</a> <a href="https://x.com/joshwoodward/status/2122453269842886788">详情</a></p></div>
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他用一句话总结 <span class="hl">2026 基础设施大战</span>：Q1 全民 vibe coding，Q2 做 harness，Q3 做 sandbox，Q4 做 Agentic CI，"provider 多到数不过来"，并问大家猜下一个会是什么。另一条推文里他借凤凰涅槃的比喻评论近期 infra 事故："整个互联网会烧掉一次，然后在另一边更强地重生"，向所有 infra 公司致敬。<a href="https://x.com/nikunj/status/2122543500814336281">详情</a></p></div>
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他连发三条与 GBrain 相关的内容：一是 GBrain 的 Hosted 版本开箱即用支持"个人大脑汇聚成团队大脑、再汇聚成公司级大脑"的层级记忆结构；二是宣布一个新项目，用 Vorflux 作为 software factory，把 GBrain 后端引擎用 <span class="hl">Rust</span> 重写，替代 postgres+pgvector/pglite 作为向量搜索、图搜索、embeddings、<span class="hl">RAG</span> 和 HNSW 的存储层。他还介绍了 Degla：能在几乎任何飞行平台上实现真正的无人机自主飞行，已在政府机构的搜救任务中投入使用。<a href="https://x.com/garrytan/status/2122517681740124271">详情</a> <a href="https://x.com/garrytan/status/2122576951080792543">详情</a> <a href="https://x.com/garrytan/status/2122487869780742304">详情</a></p></div>
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>他提出一个 AI 时代的信息流排序设想：用 <span class="hl">proof of work</span> 来排序，让 agent 汇报自己基于某条内容消耗了多少 <span class="hl">token</span>，再根据这个指标对人类和 agent 共同阅读的 feed 进行排序。这个思路把"内容的价值"和"机器处理它的成本"挂钩，是针对 agent 成为内容消费者的排序机制的新颖提案。<a href="https://x.com/danshipper/status/2122541401804054826">详情</a></p></div>
+<div class="item"><h3>Aditya Agarwal (SPC 普通合伙人，前 Dropbox CTO)</h3><p>他宣布 SPC 领投了 <span class="hl">BharatSemi</span> 的 <span class="hl">2400 万美元</span>种子轮(与 Redstart Ventures 和 IndusBridge 联合)，核心论点有二：把 AI 尽可能贴近硅片(embedding AI as close to the silicon as possible)对很多 hardtech 领域至关重要；以及印度可以造半导体，"人们说不可能，我们正在证明他们错了"。他还提到自己的可解释性(interpretability)研究已发展到可以应用于前沿模型的阶段。<a href="https://x.com/adityaag/status/2122386958101959118">详情</a> <a href="https://x.com/adityaag/status/2122367547312119843">详情</a></p></div>
+<div class="item"><h3>Nan Yu (OpenAI Codex 产品负责人)</h3><p>他转发并认可了 Thariq 关于"software factory 是临时问题、模型会自己学会搭建"的观点，配文"看，一个正常人"，获得 <span class="hl">310 个赞</span>，形成了一次前 Anthropic 与现 OpenAI 产品负责人难得的观点共振。<a href="https://x.com/thenanyu/status/2122438864791110126">详情</a></p></div>
+<div class="item"><h3>Swyx (Latent Space 主播，smol_ai / Cognition)</h3><p>他留意到 Together 删除了 <span class="hl">megakernels</span> 项目，这可能是近期 AI infra 领域一个值得关注的动向。他还吐槽 Gmail 的一个产品盲区：日历邀请明明通过 Gmail 发送，但 Gmail 里却搜不到 gcal 日历内容。<a href="https://x.com/swyx/status/2122566522094915765">详情</a> <a href="https://x.com/swyx/status/2122427240441131203">详情</a></p></div>
+<h2>播客</h2>
+<div class="item"><h3>Latent Space · [One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric</h3><p>The Takeaway: 训练有素的 <span class="hl">AI-native 工程师</span>会是任何公司最有价值的资产之一，而 Stanford 的 CS 146 正在把这套方法论变成正式课程。嘉宾 Mihail Eric 身兼两职：Stanford CS 146 "Modern Software Developer" 客座教授，以及 Monaco 的 Head of AI，既是老师也是一线实践者。这门课的起源可以追溯到 2024 年 11 月，当时他发现 coding agent 的方法论散落在各种博客帖子里，于是花了约十个月打磨出正式课程提案，2025 年秋季首次开讲即大受欢迎，甚至被 Business Insider 报道。对比去年，今年的课程重点发生了明显转移：去年是"全景游览"，展示 coding agent 如何渗透 <span class="hl">SDLC</span> 的每个环节(code review、spec 设计、SRE 各有专门公司)；今年则聚焦于正在固化的原则，比如精细的 context engineering，以及用设计和架构思维来处理超复杂任务。他给学生的定心丸是："每个公司都需要你们"，前提是有扎实的计算机科学基础，课程定位不是替代算法课，而是教你如何把这些原则应用到 Monaco 这类大规模代码库的真实生产环境中。<a href="https://www.youtube.com/@LatentSpacePod">详情</a></p></div>
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
