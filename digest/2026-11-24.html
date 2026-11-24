@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-23</h1>
+
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Sam Altman (OpenAI CEO)</h3><p>Altman 提出用 <span class="hl">perplexity</span> 作为跨实验室可追踪的通用指标，来给前沿模型开发设定行业统一的"第一条红线"：各开发方应承诺，在理解与监控 AI 行为的能力达到某个具体里程碑(比如开发出 CoT monitors 的继任者)之前，不越过基于 <span class="hl">perplexity 及其他测量</span> 的共同上限。他还引用了 OpenAI 的观点：既然新能力的涌现主要来自压缩(即预训练)层面的进步，一个根植于 perplexity 的度量可以作为通用智能的共享基准，并预计进入 <span class="hl">0.68-0.7 log-perplexity</span> 区间时会出现更多变革性能力。他补充说，各家实验室此前已在白宫协议下同意建立安全标准与最佳实践，关于 perplexity 的讨论可以进一步推进这些目标。<a href="https://x.com/sama/status/2124551883130114403">详情</a></p></div>
+
+<div class="item"><h3>Swyx (Latent Space 主持人、smol_ai / Cognition / Temporal)</h3><p>Swyx 认为 OpenAI 提出的 <span class="hl">perplexity 作为行业自律指标</span> 的提案非常有意思，称这张 log-perplexity 走势图是"讲述过去四年故事最美的方式之一"。他的核心判断是：我们如今热议的很多 post-training 问题，其实只是 B 线剧情，真正的 A 线是<span class="hl">大规模预训练</span>的持续进步。他转发引用了 OpenAI 的原话："鉴于新惊人能力涌现的主要方式是压缩层面的进步，根植于困惑度的度量可以为通用智能提供共享基准，无论开发过程的自动化程度如何。"不过他也表达了保留意见：按这个指标，今年的 AI 进步比 2022 到 2025 加起来还多，"体感上不太像，但也可能只是被算法和指标骗了，或者这个指标只在 frontier 数学层面才成立"。<a href="https://x.com/swyx/status/2124583459356373052">详情</a></p></div>
+
+<div class="item"><h3>Swyx (Latent Space 主持人)</h3><p>Swyx 推荐了一份罕见的<span class="hl">从创业到被收购</span>的创始人全程复盘，认为"记录这类经历的创始人太少了，希望大家多做，能帮别人少踩很多坑"。这份复盘的亮点包括：All-in Pod 如何给 SaaS 市场顶部信号、<span class="hl">IP 转让</span>的法律坑、不要炫耀自己的 SEO、如何引起 Naval 的兴趣、招聘与裁员建议、如何"钓鱼式"寻求收购、如何为收购清障，以及"原来真的存在 CTO 教练这种东西"。<a href="https://x.com/swyx/status/2124730733147390347">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>Rauch 发出明确警告：市面上那些号称免费、零数据保留(ZDR)的 <span class="hl">"stealth model"</span>，很可能是<span class="hl">工业级数据外泄</span>的机制，他强烈怀疑这些数据最终流向国家级项目，Dragos 的研究似乎也印证了这一点。他讽刺道："想象一下跟老板解释：抱歉，我必须试试那个很酷的 ZDR 免费 stealth 模型……现在我们所有的机密、客户数据和代码都在另一个大陆了。"相比之下，Vercel AI Gateway 在不走任何这类捷径的情况下积累起了真实的海量 token 流量，他预告明天会公布在信任、隐私和安全上的新动作。<a href="https://x.com/rauchg/status/2124595496849445079">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>Levie 判断：当 agent 承担越来越多<span class="hl">长时间运行的项目工作</span>、成群的 agent 并行朝同一目标推进时，agent harness 和编排架构必须随之进化。他点出最大的变化之一是这些 agent 如何<span class="hl">共享知识、追踪任务、并与人类用户协调</span>，理论上技术不难，但要保证 agent 既拿到所需资源、又不至于权限过大或过小，复杂度极高。他认为可以从人类协作方式(共享文件、聊天和收件箱里的沟通)借鉴经验，但底层原语必须支撑远高于人类的吞吐量，同时应对 agent 更容易成为安全攻击载体的现实，这对横向和垂直方向的创业者都是大机会。<a href="https://x.com/levie/status/2124658150771188157">详情</a></p></div>
+
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>Masad 指出桌面 AI 应用普遍是<span class="hl">安全与隐私的噩梦</span>，而 Replit 与 Windows 合作，为 Replit Desktop 打造了一套世界级的安全模型。他以 <span class="hl">Christie's</span>(世界顶级艺术保管机构)选择 Replit 做安全 agentic 工作为例，说明企业级安全能力正在成为 agent 平台的差异化门槛，而不是可选项。<a href="https://x.com/amasad/status/2124604574606795002">详情</a></p></div>
+
+<div class="item"><h3>Peter Yang (Every 联合创始人)</h3><p>Yang 引用微软 Copilot EVP <span class="hl">Charles Lamanna</span> 的观点："Agents 是非常挑剔的客户。"当 agent 成为软件的主要使用者后，它们会追求最佳的性能、价格和可靠性，而 agent 的偏好未必和人类一致。Lamanna 举例：人类搜索时给 10 条带摘要的链接就够了，agent 根本不在乎，直接返回一千条结果也没问题，因此"我们的 API 和用户体验将开始演化，出现更好地支持 agent 的模式"。<a href="https://x.com/petergyang/status/2124669298191090033">详情</a></p></div>
+
+<div class="item"><h3>Nan Yu (OpenAI Codex 产品负责人、前 Linear 产品负责人)</h3><p>Yu 用玩笑的形式分享了一个真实观点：他"发现了一个能让所有 <span class="hl">vibecoded</span> 项目更好扩展、性能更高、更可靠的秘密 prompt"，内容只有一个词，"<span class="hl">Use Postgres</span>"。背后是在 AI 快速生成代码的时代，选对持久层和基础设施依然是项目能否规模化的决定性因素。<a href="https://x.com/thenanyu/status/2124592238974156861">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>针对 AI 证明 <span class="hl">Riemann 猜想</span> 类的进展，Rauch 提出一个反直觉观点：我们不该让 AI 只产出"艺术品"式的结果，而应让它面向<span class="hl">人类可理解性与概念化</span>。他主张 Riemann 的证明应该附带一篇论文、一份逐步讲解、以及新的概念和洞见，就像即使 LLM 未来能直接输出 CPU 指令，高级代码的中间表示依然是值得保留的。<a href="https://x.com/rauchg/status/2124654108124848350">详情</a></p></div>
+
+<div class="item"><h3>Dan Shipper (Every CEO)</h3><p>Shipper 罕见地表达了担忧：如果近期某事件确实源于 <span class="hl">AI 辅助的网络攻击</span>，那将非常糟糕，因为只需干扰飞机对自身载重、剩余油量和位置的感知，就能让 9/11 之后建立的全部<span class="hl">反劫机安全措施</span>失效。他推测这类小规模攻击会不断试探系统边界，虽然他知道飞机大多有手动 override，但在能见度差的情况下依然极其棘手，并呼吁更懂机载系统的专家补充意见。<a href="https://x.com/danshipper/status/2124567533449613819">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>AI & I by Every · A New Vision for Human Work After Automation</h3><p>The Takeaway: 卓越的人类工作不在于和模型比拼执行力，而在于你带给模型的<span class="hl">独特视角</span>。这期是 Dan Shipper(Every 联合创始人兼 CEO)在 Every 首届大会上的闭幕演讲，主题是"自动化之后，卓越的人类工作是什么样的"。他先用宏观数据压场：OpenAI 的 <span class="hl">GDP Val</span> benchmark 显示，2024 年 AI 仅在 12.4% 的盲评任务中胜过人类专家，2025 年升至 47.6%，2026 年已达约 83%。他随后展示自己的亲身实践：在一周的日程缝隙里，用 Claude 订阅完成了客户调研分析、给团队做了一个实时对战小游戏、vibe code 了一个自用 CRM 并批量触达客户，相当于 2020 年需要一个数据科学家、游戏开发者、产品营销、工程师和销售各司其职、约 20 万美元成本的工作量。他坦言面对这些表格时"我们完蛋了"，并将这种冲击称为 <span class="hl">agency rupture</span>(能动性断裂)，因为当模型做着和你一样的工作，它直接打击的是自我认同。他的解法是采用"intimate"视角：像 2022 年他从 GPT-3 的使用体验中推断出"AI 将赋能个人以匹敌大型组织的影响力"一样，贴近真实案例去外推未来，而非只看聚合趋势线。<a href="https://www.youtube.com/watch?v=WstNofgQF5Q">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
