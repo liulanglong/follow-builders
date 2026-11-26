@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Builders Digest</title>
+<style>
+  body { margin:0; padding:0; background:#f4f4f5; color:#1f2328;
+         font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.7; }
+  .wrap { max-width:560px; margin:0 auto; padding:24px 20px 40px; background:#ffffff; }
+  h1 { font-size:22px; line-height:1.3; margin:0 0 20px; padding-bottom:12px;
+       border-bottom:2px solid #111827; }
+  h2 { font-size:13px; letter-spacing:1.5px; color:#6b7280; text-transform:uppercase;
+       margin:28px 0 12px; }
+  .item { margin:0 0 22px; padding:0 0 22px; border-bottom:1px solid #eee; }
+  h3 { font-size:16px; margin:0 0 8px; color:#111827; }
+  p { margin:0 0 10px; font-size:15px; }
+  .link { margin:6px 0 0; }
+  a { color:#2563eb; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .footer { margin-top:28px; font-size:13px; color:#9ca3af; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>AI Builders 日报 · 2026-11-25</h1>
+<h2>X / 推特</h2>
+
+<div class="item"><h3>Amjad Masad (Replit CEO)</h3><p>他的核心判断是：美国即使做出最好的前沿模型，也可能输掉全球 AI 竞赛，这正是 Jensen 回归 NVIDIA 意义远超一家公司的原因。他论证道，全球政府都想要“主权 AI”——在自己土地上、自己基础设施上、自己掌控的模型；如果美国公司不满足这个需求，中国公司就会填补，各国会先采用中国模型，再顺势采用中国的基建和芯片，到时“最聪明的模型”也救不了建在别人技术栈上的世界。他拿 <span class="hl">Huawei</span> 的电信基建类比：一旦一个国家的网络围绕你的设备建立，替换成本极高，美国如今想资助替换都很困难。所以他认为 Jensen 支持 <span class="hl">美国开放模型生态</span>至关重要，前沿领导力和全球普及率必须两者兼得。另一条推文里他指出 token 需求以阶跃函数增长：auto-complete → chat → agent → 长时自主 agent → swarm，每次 harness 创新都解锁一个数量级的潜在 token 消耗，但用户学会用新工具总有滞后。<a href="https://x.com/amasad/status/2125353849057853876">详情</a> <a href="https://x.com/amasad/status/2125287538911072753">详情</a></p></div>
+
+<div class="item"><h3>Aaron Levie (Box CEO)</h3><p>他的观点是：一年前听起来不可能的事现在变得合理了——基于最新 AI 模型和 harness 进展，团队可以获得 <span class="hl">10 倍产出提升</span>。他指出这和以往技术扩散截然不同：传统技术采用率以“公司”为单位，比如“那家公司上了云”，公司内部各团队的提升大致均等；而 AI 现在让同一公司内部最高和最低采用者之间出现 10 倍差距——真正学会重新设计流程、把 agent 部署进工作流的团队，生产力可以跳一个数量级。目前这集中在编程领域，但更多工作将变得“编程相邻”，公司内部将出现非常剧烈的动态。<a href="https://x.com/levie/status/2125442246543814686">详情</a></p></div>
+
+<div class="item"><h3>Boris Cherny (Claude @ Anthropic)</h3><p>Anthropic 给 <span class="hl">MCP server</span> 加了一个重要能力：MCP server 现在可以自带 skills 一起发布，这样 <span class="hl">Claude Code</span> 开箱就知道怎么使用它们，不需要用户额外配置或写说明。这对 MCP 生态的开发者体验是个实质提升，这条推文获得了超过 5000 个赞，说明社区反响强烈。<a href="https://x.com/bcherny/status/2125292098165612585">详情</a></p></div>
+
+<div class="item"><h3>Peter Yang (Practical AI 教程作者)</h3><p>他用 <span class="hl">Gemini 4 Neon</span> 和 <span class="hl">Antigravity</span> 搭配用了一整个周末，并做了一期 17 分钟的免费视频课程。几个实际心得：Orchestrator 和 /swarm 对规划和多 agent 协作非常好用，他曾同时跑 <span class="hl">42 个 agent</span>；内置技能 /grill-me 会让 Antigravity 反过来向你提澄清问题，先把方案打磨清楚再动手；远程控制体验比 Claude Code 更好，因为每条线程默认都是活跃的，他演示了如何把 Antigravity 加到手机主屏上使用。<a href="https://x.com/petergyang/status/2125246815884984398">详情</a></p></div>
+
+<div class="item"><h3>Guillermo Rauch (Vercel CEO)</h3><p>他解释了为什么在 2026 年这个产品还做成 <span class="hl">CLI</span>：因为它本质上是 𝚕𝚒𝚋𝚏𝚡 的一层薄包装。目标是做出最小、最智能的编码 <span class="hl">agent 内核</span>，可嵌入任何表面——浏览器、服务器、移动端、桌面、操作系统、ADE 等等。另外他还开源了一个背景特效构建器。<a href="https://x.com/rauchg/status/2125320020666565096">详情</a> <a href="https://x.com/rauchg/status/2125426206183239770">详情</a></p></div>
+
+<div class="item"><h3>Madhu Guru (Meta AI 高级总监)</h3><p>他的观察是：围绕 <span class="hl">Jensen 事件</span>的预测很好地证明了“自信”和“正确”之间几乎没有相关性。他指出许多知名 VC、分析师和专家都以十足的确信口吻预测事态走向，有些人在几天之内就 flip-flop，但每次都同样自信。他的解释是：我们的信息生态不对称地奖励确定性、速度和莽撞，“我不确定，先看看怎么发展”没人看。结论很实用——对一切“专家”评论都要大打折扣，人们实际掌握的确定性远低于他们语气所暗示的；这次新闻周期也是校准“一直大声且一直错”的人的好机会。<a href="https://x.com/realmadhuguru/status/2125355549202194801">详情</a></p></div>
+
+<div class="item"><h3>Thariq (前 Claude Code @ Anthropic)</h3><p>一句朴素但有共鸣的话：在学习新技能(包括用 AI 编程)时，<span class="hl">你得先烂一阵子</span>。这条推文拿到 2000 多个赞，显然戳中了很多正在爬坡的开发者。<a href="https://x.com/trq212/status/2125156290494353663">详情</a></p></div>
+
+<div class="item"><h3>Peter Steinberger (OpenClaw / OpenAI)</h3><p>年终复盘式的一推：OpenClaw 找到了 <span class="hl">prosumer 和企业采用</span>的利基定位，其中多人团队功能(multiplayer team)是他认为同类最佳。他也坦率地说，长期可靠地发布免费开源非常难，每天醒来面对大量用户投诉是情绪上的挑战，好在他已把大部分工作交给团队。目前主要精力在“无聊但重要”的部分——快、可靠、安全，例外是新的 <span class="hl">memory 系统</span>和即将推出的 OpenClaw ID。<a href="https://x.com/steipete/status/2125422797304549672">详情</a></p></div>
+
+<div class="item"><h3>Nikunj Kothari (FPV Ventures 合伙人)</h3><p>他用一组排比句总结 <span class="hl">2026 年的融资 pitch</span>：App 公司说“掌控工作流者掌控宇宙”，Harness 公司说“让智能干活者掌控宇宙”，Inference 公司说“服务智能者掌控宇宙”，Model 公司说“构建智能者掌控宇宙”，Data 公司说“喂养智能者掌控宇宙”，Infra 公司说“让智能持续运转者掌控宇宙”，Chip 公司说“掌控沙子者掌控宇宙”，能源公司说“掌控电子者掌控宇宙”。每层都在声称自己才是价值链的咽喉。他还引用《料理鼠王》的金句“伟大的艺术家可以来自任何地方”，提醒大家非凡的创始人无法被模式化筛选。<a href="https://x.com/nikunj/status/2125376105024758112">详情</a> <a href="https://x.com/nikunj/status/2125270251491520702">详情</a></p></div>
+
+<div class="item"><h3>Garry Tan (Y Combinator 总裁兼 CEO)</h3><p>他提出一个框架解释为什么 AI 落地出现了瓶颈：第一，模型能力已经超出了部分客户的实际需要——尽管他怀疑在 <span class="hl">agent 能力和品味</span>上仍有阶跃式提升空间；第二，社会吸收技术的速度到顶了，知识工作流程和业务流程的改变有天然刹车，因为“人们不喜欢奶酪被挪动”。顺带一提，他还发推称 YC 就是硬科技领域的 YC。<a href="https://x.com/garrytan/status/2125247972158193792">详情</a> <a href="https://x.com/garrytan/status/2125247943540142577">详情</a> <a href="https://x.com/garrytan/status/2125258221946630432">详情</a></p></div>
+
+<div class="item"><h3>Zara Zhang (独立 Builder)</h3><p>一条被广泛转发的产品洞察：一个产品 <span class="hl">定位的清晰度</span>，与用大白话解释“它是什么”所需的字数成反比。换句话说，需要越多词汇才能说清楚的产品，定位越模糊。这对写 landing page 和做 pitch 都是很实用的检验标准。<a href="https://x.com/zarazhangrui/status/2125256097925865639">详情</a></p></div>
+
+<div class="item"><h3>Thibault Sottiaux (Codex & ChatGPT @ OpenAI)</h3><p>面向 ChatGPT Business 团队的两个小更新：一是 <span class="hl">banked reset</span>(额度重置机制)，二是 <span class="hl">fast mode</span>，两者在 12 月 31 日前免费提供，不额外收费。感兴趣可以直接注册 ChatGPT Business。<a href="https://x.com/thsottiaux/status/2125299248782778588">详情</a> <a href="https://x.com/thsottiaux/status/2125299467691987445">详情</a></p></div>
+
+<div class="item"><h3>Swyx (Latent Space 主播)</h3><p>他连发几条对硅谷现状的吐槽，其中引用了 John 的一份关于 agent 基础设施设计的实用清单：<span class="hl">local-cloud 环境和沙箱</span>、session 与 conversation store 的区分、用户审批收件箱(approval inbox)、stream listeners、面向所有人的 artifacts、以及各种配置形态的 dashboard。这是他眼中当前 agent 应用架构需要覆盖的核心组件。<a href="https://x.com/swyx/status/2125431392226148670">详情</a> <a href="https://x.com/swyx/status/2125444028527468699">详情</a></p></div>
+
+<h2>播客</h2>
+
+<div class="item"><h3>Unsupervised Learning · Ep 98: China Expert on Jensen's Return</h3><p>The Takeaway: Jensen 的“下台又回归”之所以能发生，前提是 Trump 政府大概率以和解加赦免的方式处理 NVIDIA 向中国违规售芯的巨大丑闻，而这将开启长达数年的政治风暴。Jordan Schneider(China Talk 主播，做了十年中美科技播客)形容这波紧急节目密度已是他历史上第五次——仅次于 COVID 的九次和俄乌战争的五次，他自己都说有“拿破仑逃离厄尔巴岛百日王朝”的既视感，而且不觉得这是稳态。核心事实链是：NVIDIA 不想只依赖也在自研竞品的大厂客户，于是 Jensen 四年来拼命维持对腾讯、阿里、字节跳动等中国买家(甚至解放军相关研究机构)的销售渠道；被禁运的 <span class="hl">Blackwell 芯片</span>经由 Super Micro 等渠道流入中国，有报道称其高管用吹风机撕掉机架标签以便运输，而 Jensen 多年在电视上宣称“走私不存在”。Jordan 把这和当年银行系统对朝鲜、伊朗资金“装看不见”类比——最后财政部开出了数百亿美元级罚单；如今 NVIDIA 面临约 <span class="hl">2500 万美元罚款</span>加某种和解。他的判断是：“精灵再也塞不回瓶子里了”，民主党(以及半数共和党)会在未来三年里反复炒这件事，AI 本身也并不受欢迎，回不到 10 月 31 日之前的局面了。<a href="https://www.youtube.com/watch?v=gkd5eOQGASU">详情</a></p></div>
+
+<p class="footer">由 Follow Builders 技能自动生成 · <a href="https://github.com/zarazhangrui/follow-builders">详情</a></p>
+</div>
+</body>
+</html>
